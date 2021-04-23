@@ -1,0 +1,21 @@
+{
+  "name": "tree-sitter-nu",
+  "version": "1.0.0",
+  "description": "A tree-sitter parser for the nushell programming language",
+  "main": "bindings/node",
+  "dependencies": {
+    "nan": "^2.14.2"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.19.4"
+  },
+  "scripts": {
+    "test": "nu-parser-test"
+  },
+  "keywords": [
+    "nushell",
+    "nu"
+  ],
+  "author": "Leonhard Kipp",
+  "license": "MIT"
+}
