@@ -2,48 +2,49 @@
 
 (cmd_name) @function
 
-(variable_name) @property
+(identifier) @property
+
+(variable_deref) @variable
+
+(variable_declaration name: (identifier) @variable)
+
+((identifier) @constant
+ (#match? @constant "^[A-Z][A-Z\\d_]*$"))
 
 [
-  "case"
-  "do"
-  "done"
-  "elif"
-  "else"
-  "esac"
-  "export"
-  "fi"
-  "for"
-  "function"
-  "if"
-  "in"
-  "unset"
-  "while"
-  "then"
+ "let"
+ "def"
+ "it"
 ] @keyword
 
 (comment) @comment
 
-(function_definition name: (word) @function)
-
-(file_descriptor) @number
+(function_definition func_name: (identifier) @function)
 
 [
-  (command_substitution)
-  (process_substitution)
-  (expansion)
+ (command_substitution)
+ (math_mode)
 ]@embedded
 
 [
+  ; "/" Not making / an operator may lead to better highlighting?
   "$"
-  "&&"
-  ">"
-  ">>"
-  "<"
   "|"
+  "+"
+  "-"
+  "*"
+  "="
+  "!="
+  "&&"
+  "||"
+  "=="
+  ">"
 ] @operator
 
-(
-  (command (_) @constant)
-  (#match? @constant "^-")
-)
+"." @delimiter
+"," @delimiter
+";" @delimiter
+
+(command (_) @constant)
+
+(number_literal) @number
