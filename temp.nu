@@ -2,6 +2,16 @@ let celcius = $(= $(= $fahren-32) * 5 / 9)
 build-string $fahren ' °F is ' $celcius ' °C'
 
 # Convert Fahrenheit to Celcius
+def a_command [
+     fahren:number # Degrees Fahrenheit
+    ] {
+    # (100°F − 32) × 5/9 = 37.778°C
+    let celcius = $( = $(= $fahren - 32) * 5 / 9)
+    build-string $fahren ' °F is ' $celcius ' °C'
+}
+
+
+# Convert Fahrenheit to Celcius
 def "temp f-to-c" [
      fahren:number # Degrees Fahrenheit
     ] {

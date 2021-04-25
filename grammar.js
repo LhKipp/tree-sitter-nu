@@ -30,6 +30,10 @@ const SPECIAL_CHARACTERS = [
 module.exports = grammar({
     name: 'nu',
 
+    conflicts: $ => [
+       [$.variable_deref, $.value_path]
+    ],
+
     extras: $ => [
         $.comment,
         /\s/,
@@ -58,7 +62,7 @@ module.exports = grammar({
             // $.case_statement,
             $.pipeline,
             $.block,
-            $.math_expression,
+            $._math_expression,
         ),
 
         function_definition: $ => seq(
@@ -158,9 +162,6 @@ module.exports = grammar({
             seq('\\', noneOf('\\s'))
         ))),
 
-            //Shouldn't these be merged
-            raw_string: $ => /'[^']*'/,
-
     string: $ => choice(
         seq( 
             '"',
@@ -177,8 +178,8 @@ module.exports = grammar({
     single_qouted_string_content: $ => token(prec(-1, /([^'\\]|\\(.|\n))+/)),
 
     value_path: $ => seq(
-        '$',
-        repeat1(seq($.identifier, '.')),
+        $.variable_deref,
+        token.immediate('.'),
         $.identifier
     ),
 
@@ -192,10 +193,10 @@ module.exports = grammar({
     ),
 
     math_mode: $ => seq(
-        '$(', '=', $.math_expression, ')',
+        '$(', '=', $._math_expression, ')',
     ),
 
-    identifier: $ => /[a-zA-Z_]+[a-zA-Z_0-9]*/,
+    identifier: $ => /[a-zA-Z_]+[a-zA-Z_0-9-]*/,
 
     table: $ => seq(
         '[', $.column_header, ';', repeat($.array), ']'
@@ -217,7 +218,7 @@ module.exports = grammar({
 
     _terminator: $ => choice(';', '\n'),
 
-    math_expression: $ => choice(
+    _math_expression: $ => choice(
         $.binary_expression,
         $.math_mode,
         $.command_substitution,
@@ -228,7 +229,7 @@ module.exports = grammar({
 
     parenthesized_math_expression: $ => seq(
       '(',
-      $.math_expression,
+      $._math_expression,
       ')'
     ),
 
@@ -255,9 +256,9 @@ module.exports = grammar({
 
         return choice(...table.map(([operator, precedence]) => {
             return prec.left(precedence, seq(
-                field('left', $.math_expression),
+                field('left', $._math_expression),
                 field('operator', operator),
-                field('right', $.math_expression)
+                field('right', $._math_expression)
             ))
         }));
     },

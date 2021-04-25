@@ -22,9 +22,8 @@
     {
       "scope": "source.nu",
       "file-types": [
-        "nu",
-      ],
-      "first-line-regex": "#!.*\\nu$"
+        "nu"
+      ]
     }
   ]
 }
