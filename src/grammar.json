@@ -1,5 +1,6 @@
 {
   "name": "nu",
+  "word": "word",
   "rules": {
     "source_file": {
       "type": "CHOICE",
@@ -454,17 +455,17 @@
         },
         {
           "type": "SYMBOL",
-          "name": "identifier"
+          "name": "block"
         },
         {
           "type": "SYMBOL",
-          "name": "block"
+          "name": "identifier"
         }
       ]
     },
     "number_literal": {
       "type": "PATTERN",
-      "value": "(0x[\\da-fA-F]+|[\\d]+(\\.([\\d]+)?)?|0b[01]+)"
+      "value": "[\\d]+(\\.([\\d]+)?)?"
     },
     "word": {
       "type": "TOKEN",
@@ -475,7 +476,7 @@
           "members": [
             {
               "type": "PATTERN",
-              "value": "[^'\"{}\\[\\]()\\\\\\s$;#]"
+              "value": "[^'\"{}\\[\\]()\\\\\\s$;#\\-]"
             },
             {
               "type": "SEQ",

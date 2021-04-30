@@ -79,3 +79,16 @@ echo $(char nl)
       (command 
        (identifier) 
        (identifier))))) 
+
+==================
+Parse command_substitution
+==================
+echo $(char nl)
+---
+(source_file 
+ (command 
+  (identifier) 
+  (command_substitution 
+   (command 
+    (identifier) 
+    (identifier))))) 

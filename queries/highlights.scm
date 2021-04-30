@@ -1,6 +1,6 @@
 (string) @string
 
-(cmd_name) @function
+(command cmd_name: (identifier) @function)
 
 (identifier) @property
 
@@ -47,3 +47,5 @@
 (command (_) @constant)
 
 (number_literal) @number
+
+(type) @type

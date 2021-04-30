@@ -22,6 +22,7 @@ const SPECIAL_CHARACTERS = [
     '\\', '\\s',
     '$', ';',
     '#',
+    '\\-',
 ];
 
 module.exports = grammar({
@@ -31,6 +32,8 @@ module.exports = grammar({
         $.comment,
         /\s/,
     ],
+
+    word: $ => $.word,
 
     rules: {
         source_file: $ => optional($._statements),
@@ -133,12 +136,13 @@ module.exports = grammar({
             $.command_substitution,
             $.table,
             $.array,
-            $.identifier,
             $.block,
-            // $.word,
+            $.identifier,
         ),
 
-        number_literal: $ => /(0x[\da-fA-F]+|[\d]+(\.([\d]+)?)?|0b[01]+)/,
+        // TODO figure out 
+        // number_literal: $ => /(0x[\da-fA-F]+|[\d]+(\.([\d]+)?)?|0b[01]+)/,
+        number_literal: $ => /[\d]+(\.([\d]+)?)?/,
 
         word: $ => token(repeat1(choice(
             noneOf(...SPECIAL_CHARACTERS),
