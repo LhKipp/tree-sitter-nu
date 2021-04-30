@@ -237,6 +237,10 @@
             "named": true
           },
           {
+            "type": "file_path",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -246,6 +250,10 @@
           },
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "range",
             "named": true
           },
           {
@@ -531,6 +539,21 @@
     }
   },
   {
+    "type": "range",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "number_literal",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "rest",
     "named": true,
     "fields": {},
@@ -712,6 +735,10 @@
             "named": true
           },
           {
+            "type": "file_path",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -721,6 +748,10 @@
           },
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "range",
             "named": true
           },
           {
@@ -800,6 +831,10 @@
     "named": false
   },
   {
+    "type": "..",
+    "named": false
+  },
+  {
     "type": "...rest",
     "named": false
   },
@@ -874,6 +909,10 @@
   {
     "type": "def",
     "named": false
+  },
+  {
+    "type": "file_path",
+    "named": true
   },
   {
     "type": "flag_name",

@@ -132,6 +132,8 @@ module.exports = grammar({
             $.number_literal,
             $.string,
             $.value_path,
+            $.file_path,
+            $.range,
             $.math_mode,
             $.command_substitution,
             $.table,
@@ -168,6 +170,13 @@ module.exports = grammar({
         '$',
         $.identifier,
         repeat(seq('.', $.identifier))
+    ),
+
+    file_path: $ => /\.|\.\.|((\\\\?([^\\/]*[\\/])*)([^\\/]+))/g,
+    range: $ => seq(
+        $.number_literal,
+        '..',
+        $.number_literal,
     ),
 
     variable_deref: $ => seq(

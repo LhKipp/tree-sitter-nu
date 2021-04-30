@@ -439,6 +439,14 @@
         },
         {
           "type": "SYMBOL",
+          "name": "file_path"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "range"
+        },
+        {
+          "type": "SYMBOL",
           "name": "math_mode"
         },
         {
@@ -588,6 +596,27 @@
               }
             ]
           }
+        }
+      ]
+    },
+    "file_path": {
+      "type": "PATTERN",
+      "value": "\\.|\\.\\.|((\\\\\\\\?([^\\\\/]*[\\\\/])*)([^\\\\/]+))"
+    },
+    "range": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "number_literal"
+        },
+        {
+          "type": "STRING",
+          "value": ".."
+        },
+        {
+          "type": "SYMBOL",
+          "name": "number_literal"
         }
       ]
     },
