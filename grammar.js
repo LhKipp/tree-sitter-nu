@@ -16,23 +16,16 @@ const PREC = {
 
 const SPECIAL_CHARACTERS = [
     "'", '"',
-    '<', '>',
     '{', '}',
     '\\[', '\\]',
     '(', ')',
-    '`', '$',
-    '|', '&', ';',
-    '\\',
-    '\\s',
+    '\\', '\\s',
+    '$', ';',
     '#',
 ];
 
 module.exports = grammar({
     name: 'nu',
-
-    conflicts: $ => [
-       [$.variable_deref, $.value_path]
-    ],
 
     extras: $ => [
         $.comment,
@@ -40,7 +33,6 @@ module.exports = grammar({
     ],
 
     rules: {
-        // TODO: add the actual grammar rules
         source_file: $ => optional($._statements),
 
         _statements: $ => prec(1, seq(
@@ -78,7 +70,7 @@ module.exports = grammar({
                 seq(choice(
                     $.parameter,
                     $.flag,
-                    // $.rest
+                    $.rest
                 ),
                     optional(',')),
             ),
@@ -143,16 +135,16 @@ module.exports = grammar({
         ),
 
         _primary_expression: $ => choice(
+            $.identifier,
             $.number_literal,
             $.string,
             $.value_path,
-            $.variable_deref,
             $.math_mode,
             $.command_substitution,
-            $.table,
             $.array,
+            $.table,
             $.block,
-            $.word,
+            // $.word,
         ),
 
         number_literal: $ => /(0x[\da-fA-F]+|[\d]+(\.([\d]+)?)?|0b[01]+)/,
@@ -178,9 +170,9 @@ module.exports = grammar({
     single_qouted_string_content: $ => token(prec(-1, /([^'\\]|\\(.|\n))+/)),
 
     value_path: $ => seq(
-        $.variable_deref,
-        token.immediate('.'),
-        $.identifier
+        '$',
+        $.identifier,
+        repeat(seq('.', $.identifier))
     ),
 
     variable_deref: $ => seq(
@@ -196,7 +188,7 @@ module.exports = grammar({
         '$(', '=', $._math_expression, ')',
     ),
 
-    identifier: $ => /[a-zA-Z_]+[a-zA-Z_0-9-]*/,
+    identifier: $ => /[a-zA-Z_]+(-?[a-zA-Z_0-9]+)*/,
 
     table: $ => seq(
         '[', $.column_header, ';', repeat($.array), ']'
@@ -223,7 +215,7 @@ module.exports = grammar({
         $.math_mode,
         $.command_substitution,
         $.parenthesized_math_expression,
-        $.variable_deref,
+        $.value_path,
         $.number_literal,
     ),
 
@@ -264,20 +256,6 @@ module.exports = grammar({
     },
 }
 });
-
-// Values in nu are immutable. There is nothing like assignment
-// variable_assignment: $ => seq(
-//     field('name', choice(
-//         $.variable_name,
-//         // $.subscript
-//     )),
-//     '=',
-//     field('value', choice(
-//         $._literal,
-//         // $.array,
-//     ))
-// ),
-
 
 function noneOf(...characters) {
   const negatedString = characters.map(c => c == '\\' ? '\\\\' : c).join('')

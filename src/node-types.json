@@ -43,7 +43,7 @@
             "named": true
           },
           {
-            "type": "variable_deref",
+            "type": "value_path",
             "named": true
           }
         ]
@@ -139,7 +139,7 @@
             "named": true
           },
           {
-            "type": "variable_deref",
+            "type": "value_path",
             "named": true
           }
         ]
@@ -191,15 +191,20 @@
           "named": true
         },
         {
-          "type": "variable_declaration",
+          "type": "value_path",
           "named": true
         },
         {
-          "type": "variable_deref",
+          "type": "variable_declaration",
           "named": true
         }
       ]
     }
+  },
+  {
+    "type": "cmd_name",
+    "named": true,
+    "fields": {}
   },
   {
     "type": "column_header",
@@ -241,6 +246,10 @@
           "named": true
         },
         {
+          "type": "identifier",
+          "named": true
+        },
+        {
           "type": "math_mode",
           "named": true
         },
@@ -258,14 +267,6 @@
         },
         {
           "type": "value_path",
-          "named": true
-        },
-        {
-          "type": "variable_deref",
-          "named": true
-        },
-        {
-          "type": "word",
           "named": true
         }
       ]
@@ -316,11 +317,11 @@
           "named": true
         },
         {
-          "type": "variable_declaration",
+          "type": "value_path",
           "named": true
         },
         {
-          "type": "variable_deref",
+          "type": "variable_declaration",
           "named": true
         }
       ]
@@ -384,6 +385,11 @@
     }
   },
   {
+    "type": "identifier",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "math_mode",
     "named": true,
     "fields": {},
@@ -412,7 +418,7 @@
           "named": true
         },
         {
-          "type": "variable_deref",
+          "type": "value_path",
           "named": true
         }
       ]
@@ -466,7 +472,7 @@
           "named": true
         },
         {
-          "type": "variable_deref",
+          "type": "value_path",
           "named": true
         }
       ]
@@ -517,11 +523,26 @@
           "named": true
         },
         {
-          "type": "variable_declaration",
+          "type": "value_path",
           "named": true
         },
         {
-          "type": "variable_deref",
+          "type": "variable_declaration",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "rest",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "type",
           "named": true
         }
       ]
@@ -541,6 +562,10 @@
         },
         {
           "type": "parameter",
+          "named": true
+        },
+        {
+          "type": "rest",
           "named": true
         }
       ]
@@ -591,11 +616,11 @@
           "named": true
         },
         {
-          "type": "variable_declaration",
+          "type": "value_path",
           "named": true
         },
         {
-          "type": "variable_deref",
+          "type": "variable_declaration",
           "named": true
         }
       ]
@@ -655,10 +680,6 @@
         {
           "type": "identifier",
           "named": true
-        },
-        {
-          "type": "variable_deref",
-          "named": true
         }
       ]
     }
@@ -694,6 +715,10 @@
             "named": true
           },
           {
+            "type": "identifier",
+            "named": true
+          },
+          {
             "type": "math_mode",
             "named": true
           },
@@ -712,32 +737,9 @@
           {
             "type": "value_path",
             "named": true
-          },
-          {
-            "type": "variable_deref",
-            "named": true
-          },
-          {
-            "type": "word",
-            "named": true
           }
         ]
       }
-    }
-  },
-  {
-    "type": "variable_deref",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "identifier",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -869,10 +871,6 @@
     "named": false
   },
   {
-    "type": "cmd_name",
-    "named": true
-  },
-  {
     "type": "comment",
     "named": true
   },
@@ -886,10 +884,6 @@
   },
   {
     "type": "flag_shorthand_name",
-    "named": true
-  },
-  {
-    "type": "identifier",
     "named": true
   },
   {
@@ -939,10 +933,6 @@
   {
     "type": "unit",
     "named": false
-  },
-  {
-    "type": "word",
-    "named": true
   },
   {
     "type": "{",

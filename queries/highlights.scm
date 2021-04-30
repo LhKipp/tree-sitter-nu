@@ -4,7 +4,7 @@
 
 (identifier) @property
 
-(variable_deref) @variable
+(value_path) @variable
 
 (variable_declaration name: (identifier) @variable)
 
@@ -14,7 +14,6 @@
 [
  "let"
  "def"
- "it"
 ] @keyword
 
 (comment) @comment
