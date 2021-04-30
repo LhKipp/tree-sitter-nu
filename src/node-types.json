@@ -202,11 +202,6 @@
     }
   },
   {
-    "type": "cmd_name",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "column_header",
     "named": true,
     "fields": {},
@@ -224,52 +219,59 @@
   {
     "type": "command",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "block",
-          "named": true
-        },
-        {
-          "type": "cmd_name",
-          "named": true
-        },
-        {
-          "type": "command_substitution",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "math_mode",
-          "named": true
-        },
-        {
-          "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "table",
-          "named": true
-        },
-        {
-          "type": "value_path",
-          "named": true
-        }
-      ]
+    "fields": {
+      "arg": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "array",
+            "named": true
+          },
+          {
+            "type": "block",
+            "named": true
+          },
+          {
+            "type": "command_substitution",
+            "named": true
+          },
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "math_mode",
+            "named": true
+          },
+          {
+            "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "table",
+            "named": true
+          },
+          {
+            "type": "value_path",
+            "named": true
+          }
+        ]
+      },
+      "cmd_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -383,11 +385,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "identifier",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "math_mode",
@@ -884,6 +881,10 @@
   },
   {
     "type": "flag_shorthand_name",
+    "named": true
+  },
+  {
+    "type": "identifier",
     "named": true
   },
   {

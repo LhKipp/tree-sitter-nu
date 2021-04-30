@@ -111,15 +111,13 @@ module.exports = grammar({
             'let',
             field('name', $.identifier),
             '=',
-            field('value', $._literal),
+            field('value', $._expression),
         ),
 
         command: $ => seq(
-            $.cmd_name,
-            repeat($._literal)
+            field('cmd_name', $.identifier),
+            repeat(field('arg', $._expression))
         ),
-
-        cmd_name: $ => /[a-zA-Z_]+(-?[a-zA-Z_0-9]+)*/,
 
         pipeline: $ => prec.left(1, seq(
           $._statement,
@@ -127,22 +125,15 @@ module.exports = grammar({
           $._statement,
         )),
 
-        // literals
-        _literal: $ => choice(
-            // $.concatenation,
-            $._primary_expression,
-            // alias(prec(-2, repeat1($._special_character)), $.word)
-        ),
-
-        _primary_expression: $ => choice(
-            $.identifier,
+        _expression: $ => choice(
             $.number_literal,
             $.string,
             $.value_path,
             $.math_mode,
             $.command_substitution,
-            $.array,
             $.table,
+            $.array,
+            $.identifier,
             $.block,
             // $.word,
         ),
