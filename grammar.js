@@ -33,6 +33,11 @@ module.exports = grammar({
         /\s/,
     ],
 
+  conflicts: $ => [
+    // conflict on parsing array of array vs table
+    [$._expression, $.column_header],
+  ],
+
     word: $ => $.word,
 
     rules: {
@@ -203,7 +208,7 @@ module.exports = grammar({
     ),
 
     array: $ => seq(
-        '[', repeat(seq($.identifier, ',')), ']'
+        '[', repeat(seq($._expression, choice(',', ' '))), ']'
     ),
 
     block: $ => seq(

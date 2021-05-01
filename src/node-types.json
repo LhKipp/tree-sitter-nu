@@ -8,7 +8,47 @@
       "required": false,
       "types": [
         {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "command_substitution",
+          "named": true
+        },
+        {
+          "type": "file_path",
+          "named": true
+        },
+        {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "math_mode",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "value_path",
           "named": true
         }
       ]
@@ -772,6 +812,10 @@
   },
   {
     "type": "\n",
+    "named": false
+  },
+  {
+    "type": " ",
     "named": false
   },
   {

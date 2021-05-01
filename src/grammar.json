@@ -746,11 +746,20 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "identifier"
+                "name": "_expression"
               },
               {
-                "type": "STRING",
-                "value": ","
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": ","
+                  },
+                  {
+                    "type": "STRING",
+                    "value": " "
+                  }
+                ]
               }
             ]
           }
@@ -1367,7 +1376,12 @@
       "value": "\\s"
     }
   ],
-  "conflicts": [],
+  "conflicts": [
+    [
+      "_expression",
+      "column_header"
+    ]
+  ],
   "precedences": [],
   "externals": [],
   "inline": [],
