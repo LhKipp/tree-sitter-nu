@@ -24,6 +24,14 @@
           "named": true
         },
         {
+          "type": "flag_name",
+          "named": true
+        },
+        {
+          "type": "flag_shorthand_name",
+          "named": true
+        },
+        {
           "type": "identifier",
           "named": true
         },
@@ -207,10 +215,6 @@
           "named": true
         },
         {
-          "type": "block",
-          "named": true
-        },
-        {
           "type": "command",
           "named": true
         },
@@ -289,6 +293,14 @@
             "named": true
           },
           {
+            "type": "flag_name",
+            "named": true
+          },
+          {
+            "type": "flag_shorthand_name",
+            "named": true
+          },
+          {
             "type": "identifier",
             "named": true
           },
@@ -344,10 +356,6 @@
       "types": [
         {
           "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "block",
           "named": true
         },
         {
@@ -558,10 +566,6 @@
           "named": true
         },
         {
-          "type": "block",
-          "named": true
-        },
-        {
           "type": "command",
           "named": true
         },
@@ -663,10 +667,6 @@
       "types": [
         {
           "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "block",
           "named": true
         },
         {
@@ -798,6 +798,14 @@
           },
           {
             "type": "file_path",
+            "named": true
+          },
+          {
+            "type": "flag_name",
+            "named": true
+          },
+          {
+            "type": "flag_shorthand_name",
             "named": true
           },
           {

@@ -76,10 +76,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "block"
-        },
-        {
-          "type": "SYMBOL",
           "name": "_math_expression"
         }
       ]
@@ -443,6 +439,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "_flag_arg"
+        },
+        {
+          "type": "SYMBOL",
           "name": "range"
         },
         {
@@ -613,6 +613,37 @@
         {
           "type": "PATTERN",
           "value": "(([\\w\\.]+\\/)*)([\\w\\.]+)\\.\\w+"
+        }
+      ]
+    },
+    "_flag_arg": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "[^S\\r\\n]"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "flag_name"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "PATTERN",
+              "value": "[^S\\r\\n]"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "flag_shorthand_name"
+            }
+          ]
         }
       ]
     },

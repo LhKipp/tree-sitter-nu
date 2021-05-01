@@ -47,6 +47,8 @@ const SPECIAL_CHARACTERS = [
     '\\-',
 ];
 
+const ws_no_newline = new RegExp('[^\S\r\n]');
+
 module.exports = grammar({
     name: 'nu',
 
@@ -83,7 +85,7 @@ module.exports = grammar({
             // $.if_statement,
             // $.case_statement,
             $.pipeline,
-            $.block,
+            // $.block,
             $._math_expression,
         ),
 
@@ -160,6 +162,7 @@ module.exports = grammar({
             $.string,
             $.value_path,
             $.file_path,
+            $._flag_arg,
             $.range,
             $.math_mode,
             $.operator,
@@ -205,6 +208,11 @@ module.exports = grammar({
             /[^\S\r\n]\.\.|\.[^\S\r\n]/, //Expect ws before .|.. and after (but exclude newline)
             /(([\w\.]+\/)*)([\w\.]+)\.\w+/, //filepath must end with <.file_ending> for now
         ),
+
+    _flag_arg: $ => choice(
+        seq(ws_no_newline, $.flag_name),
+        seq(ws_no_newline, $.flag_shorthand_name),
+    ),
 
     range: $ => seq(
         $.number_literal,
