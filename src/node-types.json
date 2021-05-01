@@ -943,7 +943,7 @@
             "named": true
           },
           {
-            "type": "block",
+            "type": "binary_expression",
             "named": true
           },
           {
@@ -951,35 +951,11 @@
             "named": true
           },
           {
-            "type": "file_path",
-            "named": true
-          },
-          {
-            "type": "flag_name",
-            "named": true
-          },
-          {
-            "type": "flag_shorthand_name",
-            "named": true
-          },
-          {
-            "type": "identifier",
-            "named": true
-          },
-          {
             "type": "number_literal",
             "named": true
           },
           {
-            "type": "operator",
-            "named": true
-          },
-          {
-            "type": "range",
-            "named": true
-          },
-          {
-            "type": "string",
+            "type": "parenthesized_math_expression",
             "named": true
           },
           {
@@ -988,10 +964,6 @@
           },
           {
             "type": "value_path",
-            "named": true
-          },
-          {
-            "type": "word",
             "named": true
           }
         ]

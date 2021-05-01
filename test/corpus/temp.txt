@@ -143,3 +143,10 @@ split row '\'
 (source_file 
 (command (identifier) (identifier) 
 (string (single_qouted_string_content))))
+
+==================
+Parse multiply
+==================
+let pos_y = 0.995 * $resolution_y
+---
+(source_file (variable_declaration (identifier) (binary_expression (number_literal) (value_path (identifier))))) 

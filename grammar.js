@@ -154,7 +154,7 @@ module.exports = grammar({
             'let',
             field('name', $.identifier),
             '=',
-            field('value', $._expression),
+            field('value', $._math_expression),
         ),
 
         command: $ => seq(
