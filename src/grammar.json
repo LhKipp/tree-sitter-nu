@@ -68,6 +68,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "alias"
+        },
+        {
+          "type": "SYMBOL",
           "name": "command"
         },
         {
@@ -591,6 +595,26 @@
               "value": "'"
             }
           ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "`"
+            },
+            {
+              "type": "REPEAT",
+              "content": {
+                "type": "SYMBOL",
+                "name": "backtick_qouted_string_content"
+              }
+            },
+            {
+              "type": "STRING",
+              "value": "`"
+            }
+          ]
         }
       ]
     },
@@ -613,6 +637,17 @@
         "content": {
           "type": "PATTERN",
           "value": "([^'\\\\]|\\\\(.|\\n))+"
+        }
+      }
+    },
+    "backtick_qouted_string_content": {
+      "type": "TOKEN",
+      "content": {
+        "type": "PREC",
+        "value": -1,
+        "content": {
+          "type": "PATTERN",
+          "value": "([^`\\\\]|\\\\(.|\\n))+"
         }
       }
     },

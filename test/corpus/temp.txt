@@ -96,3 +96,42 @@ echo $(= $separator | empty?)
       (identifier))) 
     (command 
      (identifier)))))) 
+==================
+Parse alias
+==================
+alias fmt_error = ansi -e "31;1m"
+---
+(source_file 
+ (alias 
+  (identifier) 
+    (command (identifier) (flag_shorthand_name) (string (qouted_string_content)))))
+==================
+Parse if
+==================
+if 1 > 2 { 
+    echo true 
+} { 
+    echo false 
+}
+---
+    (source_file 
+     (command (identifier) (number_literal) (operator) (number_literal)
+      (block (command (identifier) (identifier)))
+      (block (command (identifier) (identifier))))) 
+==================
+Parse if 2
+==================
+if $incorrect_count > 0 {
+  echo `The following directories are named incorrectly: {{$(char newline)}}`
+	ls-incorrect-dirs
+	exit 1
+} {
+	exit 0
+}
+---
+(source_file 
+(command (identifier) (value_path (identifier)) (operator) (number_literal)
+ (block 
+  (command (identifier) (string (backtick_qouted_string_content)))
+  (command (identifier)) (command (identifier) (number_literal))) 
+ (block (command (identifier) (number_literal))))) 

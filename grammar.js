@@ -80,6 +80,7 @@ module.exports = grammar({
         _statement: $ => choice(
             $.variable_declaration,
             $.function_definition,
+            $.alias,
             $.command,
             // $.for_statement,
             // $.while_statement,
@@ -201,9 +202,15 @@ module.exports = grammar({
             repeat($.single_qouted_string_content),
             '\''
         ),
+        seq( 
+            '`',
+            repeat($.backtick_qouted_string_content),
+            '`'
+        ),
     ),
     qouted_string_content: $ => token(prec(-1, /([^"\\]|\\(.|\n))+/)),
     single_qouted_string_content: $ => token(prec(-1, /([^'\\]|\\(.|\n))+/)),
+    backtick_qouted_string_content: $ => token(prec(-1, /([^`\\]|\\(.|\n))+/)),
 
     value_path: $ => seq(
         '$',
