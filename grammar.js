@@ -28,6 +28,7 @@ const OPERATOR_PREC = [
     ['=~', PREC.EQUAL],
     ['==', PREC.EQUAL],
     ['!=', PREC.EQUAL],
+    ['in', PREC.EQUAL],
     ['>', PREC.RELATIONAL],
     ['>=', PREC.RELATIONAL],
     ['<=', PREC.RELATIONAL],
@@ -38,7 +39,7 @@ const OPERATOR_PREC = [
 
 
 const SPECIAL_CHARACTERS = [
-    "'", '"',
+    "'", '"', '`',
     '{', '}',
     '\\[', '\\]',
     '(', ')',
@@ -180,16 +181,17 @@ module.exports = grammar({
             $.array,
             $.block,
             $.identifier,
+            $.word,
         ),
 
         // TODO figure out 
         // number_literal: $ => /(0x[\da-fA-F]+|[\d]+(\.([\d]+)?)?|0b[01]+)/,
         number_literal: $ => /[\d]+(\.([\d]+)?)?/,
 
-        word: $ => token(repeat1(choice(
+        word: $ => token(prec(-1,repeat1(choice(
             noneOf(...SPECIAL_CHARACTERS),
             seq('\\', noneOf('\\s'))
-        ))),
+        )))),
 
     string: $ => choice(
         seq( 
@@ -209,7 +211,8 @@ module.exports = grammar({
         ),
     ),
     qouted_string_content: $ => token(prec(-1, /([^"\\]|\\(.|\n))+/)),
-    single_qouted_string_content: $ => token(prec(-1, /([^'\\]|\\(.|\n))+/)),
+    // single_qouted_string_content: $ => token(prec(-1, /([^'\\]|\\(.|\n))+/)),
+    single_qouted_string_content: $ => token(prec(-1, /([^']|)+/)),
     backtick_qouted_string_content: $ => token(prec(-1, /([^`\\]|\\(.|\n))+/)),
 
     value_path: $ => seq(

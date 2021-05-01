@@ -135,3 +135,11 @@ if $incorrect_count > 0 {
   (command (identifier) (string (backtick_qouted_string_content)))
   (command (identifier)) (command (identifier) (number_literal))) 
  (block (command (identifier) (number_literal))))) 
+==================
+Parse escaped string
+==================
+split row '\'
+---
+(source_file 
+(command (identifier) (identifier) 
+(string (single_qouted_string_content))))
