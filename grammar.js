@@ -201,10 +201,10 @@ module.exports = grammar({
     ),
 
     file_path: $ => choice(
-        // '-', //previous pwd (conflicts with operator)
-        /\s\.\.|\.\s/, 
-        /(([\w\.]+\/)*)([\w\.]+)\.\w+/, //filepath must end with <.file_ending> for now
-    ),
+            // '-', //previous pwd (conflicts with operator)
+            /[^\S\r\n]\.\.|\.[^\S\r\n]/, //Expect ws before .|.. and after (but exclude newline)
+            /(([\w\.]+\/)*)([\w\.]+)\.\w+/, //filepath must end with <.file_ending> for now
+        ),
 
     range: $ => seq(
         $.number_literal,

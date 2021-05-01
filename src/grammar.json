@@ -608,7 +608,7 @@
       "members": [
         {
           "type": "PATTERN",
-          "value": "\\s\\.\\.|\\.\\s"
+          "value": "[^\\S\\r\\n]\\.\\.|\\.[^\\S\\r\\n]"
         },
         {
           "type": "PATTERN",
