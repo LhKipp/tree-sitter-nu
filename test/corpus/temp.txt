@@ -1,9 +1,6 @@
 ==================
 Test temp.nu
 ==================
-let celcius = $(= $(= $fahren-32) * 5 / 9)
-build-string $fahren ' °F is ' $celcius ' °C'
-
 # Convert Fahrenheit to Celcius
 def a_command [
      fahren:number # Degrees Fahrenheit
@@ -17,78 +14,85 @@ temp k-to-c 100
 echo $(char nl)
 ---
 (source_file 
- (variable_declaration 
+ (comment) 
+ (function_definition 
   (identifier) 
-  (math_mode 
-   (binary_expression 
-    (binary_expression 
+  (signature 
+   (parameter 
+    (identifier) 
+    (type)) 
+   (comment)) 
+  (block 
+   (comment) 
+   (variable_declaration 
+    (identifier) 
+    (command_substitution
      (math_mode 
-      (value_path 
-       (identifier))) 
-     (number_literal)) 
-    (number_literal)))) 
- (command 
-  (identifier) 
-  (value_path 
-   (identifier)) 
-  (string 
-   (single_qouted_string_content)) 
-  (value_path 
-   (identifier)) 
-  (string 
-   (single_qouted_string_content))) 
-(comment) 
-    (function_definition 
-     (identifier) 
-     (signature 
-      (parameter 
-       (identifier) 
-       (type)) 
-      (comment)) 
-     (block 
-      (comment) 
-      (variable_declaration 
-       (identifier) 
-       (math_mode 
-        (binary_expression 
-         (binary_expression 
-          (math_mode 
-           (binary_expression 
-            (value_path 
-             (identifier)) 
-            (number_literal))) 
-          (number_literal)) 
-         (number_literal)))) 
-      (command 
-       (identifier) 
-       (value_path 
-        (identifier)) 
-       (string 
-        (single_qouted_string_content)) 
-       (value_path 
-        (identifier)) 
-       (string 
-        (single_qouted_string_content))))) 
-    (command 
-     (identifier) 
-     (identifier) 
-     (number_literal)) 
-    (command 
-     (identifier) 
-     (command_substitution 
-      (command 
-       (identifier) 
-       (identifier))))) 
-
+      (binary_expression 
+       (binary_expression 
+        (command_substitution
+         (math_mode 
+          (binary_expression 
+           (value_path 
+            (identifier))
+           (number_literal))))
+        (number_literal))
+       (number_literal)))))
+   (command 
+    (identifier) 
+    (value_path 
+     (identifier)) 
+    (string 
+     (single_qouted_string_content)) 
+    (value_path 
+     (identifier)) 
+    (string 
+     (single_qouted_string_content))))) 
+(command 
+ (identifier) 
+ (identifier) 
+ (number_literal)) 
+(command 
+ (identifier) 
+ (command_substitution 
+  (command 
+   (identifier) 
+   (identifier))))) 
 ==================
 Parse command_substitution
 ==================
 echo $(char nl)
 ---
+    (source_file 
+     (command 
+      (identifier) 
+      (command_substitution 
+       (command 
+        (identifier) 
+        (identifier))))) 
+==================
+Parse shorthand flag
+==================
+ansi -e $ansi_str
+---
+(source_file 
+ (command 
+  (identifier) 
+  (flag_shorthand_name)
+  (value_path
+    (identifier))))
+==================
+Parse predicate command
+==================
+echo $(= $separator | empty?)
+---
 (source_file 
  (command 
   (identifier) 
   (command_substitution 
-   (command 
-    (identifier) 
-    (identifier))))) 
+   (pipeline 
+    (math_mode 
+     (value_path 
+      (identifier))) 
+    (command 
+     (identifier)))))) 

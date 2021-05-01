@@ -1,0 +1,162 @@
+(source_file [0, 0] - [43, 0]
+  (comment [0, 0] - [0, 19])
+  (pipeline [1, 0] - [23, 15]
+    (pipeline [1, 0] - [23, 1]
+      (command [1, 0] - [1, 23]
+        cmd_name: (identifier [1, 0] - [1, 4])
+        arg: (file_path [1, 4] - [1, 11])
+        arg: (file_path [1, 11] - [1, 20])
+        arg: (number_literal [1, 20] - [1, 23]))
+      (command [1, 26] - [23, 1]
+        cmd_name: (identifier [1, 26] - [1, 30])
+        arg: (block [1, 30] - [23, 1]
+          (variable_declaration [2, 4] - [2, 18]
+            name: (identifier [2, 8] - [2, 12])
+            value: (value_path [2, 14] - [2, 18]
+              (identifier [2, 16] - [2, 18])))
+          (comment [3, 4] - [3, 23])
+          (pipeline [4, 4] - [22, 19]
+            (pipeline [4, 4] - [22, 5]
+              (command [4, 4] - [4, 25]
+                cmd_name: (identifier [4, 4] - [4, 8])
+                arg: (file_path [4, 8] - [4, 15])
+                arg: (file_path [4, 15] - [4, 22])
+                arg: (number_literal [4, 22] - [4, 25]))
+              (command [4, 28] - [22, 5]
+                cmd_name: (identifier [4, 28] - [4, 32])
+                arg: (block [4, 32] - [22, 5]
+                  (variable_declaration [5, 8] - [5, 22]
+                    name: (identifier [5, 12] - [5, 16])
+                    value: (value_path [5, 18] - [5, 22]
+                      (identifier [5, 20] - [5, 22])))
+                  (comment [6, 8] - [6, 18])
+                  (comment [7, 8] - [7, 39])
+                  (comment [8, 8] - [8, 40])
+                  (comment [9, 8] - [9, 41])
+                  (comment [10, 8] - [10, 21])
+                  (comment [11, 8] - [11, 39])
+                  (comment [12, 8] - [12, 40])
+                  (comment [13, 8] - [13, 25])
+                  (comment [14, 8] - [14, 42])
+                  (comment [15, 8] - [15, 26])
+                  (variable_declaration [16, 8] - [20, 28]
+                    name: (identifier [16, 12] - [16, 15])
+                    value: (command_substitution [16, 17] - [20, 28]
+                      (pipeline [16, 20] - [20, 27]
+                        (pipeline [16, 20] - [20, 13]
+                          (command [16, 20] - [16, 29]
+                            cmd_name: (identifier [16, 20] - [16, 24])
+                            arg: (file_path [16, 24] - [16, 29]))
+                          (command [16, 32] - [20, 13]
+                            cmd_name: (identifier [16, 32] - [16, 36])
+                            arg: (block [16, 36] - [20, 13]
+                              (variable_declaration [17, 12] - [17, 26]
+                                name: (identifier [17, 16] - [17, 20])
+                                value: (value_path [17, 22] - [17, 26]
+                                  (identifier [17, 24] - [17, 26])))
+                              (variable_declaration [18, 12] - [18, 116]
+                                name: (identifier [18, 16] - [18, 24])
+                                value: (command_substitution [18, 26] - [18, 116]
+                                  (pipeline [18, 29] - [18, 115]
+                                    (command [18, 29] - [18, 101]
+                                      cmd_name: (identifier [18, 29] - [18, 33])
+                                      arg: (array [18, 33] - [18, 101]
+                                        (command_substitution [18, 35] - [18, 52]
+                                          (command [18, 37] - [18, 51]
+                                            cmd_name: (identifier [18, 37] - [18, 45])
+                                            arg: (value_path [18, 45] - [18, 51]
+                                              (identifier [18, 47] - [18, 51]))))
+                                        (string [18, 53] - [18, 56]
+                                          (single_qouted_string_content [18, 54] - [18, 55]))
+                                        (command_substitution [18, 57] - [18, 74]
+                                          (command [18, 59] - [18, 73]
+                                            cmd_name: (identifier [18, 59] - [18, 67])
+                                            arg: (value_path [18, 67] - [18, 73]
+                                              (identifier [18, 69] - [18, 73]))))
+                                        (string [18, 75] - [18, 78]
+                                          (single_qouted_string_content [18, 76] - [18, 77]))
+                                        (command_substitution [18, 79] - [18, 96]
+                                          (command [18, 81] - [18, 95]
+                                            cmd_name: (identifier [18, 81] - [18, 89])
+                                            arg: (value_path [18, 89] - [18, 95]
+                                              (identifier [18, 91] - [18, 95]))))
+                                        (string [18, 97] - [18, 100]
+                                          (single_qouted_string_content [18, 98] - [18, 99]))))
+                                    (command [18, 104] - [18, 115]
+                                      cmd_name: (identifier [18, 104] - [18, 107])
+                                      arg: (identifier [18, 107] - [18, 115])))))
+                              (pipeline [19, 12] - [19, 85]
+                                (command [19, 12] - [19, 71]
+                                  cmd_name: (identifier [19, 12] - [19, 16])
+                                  arg: (array [19, 16] - [19, 71]
+                                    (command_substitution [19, 18] - [19, 38]
+                                      (command [19, 20] - [19, 37]
+                                        cmd_name: (identifier [19, 20] - [19, 24])
+                                        (ERROR [19, 24] - [19, 27]
+                                          arg: (operator [19, 24] - [19, 26]))
+                                        arg: (value_path [19, 27] - [19, 37]
+                                          (identifier [19, 29] - [19, 37]))))
+                                    (string [19, 39] - [19, 42])
+                                    (value_path [19, 43] - [19, 52]
+                                      (identifier [19, 44] - [19, 52]))
+                                    (string [19, 53] - [19, 56])
+                                    (command_substitution [19, 57] - [19, 70]
+                                      (command [19, 59] - [19, 69]
+                                        cmd_name: (identifier [19, 59] - [19, 63])
+                                        arg: (identifier [19, 63] - [19, 69])))))
+                                (command [19, 74] - [19, 85]
+                                  cmd_name: (identifier [19, 74] - [19, 77])
+                                  arg: (identifier [19, 77] - [19, 85]))))))
+                        (command [20, 16] - [20, 27]
+                          cmd_name: (identifier [20, 16] - [20, 19])
+                          arg: (identifier [20, 19] - [20, 27])))))
+                  (pipeline [21, 8] - [21, 60]
+                    (pipeline [21, 8] - [21, 49]
+                      (command [21, 8] - [21, 35]
+                        cmd_name: (identifier [21, 8] - [21, 12])
+                        arg: (array [21, 12] - [21, 35]
+                          (value_path [21, 14] - [21, 18]
+                            (identifier [21, 15] - [21, 18]))
+                          (command_substitution [21, 19] - [21, 34]
+                            (command [21, 21] - [21, 33]
+                              cmd_name: (identifier [21, 21] - [21, 25])
+                              arg: (identifier [21, 25] - [21, 33])))))
+                      (command [21, 38] - [21, 49]
+                        cmd_name: (identifier [21, 38] - [21, 41])
+                        arg: (identifier [21, 41] - [21, 49])))
+                    (command [21, 52] - [21, 60]
+                      cmd_name: (identifier [21, 52] - [21, 60]))))))
+            (command [22, 8] - [22, 19]
+              cmd_name: (identifier [22, 8] - [22, 11])
+              arg: (identifier [22, 11] - [22, 19]))))))
+    (command [23, 4] - [23, 15]
+      cmd_name: (identifier [23, 4] - [23, 7])
+      arg: (identifier [23, 7] - [23, 15])))
+  (function_definition [25, 0] - [27, 1]
+    func_name: (identifier [25, 4] - [25, 12])
+    (signature [25, 13] - [25, 19]
+      (parameter [25, 14] - [25, 18]
+        (identifier [25, 14] - [25, 18])))
+    (block [25, 20] - [27, 1]
+      (pipeline [26, 4] - [26, 25]
+        (command [26, 4] - [26, 14]
+          cmd_name: (identifier [26, 4] - [26, 8])
+          arg: (value_path [26, 8] - [26, 14]
+            (identifier [26, 10] - [26, 14])))
+        (command [26, 17] - [26, 25]
+          cmd_name: (identifier [26, 17] - [26, 20])
+          arg: (identifier [26, 20] - [26, 25])))))
+  (comment [29, 0] - [29, 13])
+  (comment [30, 0] - [30, 41])
+  (comment [31, 0] - [31, 14])
+  (comment [32, 0] - [32, 40])
+  (comment [33, 0] - [33, 15])
+  (comment [34, 0] - [34, 32])
+  (comment [35, 0] - [35, 22])
+  (comment [36, 0] - [36, 80])
+  (comment [37, 0] - [37, 8])
+  (comment [38, 0] - [38, 17])
+  (comment [39, 0] - [39, 7])
+  (comment [40, 0] - [40, 6])
+  (comment [42, 0] - [42, 8]))
+ignore/sample.nu	0 ms	(ERROR [19, 24] - [19, 27])

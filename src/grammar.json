@@ -76,6 +76,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "math_mode"
+        },
+        {
+          "type": "SYMBOL",
           "name": "_math_expression"
         }
       ]
@@ -111,6 +115,31 @@
         {
           "type": "SYMBOL",
           "name": "block"
+        }
+      ]
+    },
+    "alias": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "alias"
+        },
+        {
+          "type": "FIELD",
+          "name": "alias_name",
+          "content": {
+            "type": "SYMBOL",
+            "name": "identifier"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_statement"
         }
       ]
     },
@@ -380,8 +409,25 @@
           "type": "FIELD",
           "name": "cmd_name",
           "content": {
-            "type": "SYMBOL",
-            "name": "identifier"
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "identifier"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "?"
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              }
+            ]
           }
         },
         {
@@ -444,10 +490,6 @@
         {
           "type": "SYMBOL",
           "name": "range"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "math_mode"
         },
         {
           "type": "SYMBOL",
@@ -620,30 +662,12 @@
       "type": "CHOICE",
       "members": [
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "PATTERN",
-              "value": "[^S\\r\\n]"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "flag_name"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "flag_name"
         },
         {
-          "type": "SEQ",
-          "members": [
-            {
-              "type": "PATTERN",
-              "value": "[^S\\r\\n]"
-            },
-            {
-              "type": "SYMBOL",
-              "name": "flag_shorthand_name"
-            }
-          ]
+          "type": "SYMBOL",
+          "name": "flag_shorthand_name"
         }
       ]
     },
@@ -699,19 +723,11 @@
       "members": [
         {
           "type": "STRING",
-          "value": "$("
-        },
-        {
-          "type": "STRING",
           "value": "="
         },
         {
           "type": "SYMBOL",
           "name": "_math_expression"
-        },
-        {
-          "type": "STRING",
-          "value": ")"
         }
       ]
     },
@@ -755,17 +771,29 @@
           "value": "["
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "identifier"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "REPEAT",
           "content": {
             "type": "SEQ",
             "members": [
               {
-                "type": "SYMBOL",
-                "name": "identifier"
-              },
-              {
                 "type": "STRING",
                 "value": ","
+              },
+              {
+                "type": "SYMBOL",
+                "name": "identifier"
               }
             ]
           }
@@ -784,14 +812,22 @@
           "value": "["
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_expression"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "REPEAT",
           "content": {
             "type": "SEQ",
             "members": [
-              {
-                "type": "SYMBOL",
-                "name": "_expression"
-              },
               {
                 "type": "CHOICE",
                 "members": [
@@ -804,6 +840,10 @@
                     "value": " "
                   }
                 ]
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_expression"
               }
             ]
           }
@@ -872,10 +912,6 @@
         },
         {
           "type": "SYMBOL",
-          "name": "math_mode"
-        },
-        {
-          "type": "SYMBOL",
           "name": "command_substitution"
         },
         {
@@ -889,6 +925,14 @@
         {
           "type": "SYMBOL",
           "name": "number_literal"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "table"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "array"
         }
       ]
     },
@@ -954,6 +998,15 @@
             {
               "type": "STRING",
               "value": "%"
+            }
+          ]
+        },
+        {
+          "type": "SEQ",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "mod"
             }
           ]
         },
@@ -1213,6 +1266,39 @@
                 "content": {
                   "type": "STRING",
                   "value": "%"
+                }
+              },
+              {
+                "type": "FIELD",
+                "name": "right",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_math_expression"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "PREC_LEFT",
+          "value": 11,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "FIELD",
+                "name": "left",
+                "content": {
+                  "type": "SYMBOL",
+                  "name": "_math_expression"
+                }
+              },
+              {
+                "type": "FIELD",
+                "name": "operator",
+                "content": {
+                  "type": "STRING",
+                  "value": "mod"
                 }
               },
               {

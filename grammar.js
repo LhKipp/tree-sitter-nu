@@ -20,6 +20,7 @@ const OPERATOR_PREC = [
     ['*', PREC.MULTIPLY],
     ['/', PREC.MULTIPLY],
     ['%', PREC.MULTIPLY],
+    ['mod', PREC.MULTIPLY],
     ['||', PREC.LOGICAL_OR],
     ['&&', PREC.LOGICAL_AND],
     // ['^', PREC.EXCLUSIVE_OR],
@@ -85,6 +86,7 @@ module.exports = grammar({
             // $.if_statement,
             // $.case_statement,
             $.pipeline,
+            $.math_mode,
             // $.block,
             $._math_expression,
         ),
@@ -94,6 +96,13 @@ module.exports = grammar({
             field('func_name', choice($.identifier, $.string)),
             $.signature,
             $.block,
+        ),
+
+        alias: $ => seq(
+            'alias',
+            field('alias_name', $.identifier ),
+            '=',
+            $._statement,
         ),
 
         signature: $ => seq(
@@ -147,7 +156,7 @@ module.exports = grammar({
         ),
 
         command: $ => seq(
-            field('cmd_name', $.identifier),
+            field('cmd_name', seq($.identifier, optional('?'))),
             repeat(field('arg', $._expression))
         ),
 
@@ -164,7 +173,6 @@ module.exports = grammar({
             $.file_path,
             $._flag_arg,
             $.range,
-            $.math_mode,
             $.operator,
             $.command_substitution,
             $.table,
@@ -210,8 +218,8 @@ module.exports = grammar({
         ),
 
     _flag_arg: $ => choice(
-        seq(ws_no_newline, $.flag_name),
-        seq(ws_no_newline, $.flag_shorthand_name),
+        $.flag_name,
+        $.flag_shorthand_name,
     ),
 
     range: $ => seq(
@@ -230,7 +238,7 @@ module.exports = grammar({
     ),
 
     math_mode: $ => seq(
-        '$(', '=', $._math_expression, ')',
+        '=', $._math_expression,
     ),
 
     identifier: $ => /[a-zA-Z_]+(-?[a-zA-Z_0-9]+)*/,
@@ -240,11 +248,11 @@ module.exports = grammar({
     ),
 
     column_header: $ => seq(
-        '[', repeat(seq($.identifier, ',')), ']'
+        '[', optional($.identifier), repeat(seq(',', $.identifier)), ']'
     ),
 
     array: $ => seq(
-        '[', repeat(seq($._expression, choice(',', ' '))), ']'
+        '[', optional($._expression), repeat(seq(choice(',', ' '), $._expression)), ']'
     ),
 
     block: $ => seq(
@@ -257,11 +265,12 @@ module.exports = grammar({
 
     _math_expression: $ => choice(
         $.binary_expression,
-        $.math_mode,
         $.command_substitution,
         $.parenthesized_math_expression,
         $.value_path,
         $.number_literal,
+        $.table,
+        $.array,
     ),
 
     parenthesized_math_expression: $ => seq(
