@@ -390,6 +390,11 @@
     }
   },
   {
+    "type": "file_path",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "flag",
     "named": true,
     "fields": {},
@@ -978,10 +983,6 @@
   {
     "type": "def",
     "named": false
-  },
-  {
-    "type": "file_path",
-    "named": true
   },
   {
     "type": "flag_name",

@@ -200,7 +200,12 @@ module.exports = grammar({
         repeat(seq('.', $.identifier))
     ),
 
-    file_path: $ => /\.|\.\.|((\\\\?([^\\/]*[\\/])*)([^\\/]+))/g,
+    file_path: $ => choice(
+        // '-', //previous pwd (conflicts with operator)
+        /\s\.\.|\.\s/, 
+        /(([\w\.]+\/)*)([\w\.]+)\.\w+/, //filepath must end with <.file_ending> for now
+    ),
+
     range: $ => seq(
         $.number_literal,
         '..',

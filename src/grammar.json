@@ -604,8 +604,17 @@
       ]
     },
     "file_path": {
-      "type": "PATTERN",
-      "value": "\\.|\\.\\.|((\\\\\\\\?([^\\\\/]*[\\\\/])*)([^\\\\/]+))"
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "PATTERN",
+          "value": "\\s\\.\\.|\\.\\s"
+        },
+        {
+          "type": "PATTERN",
+          "value": "(([\\w\\.]+\\/)*)([\\w\\.]+)\\.\\w+"
+        }
+      ]
     },
     "range": {
       "type": "SEQ",
