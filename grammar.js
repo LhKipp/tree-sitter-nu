@@ -14,6 +14,28 @@ const PREC = {
   UNARY: 13,
 };
 
+const OPERATOR_PREC = [
+    ['+', PREC.ADD],
+    ['-', PREC.ADD],
+    ['*', PREC.MULTIPLY],
+    ['/', PREC.MULTIPLY],
+    ['%', PREC.MULTIPLY],
+    ['||', PREC.LOGICAL_OR],
+    ['&&', PREC.LOGICAL_AND],
+    // ['^', PREC.EXCLUSIVE_OR],
+    // ['&', PREC.BITWISE_AND],
+    ['=~', PREC.EQUAL],
+    ['==', PREC.EQUAL],
+    ['!=', PREC.EQUAL],
+    ['>', PREC.RELATIONAL],
+    ['>=', PREC.RELATIONAL],
+    ['<=', PREC.RELATIONAL],
+    ['<', PREC.RELATIONAL],
+    ['<<', PREC.SHIFT],
+    ['>>', PREC.SHIFT],
+];
+
+
 const SPECIAL_CHARACTERS = [
     "'", '"',
     '{', '}',
@@ -140,6 +162,7 @@ module.exports = grammar({
             $.file_path,
             $.range,
             $.math_mode,
+            $.operator,
             $.command_substitution,
             $.table,
             $.array,
@@ -234,28 +257,12 @@ module.exports = grammar({
       ')'
     ),
 
-    binary_expression: $ => {
-        const table = [
-            ['+', PREC.ADD],
-            ['-', PREC.ADD],
-            ['*', PREC.MULTIPLY],
-            ['/', PREC.MULTIPLY],
-            ['%', PREC.MULTIPLY],
-            ['||', PREC.LOGICAL_OR],
-            ['&&', PREC.LOGICAL_AND],
-            // ['^', PREC.EXCLUSIVE_OR],
-            // ['&', PREC.BITWISE_AND],
-            ['==', PREC.EQUAL],
-            ['!=', PREC.EQUAL],
-            ['>', PREC.RELATIONAL],
-            ['>=', PREC.RELATIONAL],
-            ['<=', PREC.RELATIONAL],
-            ['<', PREC.RELATIONAL],
-            ['<<', PREC.SHIFT],
-            ['>>', PREC.SHIFT],
-        ];
+    operator: $ => choice(...OPERATOR_PREC.map(([operator, _]) => {
+        return seq(operator)
+    })),
 
-        return choice(...table.map(([operator, precedence]) => {
+    binary_expression: $ => {
+        return choice(...OPERATOR_PREC.map(([operator, precedence]) => {
             return prec.left(precedence, seq(
                 field('left', $._math_expression),
                 field('operator', operator),
