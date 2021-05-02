@@ -400,8 +400,17 @@
           "type": "FIELD",
           "name": "value",
           "content": {
-            "type": "SYMBOL",
-            "name": "_math_expression"
+            "type": "CHOICE",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_math_expression"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "string"
+              }
+            ]
           }
         }
       ]
@@ -633,7 +642,7 @@
         "value": -1,
         "content": {
           "type": "PATTERN",
-          "value": "([^\"\\\\]|\\\\(.|\\n))+"
+          "value": "[^\"]+"
         }
       }
     },
@@ -655,7 +664,7 @@
         "value": -1,
         "content": {
           "type": "PATTERN",
-          "value": "([^`\\\\]|\\\\(.|\\n))+"
+          "value": "[^`]+"
         }
       }
     },
@@ -818,7 +827,7 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "identifier"
+              "name": "_expression"
             },
             {
               "type": "BLANK"
@@ -836,7 +845,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "identifier"
+                "name": "_expression"
               }
             ]
           }
@@ -1776,6 +1785,10 @@
   "conflicts": [
     [
       "_expression",
+      "column_header"
+    ],
+    [
+      "array",
       "column_header"
     ]
   ],

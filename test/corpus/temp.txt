@@ -150,3 +150,17 @@ Parse multiply
 let pos_y = 0.995 * $resolution_y
 ---
 (source_file (variable_declaration (identifier) (binary_expression (number_literal) (value_path (identifier))))) 
+==================
+Parse table
+==================
+echo [['name', 'tz', 'time']; ['andres' 'US/Eastern' ' '] ['fdncred' 'US/Central' ' '] ['gedge' 'US/Eastern' ' '] ['jturner' 'NZ' ' '] ['wycats' 'US/Pacific' ' ']]
+---
+(source_file 
+(command (identifier) 
+(table (column_header (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string (single_qouted_string_content)))
+(array (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string))
+(array (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string))
+(array (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string)) 
+(array (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string)) 
+(array (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string))))) 
+

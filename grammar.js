@@ -62,6 +62,8 @@ module.exports = grammar({
   conflicts: $ => [
     // conflict on parsing array of array vs table
     [$._expression, $.column_header],
+    // conflict on parsing table vs array of array
+    [$.array, $.column_header],
   ],
 
     word: $ => $.word,
@@ -154,7 +156,7 @@ module.exports = grammar({
             'let',
             field('name', $.identifier),
             '=',
-            field('value', $._math_expression),
+            field('value', choice($._math_expression, $.string)),
         ),
 
         command: $ => seq(
@@ -260,7 +262,7 @@ module.exports = grammar({
     ),
 
     column_header: $ => seq(
-        '[', optional($.identifier), repeat(seq(',', $.identifier)), ']'
+        '[', optional($._expression), repeat(seq(',', $._expression)), ']'
     ),
 
     array: $ => seq(
