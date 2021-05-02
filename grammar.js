@@ -210,10 +210,12 @@ module.exports = grammar({
             '`'
         ),
     ),
-    qouted_string_content: $ => token(prec(-1, /([^"\\]|\\(.|\n))+/)),
+    // qouted_string_content: $ => token(prec(-1, /([^"\\]|\\(.|\n))+/)),
+    qouted_string_content: $ => token(prec(-1, /[^"]+/)),
     // single_qouted_string_content: $ => token(prec(-1, /([^'\\]|\\(.|\n))+/)),
     single_qouted_string_content: $ => token(prec(-1, /([^']|)+/)),
-    backtick_qouted_string_content: $ => token(prec(-1, /([^`\\]|\\(.|\n))+/)),
+    // backtick_qouted_string_content: $ => token(prec(-1, /([^`\\]|\\(.|\n))+/)),
+    backtick_qouted_string_content: $ => token(prec(-1, /[^`]+/)),
 
     value_path: $ => seq(
         '$',
