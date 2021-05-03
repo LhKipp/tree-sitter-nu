@@ -727,16 +727,24 @@
       "type": "SEQ",
       "members": [
         {
-          "type": "SYMBOL",
-          "name": "number_literal"
+          "type": "FIELD",
+          "name": "from",
+          "content": {
+            "type": "SYMBOL",
+            "name": "number_literal"
+          }
         },
         {
           "type": "STRING",
           "value": ".."
         },
         {
-          "type": "SYMBOL",
-          "name": "number_literal"
+          "type": "FIELD",
+          "name": "to",
+          "content": {
+            "type": "SYMBOL",
+            "name": "number_literal"
+          }
         }
       ]
     },

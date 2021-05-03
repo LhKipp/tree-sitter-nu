@@ -237,9 +237,9 @@ module.exports = grammar({
     ),
 
     range: $ => seq(
-        $.number_literal,
+        field('from', $.number_literal),
         '..',
-        $.number_literal,
+        field('to', $.number_literal),
     ),
 
     variable_deref: $ => seq(
