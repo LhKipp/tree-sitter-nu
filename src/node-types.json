@@ -519,73 +519,6 @@
     }
   },
   {
-    "type": "column_header",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "cmd_invocation",
-          "named": true
-        },
-        {
-          "type": "command",
-          "named": true
-        },
-        {
-          "type": "file_path",
-          "named": true
-        },
-        {
-          "type": "flag_name",
-          "named": true
-        },
-        {
-          "type": "flag_shorthand_name",
-          "named": true
-        },
-        {
-          "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "range",
-          "named": true
-        },
-        {
-          "type": "record_or_block",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "table",
-          "named": true
-        },
-        {
-          "type": "value_path",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "command",
     "named": true,
     "fields": {
@@ -990,10 +923,6 @@
         {
           "type": "array",
           "named": true
-        },
-        {
-          "type": "column_header",
-          "named": true
         }
       ]
     }
@@ -1102,10 +1031,6 @@
   },
   {
     "type": "\n",
-    "named": false
-  },
-  {
-    "type": " ",
     "named": false
   },
   {

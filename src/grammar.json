@@ -808,7 +808,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "column_header"
+          "name": "array"
         },
         {
           "type": "STRING",
@@ -827,47 +827,6 @@
         }
       ]
     },
-    "column_header": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "STRING",
-          "value": "["
-        },
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_expression"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "REPEAT",
-          "content": {
-            "type": "SEQ",
-            "members": [
-              {
-                "type": "STRING",
-                "value": ","
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_expression"
-              }
-            ]
-          }
-        },
-        {
-          "type": "STRING",
-          "value": "]"
-        }
-      ]
-    },
     "array": {
       "type": "SEQ",
       "members": [
@@ -876,22 +835,14 @@
           "value": "["
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "SYMBOL",
-              "name": "_expression"
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
           "type": "REPEAT",
           "content": {
             "type": "SEQ",
             "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_expression"
+              },
               {
                 "type": "CHOICE",
                 "members": [
@@ -900,14 +851,9 @@
                     "value": ","
                   },
                   {
-                    "type": "STRING",
-                    "value": " "
+                    "type": "BLANK"
                   }
                 ]
-              },
-              {
-                "type": "SYMBOL",
-                "name": "_expression"
               }
             ]
           }
@@ -1902,14 +1848,6 @@
     ],
     [
       "command"
-    ],
-    [
-      "_expression",
-      "column_header"
-    ],
-    [
-      "array",
-      "column_header"
     ]
   ],
   "precedences": [],

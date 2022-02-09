@@ -1,0 +1,57 @@
+================================================================================
+Test table_simple
+================================================================================
+[ 
+    [ name ];
+    [ John ]
+]
+--------------------------------------------------------------------------------
+
+(source_file
+  (table
+    (array
+      (command
+        (identifier)))
+    (array
+      (command
+        (identifier)))))
+
+================================================================================
+Parse table
+================================================================================
+echo [['name', 'tz', 'time']; 
+    ['andres' 'US/Eastern' ' '] 
+    ['fdncred' 'US/Central' ' '] 
+    ['gedge' 'US/Eastern' ' '] 
+    ['jturner' 'NZ' ' '] 
+    ['wycats' 'US/Pacific' ' ']]
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (identifier)
+    (table
+      (array
+        (string)
+        (string)
+        (string))
+      (array
+        (string)
+        (string)
+        (string))
+      (array
+        (string)
+        (string)
+        (string))
+      (array
+        (string)
+        (string)
+        (string))
+      (array
+        (string)
+        (string)
+        (string))
+      (array
+        (string)
+        (string)
+        (string)))))

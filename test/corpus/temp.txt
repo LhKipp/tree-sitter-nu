@@ -128,37 +128,3 @@ let pos_y = 0.995 * $resolution_y
       (value_path
         (identifier)))))
 
-================================================================================
-Parse table
-================================================================================
-echo [['name', 'tz', 'time']; ['andres' 'US/Eastern' ' '] ['fdncred' 'US/Central' ' '] ['gedge' 'US/Eastern' ' '] ['jturner' 'NZ' ' '] ['wycats' 'US/Pacific' ' ']]
---------------------------------------------------------------------------------
-
-(source_file
-  (command
-    (identifier)
-    (table
-      (column_header
-        (string)
-        (string)
-        (string))
-      (array
-        (string)
-        (string)
-        (string))
-      (array
-        (string)
-        (string)
-        (string))
-      (array
-        (string)
-        (string)
-        (string))
-      (array
-        (string)
-        (string)
-        (string))
-      (array
-        (string)
-        (string)
-        (string)))))

@@ -71,10 +71,6 @@ module.exports = grammar({
         [$._cmd_expr, $.command],
         [$._cmd_expr, $._expression],
         [$.command],
-        // conflict on parsing array of array vs table
-        [$._expression, $.column_header],
-        // conflict on parsing table vs array of array
-        [$.array, $.column_header],
     ],
 
     // word: $ => $.word,
@@ -266,15 +262,11 @@ module.exports = grammar({
         identifier: $ => /[a-zA-Z_][a-zA-Z0-9_\-]*/,
 
         table: $ => seq(
-            '[', $.column_header, ';', repeat($.array), ']'
-        ),
-
-        column_header: $ => seq(
-            '[', optional($._expression), repeat(seq(',', $._expression)), ']'
+            '[', $.array, ';', repeat($.array), ']'
         ),
 
         array: $ => seq(
-            '[', optional($._expression), repeat(seq(choice(',', ' '), $._expression)), ']'
+            '[', repeat(seq($._expression, optional(','))), ']'
         ),
 
         // In LR(1) its undecidable whether `{ ident ... }` is a record or block
