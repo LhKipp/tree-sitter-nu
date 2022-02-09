@@ -1,17 +1,17 @@
 const PREC = {
-  PAREN_DECLARATOR: -10,
-  DEFAULT: 0,
-  LOGICAL_OR: 1,
-  LOGICAL_AND: 2,
-  // INCLUSIVE_OR: 3,
-  // EXCLUSIVE_OR: 4,
-  // BITWISE_AND: 5,
-  EQUAL: 6,
-  RELATIONAL: 7,
-  SHIFT: 9,
-  ADD: 10,
-  MULTIPLY: 11,
-  UNARY: 13,
+    PAREN_DECLARATOR: -10,
+    DEFAULT: 0,
+    LOGICAL_OR: 1,
+    LOGICAL_AND: 2,
+    // INCLUSIVE_OR: 3,
+    // EXCLUSIVE_OR: 4,
+    // BITWISE_AND: 5,
+    EQUAL: 6,
+    RELATIONAL: 7,
+    SHIFT: 9,
+    ADD: 10,
+    MULTIPLY: 11,
+    UNARY: 13,
 };
 
 const OPERATOR_PREC = [
@@ -59,12 +59,12 @@ module.exports = grammar({
         /\s/,
     ],
 
-  conflicts: $ => [
-    // conflict on parsing array of array vs table
-    [$._expression, $.column_header],
-    // conflict on parsing table vs array of array
-    [$.array, $.column_header],
-  ],
+    conflicts: $ => [
+        // conflict on parsing array of array vs table
+        [$._expression, $.column_header],
+        // conflict on parsing table vs array of array
+        [$.array, $.column_header],
+    ],
 
     word: $ => $.word,
 
@@ -105,7 +105,7 @@ module.exports = grammar({
 
         alias: $ => seq(
             'alias',
-            field('alias_name', $.identifier ),
+            field('alias_name', $.identifier),
             '=',
             $._statement,
         ),
@@ -114,10 +114,10 @@ module.exports = grammar({
             '[',
             repeat(
                 seq(choice(
-                    $.parameter,
-                    $.flag,
-                    $.rest
-                ),
+                        $.parameter,
+                        $.flag,
+                        $.rest
+                    ),
                     optional(',')),
             ),
             ']',
@@ -130,7 +130,7 @@ module.exports = grammar({
         flag: $ => seq(
             $.flag_name,
             optional(
-                seq('(', $.flag_shorthand_name ,')')
+                seq('(', $.flag_shorthand_name, ')')
             ),
             optional(seq(':', $.type)),
         ),
@@ -167,9 +167,9 @@ module.exports = grammar({
         cmd_name: $ => token(seq(/[a-zA-Z_]+([a-zA-Z_0-9\-]+)*/, optional('?'))), // Ident with -
 
         pipeline: $ => prec.left(1, seq(
-          $._statement,
-          '|',
-          $._statement,
+            $._statement,
+            '|',
+            $._statement,
         )),
 
         _expression: $ => choice(
@@ -192,115 +192,115 @@ module.exports = grammar({
         // number_literal: $ => /(0x[\da-fA-F]+|[\d]+(\.([\d]+)?)?|0b[01]+)/,
         number_literal: $ => /[\d]+(\.([\d]+)?)?/,
 
-        word: $ => token(prec(-1,repeat1(choice(
+        word: $ => token(prec(-1, repeat1(choice(
             noneOf(...SPECIAL_CHARACTERS),
             seq('\\', noneOf('\\s'))
         )))),
 
-    string: $ => choice(
-        seq( 
-            '"',
-            token(prec(-1, /[^"]+/)),
-            '"'
+        string: $ => choice(
+            seq(
+                '"',
+                token(prec(-1, /[^"]+/)),
+                '"'
+            ),
+            seq(
+                '\'',
+                token(prec(-1, /([^']|)+/)),
+                '\''
+            ),
+            seq(
+                '`',
+                token(prec(-1, /[^`]+/)),
+                '`'
+            ),
         ),
-        seq( 
-            '\'',
-            token(prec(-1, /([^']|)+/)),
-            '\''
-        ),
-        seq( 
-            '`',
-            token(prec(-1, /[^`]+/)),
-            '`'
-        ),
-    ),
 
-    value_path: $ => seq(
-        '$',
-        $.identifier,
-        repeat(seq(token.immediate('.'), $.identifier))
-    ),
+        value_path: $ => seq(
+            '$',
+            $.identifier,
+            repeat(seq(token.immediate('.'), $.identifier))
+        ),
 
-    file_path: $ => choice(
+        file_path: $ => choice(
             // '-', //previous pwd (conflicts with operator)
             /\s[^\S\r\n]\.\.|\s\.[^\S\r\n]/, //Expect ws before .|.. and after (but exclude newline)
             /(([\w\.]+\/)*)([\w\.]+)\.\w+/, //filepath must end with <.file_ending> for now
         ),
 
-    _flag_arg: $ => choice(
-        $.flag_name,
-        $.flag_shorthand_name,
-    ),
+        _flag_arg: $ => choice(
+            $.flag_name,
+            $.flag_shorthand_name,
+        ),
 
-    range: $ => seq(
-        field('from', $.number_literal),
-        '..',
-        field('to', $.number_literal),
-    ),
+        range: $ => seq(
+            field('from', $.number_literal),
+            '..',
+            field('to', $.number_literal),
+        ),
 
-    command_substitution: $ => seq(
-        '$(', $._statements, ')',
-    ),
+        command_substitution: $ => seq(
+            '$(', $._statements, ')',
+        ),
 
-    math_mode: $ => seq(
-        '=', $._math_expression,
-    ),
+        math_mode: $ => seq(
+            '=', $._math_expression,
+        ),
 
-    identifier: $ => /[a-zA-Z_]+(-?[a-zA-Z_0-9]+)*/,
+        identifier: $ => /[a-zA-Z_]+(-?[a-zA-Z_0-9]+)*/,
 
-    table: $ => seq(
-        '[', $.column_header, ';', repeat($.array), ']'
-    ),
+        table: $ => seq(
+            '[', $.column_header, ';', repeat($.array), ']'
+        ),
 
-    column_header: $ => seq(
-        '[', optional($._expression), repeat(seq(',', $._expression)), ']'
-    ),
+        column_header: $ => seq(
+            '[', optional($._expression), repeat(seq(',', $._expression)), ']'
+        ),
 
-    array: $ => seq(
-        '[', optional($._expression), repeat(seq(choice(',', ' '), $._expression)), ']'
-    ),
+        array: $ => seq(
+            '[', optional($._expression), repeat(seq(choice(',', ' '), $._expression)), ']'
+        ),
 
-    block: $ => seq(
-        '{', optional($._statements), '}'
-    ),
+        block: $ => seq(
+            '{', optional($._statements), '}'
+        ),
 
-    comment: $ => token(prec(-10, /#.*/)),
+        comment: $ => token(prec(-10, /#.*/)),
 
-    _terminator: $ => choice(';', '\n'),
+        _terminator: $ => choice(';', '\n'),
 
-    _math_expression: $ => choice(
-        $.binary_expression,
-        $.command_substitution,
-        $.parenthesized_math_expression,
-        $.value_path,
-        $.number_literal,
-        $.table,
-        $.array,
-    ),
+        _math_expression: $ => choice(
+            $.binary_expression,
+            $.command_substitution,
+            $.parenthesized_math_expression,
+            $.value_path,
+            $.number_literal,
+            $.table,
+            $.array,
+        ),
 
-    parenthesized_math_expression: $ => seq(
-      '(',
-      $._math_expression,
-      ')'
-    ),
+        parenthesized_math_expression: $ => seq(
+            '(',
+            $._math_expression,
+            ')'
+        ),
 
-    operator: $ => choice(...OPERATOR_PREC.map(([operator, _]) => {
-        return seq(operator)
-    })),
+        operator: $ => choice(...OPERATOR_PREC.map(([operator, _]) => {
+            return seq(operator)
+        })),
 
-    binary_expression: $ => {
-        return choice(...OPERATOR_PREC.map(([operator, precedence]) => {
-            return prec.left(precedence, seq(
-                field('left', $._math_expression),
-                field('operator', operator),
-                field('right', $._math_expression)
-            ))
-        }));
-    },
-}
+        binary_expression: $ => {
+            return choice(...OPERATOR_PREC.map(([operator, precedence]) => {
+                return prec.left(precedence, seq(
+                    field('left', $._math_expression),
+                    field('operator', operator),
+                    field('right', $._math_expression)
+                ))
+            }));
+        },
+    }
 });
 
 function noneOf(...characters) {
-  const negatedString = characters.map(c => c == '\\' ? '\\\\' : c).join('')
-  return new RegExp('[^' + negatedString + ']')
+    const negatedString = characters.map(c => c == '\\' ? '\\\\' : c).join('')
+    return new RegExp('[^' + negatedString + ']')
 }
