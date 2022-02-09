@@ -62,6 +62,8 @@ module.exports = grammar({
     ],
 
     conflicts: $ => [
+        [$._cmd_expr, $.command],
+        [$._cmd_expr, $._expression],
         [$.command],
         // conflict on parsing array of array vs table
         [$._expression, $.column_header],
@@ -164,7 +166,8 @@ module.exports = grammar({
 
         command: $ => seq(
             field('cmd_name', seq($.identifier, optional('?'))),
-            repeat(prec.left(9001, field('arg', $._cmd_expr))) // ITS OVER 9000
+            repeat(prec.left(9001, field('arg', $._cmd_expr))), // ITS OVER 9000
+
             // repeat(field('arg', $._cmd_expr)) // ITS OVER 9000
         ),
 
@@ -199,7 +202,7 @@ module.exports = grammar({
             $.cmd_invocation,
             $.table,
             $.array,
-            // $.binary_expression,
+            $.binary_expression,
             $.word,
         ),
 

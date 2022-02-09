@@ -594,6 +594,10 @@
             "named": true
           },
           {
+            "type": "binary_expression",
+            "named": true
+          },
+          {
             "type": "cmd_invocation",
             "named": true
           },

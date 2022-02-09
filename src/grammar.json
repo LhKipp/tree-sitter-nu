@@ -565,6 +565,10 @@
         },
         {
           "type": "SYMBOL",
+          "name": "binary_expression"
+        },
+        {
+          "type": "SYMBOL",
           "name": "word"
         }
       ]
@@ -1820,6 +1824,14 @@
     }
   ],
   "conflicts": [
+    [
+      "_cmd_expr",
+      "command"
+    ],
+    [
+      "_cmd_expr",
+      "_expression"
+    ],
     [
       "command"
     ],

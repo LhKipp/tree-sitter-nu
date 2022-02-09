@@ -103,62 +103,6 @@ alias fmt_error = ansi -e "31;1m"
       (string))))
 
 ================================================================================
-Parse if
-================================================================================
-if 1 > 2 { 
-    echo true 
-} { 
-    echo false 
-}
---------------------------------------------------------------------------------
-
-(source_file
-  (command
-    (identifier)
-    (number_literal)
-    (operator)
-    (number_literal)
-    (record_or_block
-      (command
-        (identifier)
-        (identifier)))
-    (record_or_block
-      (command
-        (identifier)
-        (identifier)))))
-
-================================================================================
-Parse if 2
-================================================================================
-if $incorrect_count > 0 {
-  echo `The following directories are named incorrectly: {{$(char newline)}}`
-	ls-incorrect-dirs
-	exit 1
-} {
-	exit 0
-}
---------------------------------------------------------------------------------
-
-(source_file
-  (command
-    (identifier)
-    (value_path
-      (identifier))
-    (operator)
-    (number_literal)
-    (record_or_block
-      (command
-        (identifier)
-        (string)
-        (identifier)
-        (identifier)
-        (number_literal)))
-    (record_or_block
-      (command
-        (identifier)
-        (number_literal)))))
-
-================================================================================
 Parse escaped string
 ================================================================================
 split row '\'
