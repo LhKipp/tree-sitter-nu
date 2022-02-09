@@ -222,7 +222,7 @@ module.exports = grammar({
 
     file_path: $ => choice(
             // '-', //previous pwd (conflicts with operator)
-            /[^\S\r\n]\.\.|\.[^\S\r\n]/, //Expect ws before .|.. and after (but exclude newline)
+            /\s[^\S\r\n]\.\.|\s\.[^\S\r\n]/, //Expect ws before .|.. and after (but exclude newline)
             /(([\w\.]+\/)*)([\w\.]+)\.\w+/, //filepath must end with <.file_ending> for now
         ),
 
