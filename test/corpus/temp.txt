@@ -1,126 +1,136 @@
-==================
+================================================================================
 Test temp.nu
-==================
+================================================================================
 # Convert Fahrenheit to Celcius
 def a_command [
      fahren:number # Degrees Fahrenheit
     ] {
     # (100°F − 32) × 5/9 = 37.778°C
-    let celcius = $( = $(= $fahren - 32) * 5 / 9)
+    # let celcius = $( = $(= $fahren - 32) * 5 / 9)
     build-string $fahren ' °F is ' $celcius ' °C'
 }
-
+ 
 temp k-to-c 100
 echo $(char nl)
----
-(source_file 
- (comment) 
- (function_definition 
-  (identifier) 
-  (signature 
-   (parameter 
-    (identifier) 
-    (type)) 
-   (comment)) 
-  (block 
-   (comment) 
-   (variable_declaration 
-    (identifier) 
+--------------------------------------------------------------------------------
+
+(source_file
+  (comment)
+  (function_definition
+    (identifier)
+    (signature
+      (parameter
+        (identifier)
+        (type))
+      (comment))
+    (block
+      (comment)
+      (comment)
+      (command
+        (cmd_name)
+        (value_path
+          (identifier))
+        (string)
+        (value_path
+          (identifier))
+        (string))))
+  (command
+    (cmd_name)
+    (identifier)
+    (number_literal))
+  (command
+    (cmd_name)
     (command_substitution
-     (math_mode 
-      (binary_expression 
-       (binary_expression 
-        (command_substitution
-         (math_mode 
-          (binary_expression 
-           (value_path 
-            (identifier))
-           (number_literal))))
-        (number_literal))
-       (number_literal)))))
-   (command 
-    (identifier) 
-    (value_path 
-     (identifier)) 
-    (string 
-     (single_qouted_string_content)) 
-    (value_path 
-     (identifier)) 
-    (string 
-     (single_qouted_string_content))))) 
-(command 
- (identifier) 
- (identifier) 
- (number_literal)) 
-(command 
- (identifier) 
- (command_substitution 
-  (command 
-   (identifier) 
-   (identifier))))) 
-==================
+      (command
+        (cmd_name)
+        (identifier)))))
+
+================================================================================
 Parse command_substitution
-==================
+================================================================================
 echo $(char nl)
----
-    (source_file 
-     (command 
-      (identifier) 
-      (command_substitution 
-       (command 
-        (identifier) 
-        (identifier))))) 
-==================
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (cmd_name)
+    (command_substitution
+      (command
+        (cmd_name)
+        (identifier)))))
+
+================================================================================
 Parse shorthand flag
-==================
+================================================================================
 ansi -e $ansi_str
----
-(source_file 
- (command 
-  (identifier) 
-  (flag_shorthand_name)
-  (value_path
-    (identifier))))
-==================
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (cmd_name)
+    (flag_shorthand_name)
+    (value_path
+      (identifier))))
+
+================================================================================
 Parse predicate command
-==================
+================================================================================
 echo $(= $separator | empty?)
----
-(source_file 
- (command 
-  (identifier) 
-  (command_substitution 
-   (pipeline 
-    (math_mode 
-     (value_path 
-      (identifier))) 
-    (command 
-     (identifier)))))) 
-==================
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (cmd_name)
+    (command_substitution
+      (pipeline
+        (math_mode
+          (value_path
+            (identifier)))
+        (command
+          (cmd_name))))))
+
+================================================================================
 Parse alias
-==================
+================================================================================
 alias fmt_error = ansi -e "31;1m"
----
-(source_file 
- (alias 
-  (identifier) 
-    (command (identifier) (flag_shorthand_name) (string (qouted_string_content)))))
-==================
+--------------------------------------------------------------------------------
+
+(source_file
+  (alias
+    (identifier)
+    (command
+      (cmd_name)
+      (flag_shorthand_name)
+      (string))))
+
+================================================================================
 Parse if
-==================
+================================================================================
 if 1 > 2 { 
     echo true 
 } { 
     echo false 
 }
----
-    (source_file 
-     (command (identifier) (number_literal) (operator) (number_literal)
-      (block (command (identifier) (identifier)))
-      (block (command (identifier) (identifier))))) 
-==================
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (cmd_name)
+    (number_literal)
+    (operator)
+    (number_literal)
+    (block
+      (command
+        (cmd_name)
+        (identifier)))
+    (block
+      (command
+        (cmd_name)
+        (identifier)))))
+
+================================================================================
 Parse if 2
-==================
+================================================================================
 if $incorrect_count > 0 {
   echo `The following directories are named incorrectly: {{$(char newline)}}`
 	ls-incorrect-dirs
@@ -128,39 +138,84 @@ if $incorrect_count > 0 {
 } {
 	exit 0
 }
----
-(source_file 
-(command (identifier) (value_path (identifier)) (operator) (number_literal)
- (block 
-  (command (identifier) (string (backtick_qouted_string_content)))
-  (command (identifier)) (command (identifier) (number_literal))) 
- (block (command (identifier) (number_literal))))) 
-==================
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (cmd_name)
+    (value_path
+      (identifier))
+    (operator)
+    (number_literal)
+    (block
+      (command
+        (cmd_name)
+        (string)
+        (identifier)
+        (identifier)
+        (number_literal)))
+    (block
+      (command
+        (cmd_name)
+        (number_literal)))))
+
+================================================================================
 Parse escaped string
-==================
+================================================================================
 split row '\'
----
-(source_file 
-(command (identifier) (identifier) 
-(string (single_qouted_string_content))))
+--------------------------------------------------------------------------------
 
-==================
+(source_file
+  (command
+    (cmd_name)
+    (identifier)
+    (string)))
+
+================================================================================
 Parse multiply
-==================
+================================================================================
 let pos_y = 0.995 * $resolution_y
----
-(source_file (variable_declaration (identifier) (binary_expression (number_literal) (value_path (identifier))))) 
-==================
-Parse table
-==================
-echo [['name', 'tz', 'time']; ['andres' 'US/Eastern' ' '] ['fdncred' 'US/Central' ' '] ['gedge' 'US/Eastern' ' '] ['jturner' 'NZ' ' '] ['wycats' 'US/Pacific' ' ']]
----
-(source_file 
-(command (identifier) 
-(table (column_header (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string (single_qouted_string_content)))
-(array (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string))
-(array (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string))
-(array (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string)) 
-(array (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string)) 
-(array (string (single_qouted_string_content)) (string (single_qouted_string_content)) (string))))) 
+--------------------------------------------------------------------------------
 
+(source_file
+  (variable_declaration
+    (identifier)
+    (binary_expression
+      (number_literal)
+      (value_path
+        (identifier)))))
+
+================================================================================
+Parse table
+================================================================================
+echo [['name', 'tz', 'time']; ['andres' 'US/Eastern' ' '] ['fdncred' 'US/Central' ' '] ['gedge' 'US/Eastern' ' '] ['jturner' 'NZ' ' '] ['wycats' 'US/Pacific' ' ']]
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (cmd_name)
+    (table
+      (column_header
+        (string)
+        (string)
+        (string))
+      (array
+        (string)
+        (string)
+        (string))
+      (array
+        (string)
+        (string)
+        (string))
+      (array
+        (string)
+        (string)
+        (string))
+      (array
+        (string)
+        (string)
+        (string))
+      (array
+        (string)
+        (string)
+        (string)))))
