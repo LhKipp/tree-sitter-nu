@@ -489,15 +489,11 @@
         ]
       },
       "cmd_name": {
-        "multiple": true,
+        "multiple": false,
         "required": true,
         "types": [
           {
-            "type": "?",
-            "named": false
-          },
-          {
-            "type": "identifier",
+            "type": "cmd_name",
             "named": true
           }
         ]
@@ -924,25 +920,7 @@
   {
     "type": "string",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "backtick_qouted_string_content",
-          "named": true
-        },
-        {
-          "type": "qouted_string_content",
-          "named": true
-        },
-        {
-          "type": "single_qouted_string_content",
-          "named": true
-        }
-      ]
-    }
+    "fields": {}
   },
   {
     "type": "table",
@@ -1182,12 +1160,12 @@
     "named": false
   },
   {
-    "type": "backtick_qouted_string_content",
-    "named": true
-  },
-  {
     "type": "block",
     "named": false
+  },
+  {
+    "type": "cmd_name",
+    "named": true
   },
   {
     "type": "comment",
@@ -1242,16 +1220,8 @@
     "named": false
   },
   {
-    "type": "qouted_string_content",
-    "named": true
-  },
-  {
     "type": "range",
     "named": false
-  },
-  {
-    "type": "single_qouted_string_content",
-    "named": true
   },
   {
     "type": "string",
