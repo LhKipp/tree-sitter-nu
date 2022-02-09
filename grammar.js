@@ -13,6 +13,7 @@ const PREC = {
     ADD: 10,
     MULTIPLY: 11,
     UNARY: 13,
+    ASSIGN: 16,
 };
 
 const OPERATOR_PREC = [
@@ -22,6 +23,7 @@ const OPERATOR_PREC = [
     ['*', PREC.MULTIPLY],
     ['/', PREC.MULTIPLY],
     ['%', PREC.MULTIPLY],
+    ['=', PREC.ASSIGN],
     ['mod', PREC.MULTIPLY],
     ['||', PREC.LOGICAL_OR],
     ['&&', PREC.LOGICAL_AND],
@@ -46,7 +48,7 @@ const SPECIAL_CHARACTERS = [
     '\\[', '\\]',
     '(', ')',
     '\\', '\\s',
-    '$', ';', '.', '|', '=',
+    '$', ';', '.', '|',
     '#',
     '\\-',
 ];
