@@ -45,3 +45,35 @@ if $incorrect_count > 0 {
       (command
         (identifier)
         (number_literal)))))
+
+================================================================================
+Parse if2
+================================================================================
+if $incorrect_count > 0 {
+    exit 1
+    build-string one two
+} else {
+	exit 0
+}
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (identifier)
+    (binary_expression
+      (value_path
+        (identifier))
+      (number_literal))
+    (record_or_block
+      (command
+        (identifier)
+        (number_literal))
+      (command
+        (identifier)
+        (identifier)
+        (identifier)))
+    (identifier)
+    (record_or_block
+      (command
+        (identifier)
+        (number_literal)))))

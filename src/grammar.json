@@ -60,6 +60,10 @@
         {
           "type": "STRING",
           "value": "\n"
+        },
+        {
+          "type": "STRING",
+          "value": "|"
         }
       ]
     },
@@ -456,6 +460,19 @@
               }
             }
           }
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "_cmd_newline"
+            },
+            {
+              "type": "SYMBOL",
+              "name": "_terminator"
+            }
+          ]
         }
       ]
     },
@@ -1845,7 +1862,12 @@
     ]
   ],
   "precedences": [],
-  "externals": [],
+  "externals": [
+    {
+      "type": "SYMBOL",
+      "name": "_cmd_newline"
+    }
+  ],
   "inline": [],
   "supertypes": []
 }

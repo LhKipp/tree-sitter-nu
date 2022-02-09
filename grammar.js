@@ -61,6 +61,10 @@ module.exports = grammar({
         /\s/,
     ],
 
+    externals: $ => [
+        $._cmd_newline
+    ],
+
     conflicts: $ => [
         [$._cmd_expr, $.command],
         [$._cmd_expr, $._expression],
@@ -85,7 +89,7 @@ module.exports = grammar({
             optional($._terminator)
         ),
 
-        _terminator: $ => choice(';', '\n'),
+        _terminator: $ => choice(';', '\n', '|'),
 
         _statement: $ => choice(
             $.variable_declaration,
@@ -167,7 +171,8 @@ module.exports = grammar({
         command: $ => seq(
             field('cmd_name', seq($.identifier, optional('?'))),
             repeat(prec.left(9001, field('arg', $._cmd_expr))), // ITS OVER 9000
-
+            choice($._cmd_newline, $._terminator)
+            // prec(9002,$._terminator)
             // repeat(field('arg', $._cmd_expr)) // ITS OVER 9000
         ),
 
