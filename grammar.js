@@ -218,7 +218,7 @@ module.exports = grammar({
             seq('\\', noneOf('\\s'))
         )))),
 
-        string: $ => choice(
+        string: $ => seq(optional('$'),choice(
             seq(
                 '"',
                 token(prec(-1, /[^"]+/)),
@@ -234,7 +234,7 @@ module.exports = grammar({
                 token(prec(-1, /[^`]+/)),
                 '`'
             ),
-        ),
+        )),
 
         value_path: $ => seq(
             '$',
