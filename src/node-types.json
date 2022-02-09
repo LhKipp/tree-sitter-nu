@@ -590,10 +590,6 @@
             "named": true
           },
           {
-            "type": "binary_expression",
-            "named": true
-          },
-          {
             "type": "cmd_invocation",
             "named": true
           },
@@ -607,6 +603,10 @@
           },
           {
             "type": "flag_shorthand_name",
+            "named": true
+          },
+          {
+            "type": "identifier",
             "named": true
           },
           {

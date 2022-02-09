@@ -168,14 +168,10 @@ module.exports = grammar({
 
         _expression: $ => choice(
             $.command,
-            $._cmd_expr
-        ),
-
-        _cmd_expr: $ => choice(
             $.number_literal,
             $.string,
             $.value_path,
-            $.file_path,
+            $.file_path, // TODO
             $._flag_arg,
             $.range,
             $.record_or_block,
@@ -184,6 +180,24 @@ module.exports = grammar({
             $.table,
             $.array,
             $.binary_expression,
+            $.word,
+        ),
+
+
+        _cmd_expr: $ => choice(
+            $.identifier,
+            $.number_literal,
+            $.string,
+            $.value_path,
+            $.file_path, // TODO
+            $._flag_arg,
+            $.range,
+            $.record_or_block,
+            // $.operator,
+            $.cmd_invocation,
+            $.table,
+            $.array,
+            // $.binary_expression,
             $.word,
         ),
 
