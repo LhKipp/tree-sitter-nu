@@ -1,13 +1,11 @@
 ================================================================================
 Test simple cmd_invoc
 ================================================================================
-(echo hi)
+(echo 1)
 --------------------------------------------------------------------------------
 
 (source_file
-  (parenthesized_expr
+  (cmd_invocation
     (command
-      (identifier))
-    (ERROR
-      (command
-        (identifier)))))
+      (identifier)
+      (number_literal))))

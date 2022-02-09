@@ -509,7 +509,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "parenthesized_expr"
+          "name": "cmd_invocation"
         },
         {
           "type": "SYMBOL",
@@ -943,7 +943,7 @@
         }
       }
     },
-    "parenthesized_expr": {
+    "cmd_invocation": {
       "type": "SEQ",
       "members": [
         {

@@ -180,7 +180,7 @@ module.exports = grammar({
             $.range,
             $.record_or_block,
             // $.operator,
-            $.parenthesized_expr,
+            $.cmd_invocation,
             $.table,
             $.array,
             $.binary_expression,
@@ -272,7 +272,7 @@ module.exports = grammar({
 
         comment: $ => token(prec(-10, /#.*/)),
 
-        parenthesized_expr: $ => seq(
+        cmd_invocation: $ => seq(
             '(',
             $._expression,
             ')'

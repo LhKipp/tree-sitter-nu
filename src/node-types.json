@@ -31,6 +31,10 @@
           "named": true
         },
         {
+          "type": "cmd_invocation",
+          "named": true
+        },
+        {
           "type": "command",
           "named": true
         },
@@ -52,10 +56,6 @@
         },
         {
           "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized_expr",
           "named": true
         },
         {
@@ -106,6 +106,10 @@
           "named": true
         },
         {
+          "type": "cmd_invocation",
+          "named": true
+        },
+        {
           "type": "command",
           "named": true
         },
@@ -123,10 +127,6 @@
         },
         {
           "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized_expr",
           "named": true
         },
         {
@@ -173,6 +173,10 @@
             "named": true
           },
           {
+            "type": "cmd_invocation",
+            "named": true
+          },
+          {
             "type": "command",
             "named": true
           },
@@ -190,10 +194,6 @@
           },
           {
             "type": "number_literal",
-            "named": true
-          },
-          {
-            "type": "parenthesized_expr",
             "named": true
           },
           {
@@ -313,6 +313,10 @@
             "named": true
           },
           {
+            "type": "cmd_invocation",
+            "named": true
+          },
+          {
             "type": "command",
             "named": true
           },
@@ -330,10 +334,6 @@
           },
           {
             "type": "number_literal",
-            "named": true
-          },
-          {
-            "type": "parenthesized_expr",
             "named": true
           },
           {
@@ -385,6 +385,10 @@
           "named": true
         },
         {
+          "type": "cmd_invocation",
+          "named": true
+        },
+        {
           "type": "command",
           "named": true
         },
@@ -406,10 +410,6 @@
         },
         {
           "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized_expr",
           "named": true
         },
         {
@@ -444,12 +444,12 @@
     }
   },
   {
-    "type": "column_header",
+    "type": "cmd_invocation",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
-      "required": false,
+      "multiple": false,
+      "required": true,
       "types": [
         {
           "type": "array",
@@ -457,6 +457,10 @@
         },
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "cmd_invocation",
           "named": true
         },
         {
@@ -480,7 +484,70 @@
           "named": true
         },
         {
-          "type": "parenthesized_expr",
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "record_or_block",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "value_path",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "column_header",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "cmd_invocation",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "file_path",
+          "named": true
+        },
+        {
+          "type": "flag_name",
+          "named": true
+        },
+        {
+          "type": "flag_shorthand_name",
+          "named": true
+        },
+        {
+          "type": "number_literal",
           "named": true
         },
         {
@@ -527,6 +594,10 @@
             "named": true
           },
           {
+            "type": "cmd_invocation",
+            "named": true
+          },
+          {
             "type": "file_path",
             "named": true
           },
@@ -540,10 +611,6 @@
           },
           {
             "type": "number_literal",
-            "named": true
-          },
-          {
-            "type": "parenthesized_expr",
             "named": true
           },
           {
@@ -670,73 +737,6 @@
     }
   },
   {
-    "type": "parenthesized_expr",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "command",
-          "named": true
-        },
-        {
-          "type": "file_path",
-          "named": true
-        },
-        {
-          "type": "flag_name",
-          "named": true
-        },
-        {
-          "type": "flag_shorthand_name",
-          "named": true
-        },
-        {
-          "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized_expr",
-          "named": true
-        },
-        {
-          "type": "range",
-          "named": true
-        },
-        {
-          "type": "record_or_block",
-          "named": true
-        },
-        {
-          "type": "string",
-          "named": true
-        },
-        {
-          "type": "table",
-          "named": true
-        },
-        {
-          "type": "value_path",
-          "named": true
-        },
-        {
-          "type": "word",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
     "type": "range",
     "named": true,
     "fields": {
@@ -783,6 +783,10 @@
           "named": true
         },
         {
+          "type": "cmd_invocation",
+          "named": true
+        },
+        {
           "type": "command",
           "named": true
         },
@@ -808,10 +812,6 @@
         },
         {
           "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized_expr",
           "named": true
         },
         {
@@ -904,6 +904,10 @@
           "named": true
         },
         {
+          "type": "cmd_invocation",
+          "named": true
+        },
+        {
           "type": "command",
           "named": true
         },
@@ -925,10 +929,6 @@
         },
         {
           "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized_expr",
           "named": true
         },
         {
@@ -1033,6 +1033,10 @@
             "named": true
           },
           {
+            "type": "cmd_invocation",
+            "named": true
+          },
+          {
             "type": "command",
             "named": true
           },
@@ -1050,10 +1054,6 @@
           },
           {
             "type": "number_literal",
-            "named": true
-          },
-          {
-            "type": "parenthesized_expr",
             "named": true
           },
           {
