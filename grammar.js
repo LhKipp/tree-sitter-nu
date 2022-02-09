@@ -243,13 +243,13 @@ module.exports = grammar({
         value_path: $ => seq(
             '$',
             $.identifier,
-            repeat(seq(token.immediate('.'), $.identifier))
+            repeat(seq(token.immediate('.'), choice($.identifier, $.number_literal)))
         ),
 
         file_path: $ => choice(
             // '-', //previous pwd (conflicts with operator)
-            /\s[^\S\r\n]\.\.|\s\.[^\S\r\n]/, //Expect ws before .|.. and after (but exclude newline)
-            /(([\w\.]+\/)*)([\w\.]+)\.\w+/, //filepath must end with <.file_ending> for now
+            /[^\S\r\n]\.\.|\s\.[^\S\r\n]/, //Expect ws before .|.. and after (but exclude newline)
+            /(([\w\.~]+\/)*)([\w\.~]+)\.\w+/, //filepath must end with <.file_ending> for now
         ),
 
         _flag_arg: $ => choice(

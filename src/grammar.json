@@ -727,8 +727,17 @@
                 }
               },
               {
-                "type": "SYMBOL",
-                "name": "identifier"
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "SYMBOL",
+                    "name": "identifier"
+                  },
+                  {
+                    "type": "SYMBOL",
+                    "name": "number_literal"
+                  }
+                ]
               }
             ]
           }
@@ -740,11 +749,11 @@
       "members": [
         {
           "type": "PATTERN",
-          "value": "\\s[^\\S\\r\\n]\\.\\.|\\s\\.[^\\S\\r\\n]"
+          "value": "[^\\S\\r\\n]\\.\\.|\\s\\.[^\\S\\r\\n]"
         },
         {
           "type": "PATTERN",
-          "value": "(([\\w\\.]+\\/)*)([\\w\\.]+)\\.\\w+"
+          "value": "(([\\w\\.~]+\\/)*)([\\w\\.~]+)\\.\\w+"
         }
       ]
     },

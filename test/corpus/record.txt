@@ -33,3 +33,65 @@ Test simple record2
     (value_path
       (identifier)
       (identifier))))
+
+================================================================================
+Test record with dynamic field
+================================================================================
+{
+    $var : 1 # TODO this testcase doesn't work
+}
+--------------------------------------------------------------------------------
+
+(source_file
+  (record_or_block
+    (value_path
+      (identifier))
+    (ERROR
+      (number_literal))
+    (comment)))
+
+================================================================================
+Test record in def
+================================================================================
+export def from-file [base-txt: path] {
+    let base16-lines = (open $base-txt | lines | where ($it | str length) > 0)
+    {
+        base00 : $base16-lines.0 # Default Background
+    }
+}
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_definition
+    (identifier)
+    (signature
+      (parameter
+        (identifier)
+        (type)))
+    (block
+      (variable_declaration
+        (identifier)
+        (cmd_invocation
+          (command
+            (identifier)
+            (binary_expression
+              (value_path
+                (identifier))
+              (command
+                (identifier)))
+            (identifier)
+            (binary_expression
+              (cmd_invocation
+                (binary_expression
+                  (value_path
+                    (identifier))
+                  (command
+                    (identifier)
+                    (identifier))))
+              (number_literal)))))
+      (record_or_block
+        (identifier)
+        (value_path
+          (identifier)
+          (number_literal))
+        (comment)))))
