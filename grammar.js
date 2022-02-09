@@ -1,5 +1,6 @@
 const PREC = {
     PAREN_DECLARATOR: -10,
+    PIPE: -5,
     DEFAULT: 0,
     LOGICAL_OR: 1,
     LOGICAL_AND: 2,
@@ -15,6 +16,7 @@ const PREC = {
 };
 
 const OPERATOR_PREC = [
+    ['|', PREC.PIPE],
     ['+', PREC.ADD],
     ['-', PREC.ADD],
     ['*', PREC.MULTIPLY],
@@ -81,7 +83,7 @@ module.exports = grammar({
             optional($._terminator)
         ),
 
-        _terminator: $ => choice(';', '\n', '|'),
+        _terminator: $ => choice(';', '\n'),
 
         _statement: $ => choice(
             $.variable_declaration,

@@ -6,12 +6,12 @@ def a_command [
      fahren:number # Degrees Fahrenheit
     ] {
     # (100°F − 32) × 5/9 = 37.778°C
-    # let celcius = $( = $(= $fahren - 32) * 5 / 9)
+    # let celcius = ($fahren - 32) * 5 / 9
     build-string $fahren ' °F is ' $celcius ' °C'
 }
  
 temp k-to-c 100
-echo $(char nl)
+echo (char nl)
 --------------------------------------------------------------------------------
 
 (source_file
@@ -40,7 +40,7 @@ echo $(char nl)
     (number_literal))
   (command
     (identifier)
-    (command_substitution
+    (cmd_invocation
       (command
         (identifier)
         (identifier)))))
@@ -48,13 +48,13 @@ echo $(char nl)
 ================================================================================
 Parse command_substitution
 ================================================================================
-echo $(char nl)
+echo (char nl)
 --------------------------------------------------------------------------------
 
 (source_file
   (command
     (identifier)
-    (command_substitution
+    (cmd_invocation
       (command
         (identifier)
         (identifier)))))
@@ -75,18 +75,18 @@ ansi -e $ansi_str
 ================================================================================
 Parse predicate command
 ================================================================================
-echo $(= $separator | empty?)
+echo ($separator | empty?)
 --------------------------------------------------------------------------------
 
 (source_file
   (command
     (identifier)
-    (command_substitution
-      (math_mode
+    (cmd_invocation
+      (binary_expression
         (value_path
-          (identifier)))
-      (command
-        (identifier)))))
+          (identifier))
+        (command
+          (identifier))))))
 
 ================================================================================
 Parse alias
