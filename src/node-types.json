@@ -1176,6 +1176,10 @@
     "named": false
   },
   {
+    "type": "export",
+    "named": false
+  },
+  {
     "type": "flag_name",
     "named": true
   },

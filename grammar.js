@@ -96,6 +96,7 @@ module.exports = grammar({
         ),
 
         function_definition: $ => seq(
+            optional('export'),
             'def',
             field('func_name', choice($.identifier, $.string)),
             $.signature,
