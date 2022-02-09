@@ -199,26 +199,20 @@ module.exports = grammar({
     string: $ => choice(
         seq( 
             '"',
-            repeat($.qouted_string_content),
+            token(prec(-1, /[^"]+/)),
             '"'
         ),
         seq( 
             '\'',
-            repeat($.single_qouted_string_content),
+            token(prec(-1, /([^']|)+/)),
             '\''
         ),
         seq( 
             '`',
-            repeat($.backtick_qouted_string_content),
+            token(prec(-1, /[^`]+/)),
             '`'
         ),
     ),
-    // qouted_string_content: $ => token(prec(-1, /([^"\\]|\\(.|\n))+/)),
-    qouted_string_content: $ => token(prec(-1, /[^"]+/)),
-    // single_qouted_string_content: $ => token(prec(-1, /([^'\\]|\\(.|\n))+/)),
-    single_qouted_string_content: $ => token(prec(-1, /([^']|)+/)),
-    // backtick_qouted_string_content: $ => token(prec(-1, /([^`\\]|\\(.|\n))+/)),
-    backtick_qouted_string_content: $ => token(prec(-1, /[^`]+/)),
 
     value_path: $ => seq(
         '$',

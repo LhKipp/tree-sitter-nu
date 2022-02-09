@@ -1,9 +1,4 @@
 (string) @string
-(qouted_string_content) @string
-(single_qouted_string_content) @string
-(backtick_qouted_string_content) @string
-
-
 
 (command cmd_name: (cmd_name) @function)
 
