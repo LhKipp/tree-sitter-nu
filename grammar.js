@@ -242,11 +242,6 @@ module.exports = grammar({
         field('to', $.number_literal),
     ),
 
-    variable_deref: $ => seq(
-        '$',
-        $.identifier
-    ),
-
     command_substitution: $ => seq(
         '$(', $._statements, ')',
     ),
