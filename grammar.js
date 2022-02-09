@@ -44,7 +44,7 @@ const SPECIAL_CHARACTERS = [
     '\\[', '\\]',
     '(', ')',
     '\\', '\\s',
-    '$', ';', '.', '|',
+    '$', ';', '.', '|', '=',
     '#',
     '\\-',
 ];
@@ -60,13 +60,14 @@ module.exports = grammar({
     ],
 
     conflicts: $ => [
+        [$.command],
         // conflict on parsing array of array vs table
         [$._expression, $.column_header],
         // conflict on parsing table vs array of array
         [$.array, $.column_header],
     ],
 
-    word: $ => $.word,
+    // word: $ => $.word,
 
     rules: {
         source_file: $ => optional($._statements),
@@ -91,9 +92,7 @@ module.exports = grammar({
             // $.if_statement,
             // $.case_statement,
             // $.pipeline,
-            $.math_mode,
-            $._math_expression,
-            $.command,
+            $._expression,
         ),
 
         function_definition: $ => seq(
@@ -158,15 +157,21 @@ module.exports = grammar({
             'let',
             field('name', $.identifier),
             '=',
-            field('value', choice($._math_expression, $.string)),
+            field('value', $._expression),
         ),
 
         command: $ => seq(
             field('cmd_name', seq($.identifier, optional('?'))),
-            repeat(field('arg', $._expression))
+            repeat(prec.left(9001, field('arg', $._cmd_expr))) // ITS OVER 9000
+            // repeat(field('arg', $._cmd_expr)) // ITS OVER 9000
         ),
 
         _expression: $ => choice(
+            $.command,
+            $._cmd_expr
+        ),
+
+        _cmd_expr: $ => choice(
             $.number_literal,
             $.string,
             $.value_path,
@@ -174,11 +179,11 @@ module.exports = grammar({
             $._flag_arg,
             $.range,
             $.record_or_block,
-            $.operator,
-            $.command_substitution,
+            // $.operator,
+            $.parenthesized_expr,
             $.table,
             $.array,
-            $.identifier,
+            $.binary_expression,
             $.word,
         ),
 
@@ -232,14 +237,6 @@ module.exports = grammar({
             field('to', $.number_literal),
         ),
 
-        command_substitution: $ => seq(
-            '$(', $._statements, ')',
-        ),
-
-        math_mode: $ => seq(
-            '=', $._math_expression,
-        ),
-
         identifier: $ => /[a-zA-Z_][a-zA-Z0-9_\-]*/,
 
         table: $ => seq(
@@ -257,38 +254,27 @@ module.exports = grammar({
         // In LR(1) its undecidable whether `{ ident ... }` is a record or block
         // backtracking is not allowed in ts. Therefore we have a catch both rule
         record_or_block: $ => seq(
-            '{', 
-                choice(
-                    // repeat1(seq(prec(50,$.identifier), ':', $._expression)),
-                    repeat(seq($.identifier, ':', $._expression)),
-                    optional($._statements)
-                ),
+            '{',
+            choice(
+                // repeat1(seq(prec(50,$.identifier), ':', $._expression)),
+                repeat(seq($.identifier, ':', $._expression)),
+                optional($._statements)
+            ),
             '}'
         ),
         record_field: $ => seq('.'),
 
         block: $ => seq(
-            '{', 
-                optional($._statements),
+            '{',
+            optional($._statements),
             '}'
         ),
 
         comment: $ => token(prec(-10, /#.*/)),
 
-        _math_expression: $ => choice(
-            $.binary_expression,
-            $.command_substitution,
-            $.parenthesized_math_expression,
-            $.value_path,
-            $.number_literal,
-            $.table,
-            $.array,
-            $.record_or_block,
-        ),
-
-        parenthesized_math_expression: $ => seq(
+        parenthesized_expr: $ => seq(
             '(',
-            $._math_expression,
+            $._expression,
             ')'
         ),
 
@@ -299,9 +285,9 @@ module.exports = grammar({
         binary_expression: $ => {
             return choice(...OPERATOR_PREC.map(([operator, precedence]) => {
                 return prec.left(precedence, seq(
-                    field('left', $._math_expression),
+                    field('left', $._expression),
                     field('operator', operator),
-                    field('right', $._math_expression)
+                    field('right', $._expression)
                 ))
             }));
         },

@@ -35,7 +35,15 @@
           "named": true
         },
         {
-          "type": "command_substitution",
+          "type": "file_path",
+          "named": true
+        },
+        {
+          "type": "flag_name",
+          "named": true
+        },
+        {
+          "type": "flag_shorthand_name",
           "named": true
         },
         {
@@ -43,19 +51,23 @@
           "named": true
         },
         {
-          "type": "math_mode",
-          "named": true
-        },
-        {
           "type": "number_literal",
           "named": true
         },
         {
-          "type": "parenthesized_math_expression",
+          "type": "parenthesized_expr",
+          "named": true
+        },
+        {
+          "type": "range",
           "named": true
         },
         {
           "type": "record_or_block",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         },
         {
@@ -68,6 +80,10 @@
         },
         {
           "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -86,7 +102,11 @@
           "named": true
         },
         {
-          "type": "command_substitution",
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "command",
           "named": true
         },
         {
@@ -102,15 +122,11 @@
           "named": true
         },
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
           "type": "number_literal",
           "named": true
         },
         {
-          "type": "operator",
+          "type": "parenthesized_expr",
           "named": true
         },
         {
@@ -157,7 +173,19 @@
             "named": true
           },
           {
-            "type": "command_substitution",
+            "type": "command",
+            "named": true
+          },
+          {
+            "type": "file_path",
+            "named": true
+          },
+          {
+            "type": "flag_name",
+            "named": true
+          },
+          {
+            "type": "flag_shorthand_name",
             "named": true
           },
           {
@@ -165,11 +193,19 @@
             "named": true
           },
           {
-            "type": "parenthesized_math_expression",
+            "type": "parenthesized_expr",
+            "named": true
+          },
+          {
+            "type": "range",
             "named": true
           },
           {
             "type": "record_or_block",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           },
           {
@@ -178,6 +214,10 @@
           },
           {
             "type": "value_path",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -273,7 +313,19 @@
             "named": true
           },
           {
-            "type": "command_substitution",
+            "type": "command",
+            "named": true
+          },
+          {
+            "type": "file_path",
+            "named": true
+          },
+          {
+            "type": "flag_name",
+            "named": true
+          },
+          {
+            "type": "flag_shorthand_name",
             "named": true
           },
           {
@@ -281,11 +333,19 @@
             "named": true
           },
           {
-            "type": "parenthesized_math_expression",
+            "type": "parenthesized_expr",
+            "named": true
+          },
+          {
+            "type": "range",
             "named": true
           },
           {
             "type": "record_or_block",
+            "named": true
+          },
+          {
+            "type": "string",
             "named": true
           },
           {
@@ -294,6 +354,10 @@
           },
           {
             "type": "value_path",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -325,7 +389,15 @@
           "named": true
         },
         {
-          "type": "command_substitution",
+          "type": "file_path",
+          "named": true
+        },
+        {
+          "type": "flag_name",
+          "named": true
+        },
+        {
+          "type": "flag_shorthand_name",
           "named": true
         },
         {
@@ -333,19 +405,23 @@
           "named": true
         },
         {
-          "type": "math_mode",
-          "named": true
-        },
-        {
           "type": "number_literal",
           "named": true
         },
         {
-          "type": "parenthesized_math_expression",
+          "type": "parenthesized_expr",
+          "named": true
+        },
+        {
+          "type": "range",
           "named": true
         },
         {
           "type": "record_or_block",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         },
         {
@@ -358,6 +434,10 @@
         },
         {
           "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -376,7 +456,11 @@
           "named": true
         },
         {
-          "type": "command_substitution",
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "command",
           "named": true
         },
         {
@@ -392,15 +476,11 @@
           "named": true
         },
         {
-          "type": "identifier",
-          "named": true
-        },
-        {
           "type": "number_literal",
           "named": true
         },
         {
-          "type": "operator",
+          "type": "parenthesized_expr",
           "named": true
         },
         {
@@ -443,7 +523,7 @@
             "named": true
           },
           {
-            "type": "command_substitution",
+            "type": "binary_expression",
             "named": true
           },
           {
@@ -459,15 +539,11 @@
             "named": true
           },
           {
-            "type": "identifier",
-            "named": true
-          },
-          {
             "type": "number_literal",
             "named": true
           },
           {
-            "type": "operator",
+            "type": "parenthesized_expr",
             "named": true
           },
           {
@@ -510,69 +586,6 @@
           }
         ]
       }
-    }
-  },
-  {
-    "type": "command_substitution",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "alias",
-          "named": true
-        },
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "command",
-          "named": true
-        },
-        {
-          "type": "command_substitution",
-          "named": true
-        },
-        {
-          "type": "function_definition",
-          "named": true
-        },
-        {
-          "type": "math_mode",
-          "named": true
-        },
-        {
-          "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized_math_expression",
-          "named": true
-        },
-        {
-          "type": "record_or_block",
-          "named": true
-        },
-        {
-          "type": "table",
-          "named": true
-        },
-        {
-          "type": "value_path",
-          "named": true
-        },
-        {
-          "type": "variable_declaration",
-          "named": true
-        }
-      ]
     }
   },
   {
@@ -638,54 +651,6 @@
     }
   },
   {
-    "type": "math_mode",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": false,
-      "required": true,
-      "types": [
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "command_substitution",
-          "named": true
-        },
-        {
-          "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized_math_expression",
-          "named": true
-        },
-        {
-          "type": "record_or_block",
-          "named": true
-        },
-        {
-          "type": "table",
-          "named": true
-        },
-        {
-          "type": "value_path",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "operator",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "parameter",
     "named": true,
     "fields": {},
@@ -705,7 +670,7 @@
     }
   },
   {
-    "type": "parenthesized_math_expression",
+    "type": "parenthesized_expr",
     "named": true,
     "fields": {},
     "children": {
@@ -721,7 +686,19 @@
           "named": true
         },
         {
-          "type": "command_substitution",
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "file_path",
+          "named": true
+        },
+        {
+          "type": "flag_name",
+          "named": true
+        },
+        {
+          "type": "flag_shorthand_name",
           "named": true
         },
         {
@@ -729,11 +706,19 @@
           "named": true
         },
         {
-          "type": "parenthesized_math_expression",
+          "type": "parenthesized_expr",
+          "named": true
+        },
+        {
+          "type": "range",
           "named": true
         },
         {
           "type": "record_or_block",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         },
         {
@@ -742,6 +727,10 @@
         },
         {
           "type": "value_path",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -798,10 +787,6 @@
           "named": true
         },
         {
-          "type": "command_substitution",
-          "named": true
-        },
-        {
           "type": "file_path",
           "named": true
         },
@@ -822,19 +807,11 @@
           "named": true
         },
         {
-          "type": "math_mode",
-          "named": true
-        },
-        {
           "type": "number_literal",
           "named": true
         },
         {
-          "type": "operator",
-          "named": true
-        },
-        {
-          "type": "parenthesized_math_expression",
+          "type": "parenthesized_expr",
           "named": true
         },
         {
@@ -931,7 +908,15 @@
           "named": true
         },
         {
-          "type": "command_substitution",
+          "type": "file_path",
+          "named": true
+        },
+        {
+          "type": "flag_name",
+          "named": true
+        },
+        {
+          "type": "flag_shorthand_name",
           "named": true
         },
         {
@@ -939,19 +924,23 @@
           "named": true
         },
         {
-          "type": "math_mode",
-          "named": true
-        },
-        {
           "type": "number_literal",
           "named": true
         },
         {
-          "type": "parenthesized_math_expression",
+          "type": "parenthesized_expr",
+          "named": true
+        },
+        {
+          "type": "range",
           "named": true
         },
         {
           "type": "record_or_block",
+          "named": true
+        },
+        {
+          "type": "string",
           "named": true
         },
         {
@@ -964,6 +953,10 @@
         },
         {
           "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "word",
           "named": true
         }
       ]
@@ -1040,7 +1033,19 @@
             "named": true
           },
           {
-            "type": "command_substitution",
+            "type": "command",
+            "named": true
+          },
+          {
+            "type": "file_path",
+            "named": true
+          },
+          {
+            "type": "flag_name",
+            "named": true
+          },
+          {
+            "type": "flag_shorthand_name",
             "named": true
           },
           {
@@ -1048,7 +1053,11 @@
             "named": true
           },
           {
-            "type": "parenthesized_math_expression",
+            "type": "parenthesized_expr",
+            "named": true
+          },
+          {
+            "type": "range",
             "named": true
           },
           {
@@ -1065,6 +1074,10 @@
           },
           {
             "type": "value_path",
+            "named": true
+          },
+          {
+            "type": "word",
             "named": true
           }
         ]
@@ -1089,10 +1102,6 @@
   },
   {
     "type": "$",
-    "named": false
-  },
-  {
-    "type": "$(",
     "named": false
   },
   {

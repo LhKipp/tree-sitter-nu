@@ -1,16 +1,10 @@
 ================================================================================
-Test bug1
+Test simple var_decl
 ================================================================================
-build-string $fahren ' °F is ' $celcius ' °C'
+let x = 1
 --------------------------------------------------------------------------------
 
 (source_file
-  (command
+  (variable_declaration
     (identifier)
-    (value_path
-      (identifier))
-    (string)
-    (value_path
-      (identifier))
-    (string)))
-
+    (number_literal)))

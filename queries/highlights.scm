@@ -21,11 +21,6 @@
 (function_definition func_name: (identifier) @function)
 
 [
- (command_substitution)
- (math_mode)
-]@embedded
-
-[
   ; "/" Not making / an operator may lead to better highlighting?
   "$"
   "|"
