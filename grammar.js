@@ -217,7 +217,7 @@ module.exports = grammar({
     value_path: $ => seq(
         '$',
         $.identifier,
-        repeat(seq('.', $.identifier))
+        repeat(seq(token.immediate('.'), $.identifier))
     ),
 
     file_path: $ => choice(
