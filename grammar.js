@@ -160,9 +160,10 @@ module.exports = grammar({
         ),
 
         command: $ => seq(
-            field('cmd_name', seq($.identifier, optional('?'))),
+            field('cmd_name', $.cmd_name),
             repeat(field('arg', $._expression))
         ),
+        cmd_name: $ => token(seq(/[a-zA-Z_]+([a-zA-Z_0-9\-]+)*/, optional('?'))), // Ident with -
 
         pipeline: $ => prec.left(1, seq(
           $._statement,

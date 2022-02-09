@@ -5,7 +5,7 @@
 
 
 
-(command cmd_name: (identifier) @function)
+(command cmd_name: (cmd_name) @function)
 
 (identifier) @property
 
