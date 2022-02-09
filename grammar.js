@@ -161,16 +161,9 @@ module.exports = grammar({
         ),
 
         command: $ => seq(
-            field('cmd_name', $.cmd_name),
+            field('cmd_name', seq($.identifier, optional('?'))),
             repeat(field('arg', $._expression))
         ),
-        cmd_name: $ => token(seq(/[a-zA-Z_]+([a-zA-Z_0-9\-]+)*/, optional('?'))), // Ident with -
-
-        pipeline: $ => prec.left(1, seq(
-            $._statement,
-            '|',
-            $._statement,
-        )),
 
         _expression: $ => choice(
             $.number_literal,
@@ -246,7 +239,7 @@ module.exports = grammar({
             '=', $._math_expression,
         ),
 
-        identifier: $ => /[a-zA-Z_]+(-?[a-zA-Z_0-9]+)*/,
+        identifier: $ => /[a-zA-Z_][a-zA-Z0-9_\-]*/,
 
         table: $ => seq(
             '[', $.column_header, ';', repeat($.array), ']'

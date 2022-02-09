@@ -1,6 +1,6 @@
 (string) @string
 
-(command cmd_name: (cmd_name) @function)
+(command cmd_name: (identifier) @function)
 
 (identifier) @property
 
