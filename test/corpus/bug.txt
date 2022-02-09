@@ -6,7 +6,7 @@ build-string $fahren ' °F is ' $celcius ' °C'
 
 (source_file
   (command
-    (cmd_name)
+    (identifier)
     (value_path
       (identifier))
     (string)
@@ -14,18 +14,3 @@ build-string $fahren ' °F is ' $celcius ' °C'
       (identifier))
     (string)))
 
-================================================================================
-Test bug2
-================================================================================
-build-string $fahren ' °F is ' $celcius ' °C'
---------------------------------------------------------------------------------
-
-(source_file
-  (command
-    (cmd_name)
-    (value_path
-      (identifier))
-    (string)
-    (value_path
-      (identifier))
-    (string)))

@@ -6,7 +6,7 @@ build-string
 
 (source_file
   (command
-    (cmd_name)))
+    (identifier)))
 
 ================================================================================
 Test cmd with hyphen and arg
@@ -16,6 +16,22 @@ build-string $fahren
 
 (source_file
   (command
-    (cmd_name)
+    (identifier)
     (value_path
       (identifier))))
+
+================================================================================
+Test cmd with args
+================================================================================
+build-string $fahren ' °F is ' $celcius ' °C'
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (identifier)
+    (value_path
+      (identifier))
+    (string)
+    (value_path
+      (identifier))
+    (string)))

@@ -27,7 +27,7 @@ echo $(char nl)
       (comment)
       (comment)
       (command
-        (cmd_name)
+        (identifier)
         (value_path
           (identifier))
         (string)
@@ -35,14 +35,14 @@ echo $(char nl)
           (identifier))
         (string))))
   (command
-    (cmd_name)
+    (identifier)
     (identifier)
     (number_literal))
   (command
-    (cmd_name)
+    (identifier)
     (command_substitution
       (command
-        (cmd_name)
+        (identifier)
         (identifier)))))
 
 ================================================================================
@@ -53,10 +53,10 @@ echo $(char nl)
 
 (source_file
   (command
-    (cmd_name)
+    (identifier)
     (command_substitution
       (command
-        (cmd_name)
+        (identifier)
         (identifier)))))
 
 ================================================================================
@@ -67,7 +67,7 @@ ansi -e $ansi_str
 
 (source_file
   (command
-    (cmd_name)
+    (identifier)
     (flag_shorthand_name)
     (value_path
       (identifier))))
@@ -80,14 +80,13 @@ echo $(= $separator | empty?)
 
 (source_file
   (command
-    (cmd_name)
+    (identifier)
     (command_substitution
-      (pipeline
-        (math_mode
-          (value_path
-            (identifier)))
-        (command
-          (cmd_name))))))
+      (math_mode
+        (value_path
+          (identifier)))
+      (command
+        (identifier)))))
 
 ================================================================================
 Parse alias
@@ -99,7 +98,7 @@ alias fmt_error = ansi -e "31;1m"
   (alias
     (identifier)
     (command
-      (cmd_name)
+      (identifier)
       (flag_shorthand_name)
       (string))))
 
@@ -115,17 +114,17 @@ if 1 > 2 {
 
 (source_file
   (command
-    (cmd_name)
+    (identifier)
     (number_literal)
     (operator)
     (number_literal)
-    (block
+    (record_or_block
       (command
-        (cmd_name)
+        (identifier)
         (identifier)))
-    (block
+    (record_or_block
       (command
-        (cmd_name)
+        (identifier)
         (identifier)))))
 
 ================================================================================
@@ -142,21 +141,21 @@ if $incorrect_count > 0 {
 
 (source_file
   (command
-    (cmd_name)
+    (identifier)
     (value_path
       (identifier))
     (operator)
     (number_literal)
-    (block
+    (record_or_block
       (command
-        (cmd_name)
+        (identifier)
         (string)
         (identifier)
         (identifier)
         (number_literal)))
-    (block
+    (record_or_block
       (command
-        (cmd_name)
+        (identifier)
         (number_literal)))))
 
 ================================================================================
@@ -167,7 +166,7 @@ split row '\'
 
 (source_file
   (command
-    (cmd_name)
+    (identifier)
     (identifier)
     (string)))
 
@@ -193,7 +192,7 @@ echo [['name', 'tz', 'time']; ['andres' 'US/Eastern' ' '] ['fdncred' 'US/Central
 
 (source_file
   (command
-    (cmd_name)
+    (identifier)
     (table
       (column_header
         (string)

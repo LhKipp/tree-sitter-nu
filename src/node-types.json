@@ -55,7 +55,7 @@
           "named": true
         },
         {
-          "type": "pipeline",
+          "type": "record_or_block",
           "named": true
         },
         {
@@ -83,10 +83,6 @@
       "types": [
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "block",
           "named": true
         },
         {
@@ -119,6 +115,10 @@
         },
         {
           "type": "range",
+          "named": true
+        },
+        {
+          "type": "record_or_block",
           "named": true
         },
         {
@@ -166,6 +166,10 @@
           },
           {
             "type": "parenthesized_math_expression",
+            "named": true
+          },
+          {
+            "type": "record_or_block",
             "named": true
           },
           {
@@ -281,6 +285,10 @@
             "named": true
           },
           {
+            "type": "record_or_block",
+            "named": true
+          },
+          {
             "type": "table",
             "named": true
           },
@@ -337,7 +345,7 @@
           "named": true
         },
         {
-          "type": "pipeline",
+          "type": "record_or_block",
           "named": true
         },
         {
@@ -365,10 +373,6 @@
       "types": [
         {
           "type": "array",
-          "named": true
-        },
-        {
-          "type": "block",
           "named": true
         },
         {
@@ -404,6 +408,10 @@
           "named": true
         },
         {
+          "type": "record_or_block",
+          "named": true
+        },
+        {
           "type": "string",
           "named": true
         },
@@ -432,10 +440,6 @@
         "types": [
           {
             "type": "array",
-            "named": true
-          },
-          {
-            "type": "block",
             "named": true
           },
           {
@@ -471,6 +475,10 @@
             "named": true
           },
           {
+            "type": "record_or_block",
+            "named": true
+          },
+          {
             "type": "string",
             "named": true
           },
@@ -489,11 +497,15 @@
         ]
       },
       "cmd_name": {
-        "multiple": false,
+        "multiple": true,
         "required": true,
         "types": [
           {
-            "type": "cmd_name",
+            "type": "?",
+            "named": false
+          },
+          {
+            "type": "identifier",
             "named": true
           }
         ]
@@ -545,7 +557,7 @@
           "named": true
         },
         {
-          "type": "pipeline",
+          "type": "record_or_block",
           "named": true
         },
         {
@@ -654,6 +666,10 @@
           "named": true
         },
         {
+          "type": "record_or_block",
+          "named": true
+        },
+        {
           "type": "table",
           "named": true
         },
@@ -717,62 +733,7 @@
           "named": true
         },
         {
-          "type": "table",
-          "named": true
-        },
-        {
-          "type": "value_path",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "pipeline",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "alias",
-          "named": true
-        },
-        {
-          "type": "array",
-          "named": true
-        },
-        {
-          "type": "binary_expression",
-          "named": true
-        },
-        {
-          "type": "command",
-          "named": true
-        },
-        {
-          "type": "command_substitution",
-          "named": true
-        },
-        {
-          "type": "function_definition",
-          "named": true
-        },
-        {
-          "type": "math_mode",
-          "named": true
-        },
-        {
-          "type": "number_literal",
-          "named": true
-        },
-        {
-          "type": "parenthesized_math_expression",
-          "named": true
-        },
-        {
-          "type": "pipeline",
+          "type": "record_or_block",
           "named": true
         },
         {
@@ -781,10 +742,6 @@
         },
         {
           "type": "value_path",
-          "named": true
-        },
-        {
-          "type": "variable_declaration",
           "named": true
         }
       ]
@@ -814,6 +771,101 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "record_or_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "command_substitution",
+          "named": true
+        },
+        {
+          "type": "file_path",
+          "named": true
+        },
+        {
+          "type": "flag_name",
+          "named": true
+        },
+        {
+          "type": "flag_shorthand_name",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "math_mode",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "operator",
+          "named": true
+        },
+        {
+          "type": "parenthesized_math_expression",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "record_or_block",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "value_path",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -899,7 +951,7 @@
           "named": true
         },
         {
-          "type": "pipeline",
+          "type": "record_or_block",
           "named": true
         },
         {
@@ -997,6 +1049,10 @@
           },
           {
             "type": "parenthesized_math_expression",
+            "named": true
+          },
+          {
+            "type": "record_or_block",
             "named": true
           },
           {
@@ -1162,10 +1218,6 @@
   {
     "type": "block",
     "named": false
-  },
-  {
-    "type": "cmd_name",
-    "named": true
   },
   {
     "type": "comment",

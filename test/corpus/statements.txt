@@ -29,7 +29,7 @@ cmd $env.WALLPAPER_IMG
 
 (source_file
   (command
-    (cmd_name)
+    (identifier)
     (value_path
       (identifier)
       (identifier))))
