@@ -1,5 +1,5 @@
 ================================================================================
-Test simple record
+Test simple record1
 ================================================================================
 {
     a : 1
@@ -46,8 +46,7 @@ Test record with dynamic field
   (record_or_block
     (value_path
       (identifier))
-    (ERROR
-      (number_literal))
+    (number_literal)
     (comment)))
 
 ================================================================================

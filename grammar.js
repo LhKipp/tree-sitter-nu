@@ -70,7 +70,7 @@ module.exports = grammar({
     conflicts: $ => [
         [$._cmd_expr, $.command],
         [$._cmd_expr, $._expression],
-        [$.command],
+        [$.command], // TODO is this needed?
     ],
 
     // word: $ => $.word,
@@ -99,6 +99,9 @@ module.exports = grammar({
             // $.case_statement,
             // $.pipeline,
             $._expression,
+            // A record entry is not a 'real' statement, but treating it as such
+            // makes life much easier
+            seq(choice($.identifier, $.string, $.value_path), ':', $._expression)
         ),
 
         function_definition: $ => seq(
@@ -168,7 +171,7 @@ module.exports = grammar({
 
         command: $ => seq(
             field('cmd_name', seq($.identifier, optional('?'))),
-            repeat(prec.left(9001, field('arg', $._cmd_expr))), // ITS OVER 9000
+            repeat(field('arg', $._cmd_expr)), // ITS OVER 9000
             choice($._cmd_newline, $._terminator)
             // prec(9002,$._terminator)
             // repeat(field('arg', $._cmd_expr)) // ITS OVER 9000
@@ -273,14 +276,9 @@ module.exports = grammar({
         // backtracking is not allowed in ts. Therefore we have a catch both rule
         record_or_block: $ => seq(
             '{',
-            choice(
-                // repeat1(seq(prec(50,$.identifier), ':', $._expression)),
-                repeat(seq($.identifier, ':', $._expression)),
-                optional($._statements)
-            ),
+                optional($._statements),
             '}'
         ),
-        record_field: $ => seq('.'),
 
         block: $ => seq(
             '{',

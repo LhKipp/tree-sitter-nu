@@ -15,7 +15,7 @@
       }
     },
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
@@ -52,6 +52,10 @@
         },
         {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         },
         {
@@ -414,6 +418,10 @@
         },
         {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         },
         {
@@ -870,6 +878,10 @@
         },
         {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "identifier",
           "named": true
         },
         {
