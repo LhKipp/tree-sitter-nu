@@ -234,17 +234,17 @@ module.exports = grammar({
         string: $ => seq(optional('$'), choice(
             seq(
                 '"',
-                token(prec(-1, /[^"]+/)),
+                token(prec(-1, /[^"]*/)),
                 '"'
             ),
             seq(
                 '\'',
-                token(prec(-1, /([^']|)+/)),
+                token(prec(-1, /([^']|)*/)),
                 '\''
             ),
             seq(
                 '`',
-                token(prec(-1, /[^`]+/)),
+                token(prec(-1, /[^`]*/)),
                 '`'
             ),
         )),
@@ -333,3 +333,26 @@ function noneOf(...characters) {
     const negatedString = characters.map(c => c == '\\' ? '\\\\' : c).join('')
     return new RegExp('[^' + negatedString + ']')
 }
+
+// (ERROR [0, 0] - [504, 1]
+//           (ERROR [130, 27] - [148, 49]
+//             (ERROR [150, 27] - [151, 33]
+//             (ERROR [325, 66] - [325, 68])
+//           (ERROR [332, 8] - [332, 11])
+//           (ERROR [333, 4] - [335, 21]
+//       (ERROR [340, 8] - [340, 11])
+//       (ERROR [341, 4] - [341, 5])))
+//             (ERROR [343, 42] - [343, 44])
+//           (ERROR [359, 8] - [359, 11])
+//           (ERROR [360, 4] - [360, 5])))
+//                 (ERROR [363, 48] - [363, 50])
+//               (ERROR [368, 8] - [368, 11])
+//               (ERROR [369, 4] - [371, 41]
+//           (ERROR [374, 8] - [374, 11])
+//           (ERROR [375, 4] - [375, 5])))
+//       (ERROR [386, 0] - [397, 42]
+//             (ERROR [426, 42] - [426, 44])
+//           (ERROR [446, 8] - [446, 11])
+//           (ERROR [447, 4] - [447, 5])))
+//       (ERROR [467, 7] - [484, 1]
+// ignore/oh-my.nu	5 ms	(ERROR [0, 0] - [504, 1])

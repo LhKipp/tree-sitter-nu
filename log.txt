@@ -1,0 +1,1873 @@
+(source_file [0, 0] - [504, 1]
+  (comment [0, 0] - [0, 62])
+  (comment [0, 62] - [1, 49])
+  (comment [1, 49] - [3, 16])
+  (comment [3, 16] - [4, 58])
+  (comment [4, 58] - [5, 57])
+  (comment [5, 57] - [6, 40])
+  (comment [6, 40] - [7, 1])
+  (comment [7, 1] - [8, 71])
+  (comment [8, 71] - [10, 15])
+  (comment [10, 15] - [11, 46])
+  (comment [11, 46] - [12, 45])
+  (comment [12, 45] - [13, 48])
+  (comment [13, 48] - [14, 58])
+  (comment [14, 58] - [17, 22])
+  (function_definition [17, 22] - [31, 1]
+    func_name: (identifier [18, 4] - [18, 15])
+    (signature [18, 16] - [18, 20]
+      (parameter [18, 17] - [18, 19]
+        (identifier [18, 17] - [18, 19])))
+    (block [18, 21] - [31, 1]
+      (variable_declaration [18, 22] - [19, 67]
+        name: (identifier [19, 8] - [19, 23])
+        value: (cmd_invocation [19, 25] - [19, 67]
+          (value_path [19, 27] - [19, 34]
+            (identifier [19, 28] - [19, 30])
+            (identifier [19, 31] - [19, 34]))
+          (command [19, 36] - [19, 66]
+            cmd_name: (identifier [19, 36] - [19, 40])
+            arg: (identifier [19, 40] - [19, 52])
+            arg: (value_path [19, 52] - [19, 66]
+              (identifier [19, 54] - [19, 56])
+              (identifier [19, 57] - [19, 66])))))
+      (command [20, 0] - [30, 5]
+        cmd_name: (identifier [20, 0] - [20, 6])
+        arg: (cmd_invocation [20, 6] - [20, 34]
+          (binary_expression [20, 8] - [20, 33]
+            left: (value_path [20, 8] - [20, 24]
+              (identifier [20, 9] - [20, 24]))
+            right: (value_path [20, 27] - [20, 33]
+              (identifier [20, 29] - [20, 33]))))
+        arg: (record_or_block [20, 34] - [28, 5]
+          (command [20, 36] - [27, 9]
+            cmd_name: (identifier [20, 36] - [21, 10])
+            arg: (cmd_invocation [21, 10] - [21, 29]
+              (binary_expression [21, 12] - [21, 28]
+                left: (value_path [21, 12] - [21, 15]
+                  (identifier [21, 13] - [21, 15]))
+                right: (string [21, 18] - [21, 28])))
+            arg: (record_or_block [21, 29] - [25, 9]
+              (variable_declaration [21, 31] - [22, 69]
+                name: (identifier [22, 16] - [22, 20])
+                value: (cmd_invocation [22, 22] - [22, 69]
+                  (value_path [22, 24] - [22, 37]
+                    (identifier [22, 25] - [22, 27])
+                    (identifier [22, 28] - [22, 37]))
+                  (command [22, 39] - [22, 68]
+                    cmd_name: (identifier [22, 39] - [22, 43])
+                    arg: (identifier [22, 43] - [22, 56])
+                    arg: (flag_shorthand_name [22, 56] - [22, 59])
+                    arg: (string [22, 59] - [22, 64])
+                    arg: (string [22, 64] - [22, 68]))))
+              (variable_declaration [23, 0] - [23, 62]
+                name: (identifier [23, 16] - [23, 19])
+                value: (cmd_invocation [23, 21] - [23, 62]
+                  (value_path [23, 23] - [23, 30]
+                    (identifier [23, 24] - [23, 26])
+                    (identifier [23, 27] - [23, 30]))
+                  (command [23, 32] - [23, 61]
+                    cmd_name: (identifier [23, 32] - [23, 36])
+                    arg: (identifier [23, 36] - [23, 49])
+                    arg: (flag_shorthand_name [23, 49] - [23, 52])
+                    arg: (string [23, 52] - [23, 57])
+                    arg: (string [23, 57] - [23, 61]))))
+              (value_path [24, 0] - [24, 16]
+                (identifier [24, 13] - [24, 16]))
+              (command [24, 18] - [24, 45]
+                cmd_name: (identifier [24, 18] - [24, 22])
+                arg: (identifier [24, 22] - [24, 35])
+                arg: (value_path [24, 35] - [24, 41]
+                  (identifier [24, 37] - [24, 41]))
+                arg: (string [24, 41] - [24, 45])))
+            arg: (identifier [25, 9] - [25, 14])
+            arg: (record_or_block [25, 14] - [27, 9]
+              (value_path [25, 16] - [26, 19]
+                (identifier [26, 13] - [26, 15])
+                (identifier [26, 16] - [26, 19]))
+              (command [26, 21] - [26, 56]
+                cmd_name: (identifier [26, 21] - [26, 25])
+                arg: (identifier [26, 25] - [26, 38])
+                arg: (value_path [26, 38] - [26, 52]
+                  (identifier [26, 40] - [26, 42])
+                  (identifier [26, 43] - [26, 52]))
+                arg: (string [26, 52] - [26, 56])))))
+        arg: (identifier [28, 5] - [28, 10])
+        arg: (record_or_block [28, 10] - [30, 5]
+          (value_path [28, 12] - [29, 15]
+            (identifier [29, 9] - [29, 11])
+            (identifier [29, 12] - [29, 15]))
+          (command [29, 17] - [29, 46]
+            cmd_name: (identifier [29, 17] - [29, 21])
+            arg: (identifier [29, 21] - [29, 34])
+            arg: (flag_shorthand_name [29, 34] - [29, 37])
+            arg: (string [29, 37] - [29, 42])
+            arg: (string [29, 42] - [29, 46]))))))
+  (function_definition [33, 0] - [99, 1]
+    func_name: (identifier [33, 4] - [33, 25])
+    (signature [33, 26] - [33, 44]
+      (parameter [33, 27] - [33, 32]
+        (identifier [33, 27] - [33, 32]))
+      (parameter [33, 33] - [33, 43]
+        (identifier [33, 33] - [33, 43])))
+    (block [33, 45] - [99, 1]
+      (comment [33, 46] - [34, 66])
+      (comment [34, 66] - [35, 71])
+      (variable_declaration [35, 71] - [36, 49]
+        name: (identifier [36, 8] - [36, 9])
+        value: (cmd_invocation [36, 11] - [36, 49]
+          (command [36, 13] - [36, 48]
+            cmd_name: (identifier [36, 13] - [36, 17])
+            arg: (record_or_block [36, 17] - [36, 48]
+              (record_entry [36, 19] - [36, 33]
+                (identifier [36, 19] - [36, 22])
+                (string [36, 23] - [36, 33]))
+              (record_entry [36, 34] - [36, 47]
+                (identifier [36, 34] - [36, 36])
+                (string [36, 37] - [36, 47]))))))
+      (comment [36, 50] - [36, 61])
+      (variable_declaration [37, 0] - [37, 49]
+        name: (identifier [37, 8] - [37, 9])
+        value: (cmd_invocation [37, 11] - [37, 49]
+          (command [37, 13] - [37, 48]
+            cmd_name: (identifier [37, 13] - [37, 17])
+            arg: (record_or_block [37, 17] - [37, 48]
+              (record_entry [37, 19] - [37, 33]
+                (identifier [37, 19] - [37, 22])
+                (string [37, 23] - [37, 33]))
+              (record_entry [37, 34] - [37, 47]
+                (identifier [37, 34] - [37, 36])
+                (string [37, 37] - [37, 47]))))))
+      (comment [37, 50] - [37, 56])
+      (variable_declaration [38, 0] - [38, 58]
+        name: (identifier [38, 8] - [38, 10])
+        value: (cmd_invocation [38, 12] - [38, 58]
+          (command [38, 14] - [38, 57]
+            cmd_name: (identifier [38, 14] - [38, 18])
+            arg: (record_or_block [38, 18] - [38, 57]
+              (record_entry [38, 20] - [38, 34]
+                (identifier [38, 20] - [38, 23])
+                (string [38, 24] - [38, 34]))
+              (record_entry [38, 35] - [38, 48]
+                (identifier [38, 35] - [38, 37])
+                (string [38, 38] - [38, 48]))
+              (record_entry [38, 49] - [38, 56]
+                (identifier [38, 49] - [38, 53])
+                (command [38, 54] - [38, 56]
+                  cmd_name: (identifier [38, 54] - [38, 56])))))))
+      (comment [38, 59] - [38, 70])
+      (variable_declaration [39, 0] - [39, 24]
+        name: (identifier [39, 8] - [39, 9])
+        value: (cmd_invocation [39, 11] - [39, 24]
+          (command [39, 13] - [39, 23]
+            cmd_name: (identifier [39, 13] - [39, 17])
+            arg: (identifier [39, 17] - [39, 23]))))
+      (command [41, 0] - [98, 5]
+        cmd_name: (identifier [41, 0] - [41, 6])
+        arg: (cmd_invocation [41, 6] - [41, 50]
+          (binary_expression [41, 8] - [41, 49]
+            left: (cmd_invocation [41, 8] - [41, 29]
+              (value_path [41, 9] - [41, 15]
+                (identifier [41, 10] - [41, 15]))
+              (command [41, 17] - [41, 28]
+                cmd_name: (identifier [41, 17] - [41, 21])
+                arg: (identifier [41, 21] - [41, 28])))
+            right: (cmd_invocation [41, 31] - [41, 49]
+              (binary_expression [41, 33] - [41, 48]
+                left: (value_path [41, 33] - [41, 44]
+                  (identifier [41, 34] - [41, 44]))
+                right: (number_literal [41, 46] - [41, 48])))))
+        arg: (record_or_block [41, 50] - [61, 5]
+          (comment [41, 52] - [42, 49])
+          (comment [42, 49] - [43, 78])
+          (variable_declaration [43, 78] - [44, 45]
+            name: (identifier [44, 12] - [44, 18])
+            value: (cmd_invocation [44, 20] - [44, 45]
+              (value_path [44, 22] - [44, 28]
+                (identifier [44, 23] - [44, 28]))
+              (command [44, 30] - [44, 44]
+                cmd_name: (identifier [44, 30] - [44, 36])
+                arg: (identifier [44, 36] - [44, 40])
+                arg: (string [44, 40] - [44, 44]))))
+          (variable_declaration [46, 0] - [46, 43]
+            name: (identifier [46, 12] - [46, 22])
+            value: (cmd_invocation [46, 24] - [46, 43]
+              (value_path [46, 26] - [46, 33]
+                (identifier [46, 27] - [46, 33]))
+              (command [46, 35] - [46, 42]
+                cmd_name: (identifier [46, 35] - [46, 42]))))
+          (variable_declaration [47, 0] - [47, 65]
+            name: (identifier [47, 12] - [47, 22])
+            value: (cmd_invocation [47, 24] - [47, 65]
+              (command [47, 26] - [47, 64]
+                cmd_name: (identifier [47, 26] - [47, 28])
+                arg: (cmd_invocation [47, 28] - [47, 47]
+                  (binary_expression [47, 30] - [47, 46]
+                    left: (value_path [47, 30] - [47, 41]
+                      (identifier [47, 31] - [47, 41]))
+                    right: (number_literal [47, 44] - [47, 46])))
+                arg: (record_or_block [47, 47] - [47, 53]
+                  (number_literal [47, 49] - [47, 51]))
+                arg: (identifier [47, 53] - [47, 58])
+                arg: (record_or_block [47, 58] - [47, 64]
+                  (number_literal [47, 60] - [47, 62])))))
+          (comment [48, 0] - [48, 44])
+          (variable_declaration [48, 44] - [51, 10]
+            name: (identifier [49, 12] - [49, 18])
+            value: (cmd_invocation [49, 20] - [51, 10]
+              (command [49, 22] - [51, 9]
+                cmd_name: (identifier [49, 22] - [49, 25])
+                arg: (identifier [49, 25] - [49, 27])
+                arg: (identifier [49, 27] - [49, 30])
+                arg: (file_path [49, 30] - [49, 34])
+                arg: (cmd_invocation [49, 34] - [49, 61]
+                  (binary_expression [49, 35] - [49, 60]
+                    left: (value_path [49, 35] - [49, 46]
+                      (identifier [49, 36] - [49, 46]))
+                    right: (value_path [49, 48] - [49, 60]
+                      (identifier [49, 50] - [49, 60]))))
+                arg: (record_or_block [49, 61] - [51, 9]
+                  (string [49, 63] - [50, 67])))))
+          (comment [53, 0] - [53, 32])
+          (variable_declaration [53, 32] - [54, 49]
+            name: (identifier [54, 12] - [54, 18])
+            value: (cmd_invocation [54, 20] - [54, 49]
+              (value_path [54, 22] - [54, 29]
+                (identifier [54, 23] - [54, 29]))
+              (command [54, 31] - [54, 48]
+                cmd_name: (identifier [54, 31] - [54, 39])
+                arg: (string [54, 39] - [54, 48]))))
+          (comment [56, 0] - [56, 42])
+          (variable_declaration [56, 42] - [57, 76]
+            name: (identifier [57, 12] - [57, 18])
+            value: (cmd_invocation [57, 20] - [57, 76]
+              (value_path [57, 22] - [57, 29]
+                (identifier [57, 23] - [57, 29]))
+              (command [57, 31] - [57, 75]
+                cmd_name: (identifier [57, 31] - [57, 38])
+                arg: (string [57, 38] - [57, 75]))))
+          (comment [59, 0] - [59, 17])
+          (value_path [59, 17] - [60, 15]
+            (identifier [60, 9] - [60, 15]))
+          (command [60, 17] - [60, 38]
+            cmd_name: (identifier [60, 17] - [60, 21])
+            arg: (identifier [60, 21] - [60, 29])
+            arg: (string [60, 29] - [60, 38])))
+        arg: (identifier [61, 5] - [61, 10])
+        arg: (record_or_block [61, 10] - [98, 5]
+          (comment [61, 12] - [62, 29])
+          (comment [62, 29] - [64, 85])
+          (comment [64, 85] - [65, 47])
+          (comment [65, 47] - [66, 45])
+          (comment [66, 45] - [67, 55])
+          (comment [67, 55] - [68, 43])
+          (comment [68, 43] - [69, 66])
+          (comment [69, 66] - [70, 15])
+          (comment [70, 15] - [71, 12])
+          (comment [71, 12] - [72, 75])
+          (comment [72, 75] - [73, 39])
+          (comment [73, 39] - [75, 85])
+          (comment [75, 85] - [76, 43])
+          (comment [76, 43] - [77, 45])
+          (comment [77, 45] - [78, 19])
+          (comment [78, 19] - [79, 43])
+          (variable_declaration [79, 43] - [80, 45]
+            name: (identifier [80, 12] - [80, 18])
+            value: (cmd_invocation [80, 20] - [80, 45]
+              (value_path [80, 22] - [80, 28]
+                (identifier [80, 23] - [80, 28]))
+              (command [80, 30] - [80, 44]
+                cmd_name: (identifier [80, 30] - [80, 36])
+                arg: (identifier [80, 36] - [80, 40])
+                arg: (string [80, 40] - [80, 44]))))
+          (variable_declaration [81, 0] - [81, 43]
+            name: (identifier [81, 12] - [81, 22])
+            value: (cmd_invocation [81, 24] - [81, 43]
+              (value_path [81, 26] - [81, 33]
+                (identifier [81, 27] - [81, 33]))
+              (command [81, 35] - [81, 42]
+                cmd_name: (identifier [81, 35] - [81, 42]))))
+          (command [82, 0] - [97, 9]
+            cmd_name: (identifier [82, 0] - [82, 10])
+            arg: (cmd_invocation [82, 10] - [82, 29]
+              (binary_expression [82, 12] - [82, 28]
+                left: (value_path [82, 12] - [82, 23]
+                  (identifier [82, 13] - [82, 23]))
+                right: (number_literal [82, 26] - [82, 28])))
+            arg: (record_or_block [82, 29] - [85, 9]
+              (comment [82, 31] - [83, 43])
+              (string [83, 43] - [84, 20]))
+            arg: (identifier [85, 9] - [85, 14])
+            arg: (identifier [85, 14] - [85, 17])
+            arg: (cmd_invocation [85, 17] - [85, 36]
+              (binary_expression [85, 19] - [85, 35]
+                left: (value_path [85, 19] - [85, 30]
+                  (identifier [85, 20] - [85, 30]))
+                right: (number_literal [85, 33] - [85, 35])))
+            arg: (record_or_block [85, 36] - [89, 9]
+              (variable_declaration [85, 38] - [86, 44]
+                name: (identifier [86, 16] - [86, 24])
+                value: (cmd_invocation [86, 26] - [86, 44]
+                  (value_path [86, 28] - [86, 35]
+                    (identifier [86, 29] - [86, 35]))
+                  (command [86, 37] - [86, 43]
+                    cmd_name: (identifier [86, 37] - [86, 43]))))
+              (variable_declaration [87, 0] - [87, 48]
+                name: (identifier [87, 16] - [87, 22])
+                value: (string [87, 24] - [87, 48]))
+              (value_path [88, 0] - [88, 19]
+                (identifier [88, 13] - [88, 19]))
+              (command [88, 21] - [88, 41]
+                cmd_name: (identifier [88, 21] - [88, 25])
+                arg: (identifier [88, 25] - [88, 33])
+                arg: (string [88, 33] - [88, 41])))
+            arg: (identifier [89, 9] - [89, 14])
+            arg: (record_or_block [89, 14] - [97, 9]
+              (variable_declaration [89, 16] - [90, 62]
+                name: (identifier [90, 16] - [90, 24])
+                value: (cmd_invocation [90, 26] - [90, 62]
+                  (value_path [90, 28] - [90, 35]
+                    (identifier [90, 29] - [90, 35]))
+                  (command [90, 37] - [90, 61]
+                    cmd_name: (identifier [90, 37] - [90, 43])
+                    arg: (cmd_invocation [90, 43] - [90, 61]
+                      (binary_expression [90, 45] - [90, 60]
+                        left: (value_path [90, 45] - [90, 56]
+                          (identifier [90, 46] - [90, 56]))
+                        right: (number_literal [90, 58] - [90, 60]))))))
+              (variable_declaration [91, 0] - [91, 43]
+                name: (identifier [91, 16] - [91, 24])
+                value: (cmd_invocation [91, 26] - [91, 43]
+                  (value_path [91, 28] - [91, 35]
+                    (identifier [91, 29] - [91, 35]))
+                  (command [91, 37] - [91, 42]
+                    cmd_name: (identifier [91, 37] - [91, 42]))))
+              (variable_declaration [92, 0] - [94, 14]
+                name: (identifier [92, 16] - [92, 22])
+                value: (cmd_invocation [92, 24] - [94, 14]
+                  (command [92, 26] - [94, 13]
+                    cmd_name: (identifier [92, 26] - [92, 29])
+                    arg: (identifier [92, 29] - [92, 31])
+                    arg: (identifier [92, 31] - [92, 34])
+                    arg: (value_path [92, 34] - [92, 44]
+                      (identifier [92, 36] - [92, 44]))
+                    arg: (record_or_block [92, 44] - [94, 13]
+                      (string [92, 46] - [93, 50])))))
+              (variable_declaration [95, 0] - [95, 70]
+                name: (identifier [95, 16] - [95, 22])
+                value: (cmd_invocation [95, 24] - [95, 70]
+                  (value_path [95, 26] - [95, 33]
+                    (identifier [95, 27] - [95, 33]))
+                  (command [95, 35] - [95, 69]
+                    cmd_name: (identifier [95, 35] - [95, 42])
+                    arg: (string [95, 42] - [95, 69]))))
+              (value_path [96, 0] - [96, 19]
+                (identifier [96, 13] - [96, 19]))
+              (command [96, 21] - [96, 41]
+                cmd_name: (identifier [96, 21] - [96, 25])
+                arg: (identifier [96, 25] - [96, 33])
+                arg: (string [96, 33] - [96, 41]))))))))
+  (function_definition [101, 0] - [109, 1]
+    func_name: (identifier [101, 4] - [101, 26])
+    (signature [101, 27] - [101, 31]
+      (parameter [101, 28] - [101, 30]
+        (identifier [101, 28] - [101, 30])))
+    (block [101, 32] - [109, 1]
+      (variable_declaration [101, 33] - [102, 48]
+        name: (identifier [102, 8] - [102, 17])
+        value: (cmd_invocation [102, 19] - [102, 48]
+          (value_path [102, 21] - [102, 24]
+            (identifier [102, 22] - [102, 24]))
+          (command [102, 26] - [102, 47]
+            cmd_name: (identifier [102, 26] - [102, 30])
+            arg: (identifier [102, 30] - [102, 47]))))
+      (variable_declaration [103, 0] - [103, 56]
+        name: (identifier [103, 8] - [103, 22])
+        value: (cmd_invocation [103, 24] - [103, 56]
+          (value_path [103, 26] - [103, 29]
+            (identifier [103, 27] - [103, 29]))
+          (command [103, 31] - [103, 55]
+            cmd_name: (identifier [103, 31] - [103, 35])
+            arg: (identifier [103, 35] - [103, 55]))))
+      (variable_declaration [104, 0] - [104, 54]
+        name: (identifier [104, 8] - [104, 21])
+        value: (cmd_invocation [104, 23] - [104, 54]
+          (value_path [104, 25] - [104, 28]
+            (identifier [104, 26] - [104, 28]))
+          (command [104, 30] - [104, 53]
+            cmd_name: (identifier [104, 30] - [104, 34])
+            arg: (identifier [104, 34] - [104, 53]))))
+      (variable_declaration [105, 0] - [105, 47]
+        name: (identifier [105, 8] - [105, 21])
+        value: (cmd_invocation [105, 23] - [105, 47]
+          (value_path [105, 25] - [105, 28]
+            (identifier [105, 26] - [105, 28]))
+          (command [105, 30] - [105, 46]
+            cmd_name: (identifier [105, 30] - [105, 34])
+            arg: (identifier [105, 34] - [105, 46]))))
+      (variable_declaration [106, 0] - [106, 56]
+        name: (identifier [106, 8] - [106, 25])
+        value: (cmd_invocation [106, 27] - [106, 56]
+          (value_path [106, 29] - [106, 32]
+            (identifier [106, 30] - [106, 32]))
+          (command [106, 34] - [106, 55]
+            cmd_name: (identifier [106, 34] - [106, 38])
+            arg: (identifier [106, 38] - [106, 55]))))
+      (binary_expression [108, 0] - [108, 87]
+        left: (binary_expression [108, 0] - [108, 66]
+          left: (binary_expression [108, 0] - [108, 49]
+            left: (binary_expression [108, 0] - [108, 32]
+              left: (value_path [108, 0] - [108, 14]
+                (identifier [108, 5] - [108, 14]))
+              right: (value_path [108, 16] - [108, 32]
+                (identifier [108, 18] - [108, 32])))
+            right: (value_path [108, 34] - [108, 49]
+              (identifier [108, 36] - [108, 49])))
+          right: (value_path [108, 51] - [108, 66]
+            (identifier [108, 53] - [108, 66])))
+        right: (value_path [108, 68] - [108, 87]
+          (identifier [108, 70] - [108, 87])))))
+  (function_definition [111, 0] - [118, 1]
+    func_name: (identifier [111, 4] - [111, 26])
+    (signature [111, 27] - [111, 31]
+      (parameter [111, 28] - [111, 30]
+        (identifier [111, 28] - [111, 30])))
+    (block [111, 32] - [118, 1]
+      (variable_declaration [111, 33] - [112, 45]
+        name: (identifier [112, 8] - [112, 19])
+        value: (cmd_invocation [112, 21] - [112, 45]
+          (value_path [112, 23] - [112, 26]
+            (identifier [112, 24] - [112, 26]))
+          (command [112, 28] - [112, 44]
+            cmd_name: (identifier [112, 28] - [112, 32])
+            arg: (identifier [112, 32] - [112, 44]))))
+      (variable_declaration [113, 0] - [113, 43]
+        name: (identifier [113, 8] - [113, 18])
+        value: (cmd_invocation [113, 20] - [113, 43]
+          (value_path [113, 22] - [113, 25]
+            (identifier [113, 23] - [113, 25]))
+          (command [113, 27] - [113, 42]
+            cmd_name: (identifier [113, 27] - [113, 31])
+            arg: (identifier [113, 31] - [113, 42]))))
+      (variable_declaration [114, 0] - [114, 52]
+        name: (identifier [114, 8] - [114, 22])
+        value: (cmd_invocation [114, 24] - [114, 52]
+          (value_path [114, 26] - [114, 29]
+            (identifier [114, 27] - [114, 29]))
+          (command [114, 31] - [114, 51]
+            cmd_name: (identifier [114, 31] - [114, 35])
+            arg: (identifier [114, 35] - [114, 51]))))
+      (variable_declaration [115, 0] - [115, 43]
+        name: (identifier [115, 8] - [115, 18])
+        value: (cmd_invocation [115, 20] - [115, 43]
+          (value_path [115, 22] - [115, 25]
+            (identifier [115, 23] - [115, 25]))
+          (command [115, 27] - [115, 42]
+            cmd_name: (identifier [115, 27] - [115, 31])
+            arg: (identifier [115, 31] - [115, 42]))))
+      (binary_expression [117, 0] - [117, 62]
+        left: (binary_expression [117, 0] - [117, 48]
+          left: (binary_expression [117, 0] - [117, 30]
+            left: (value_path [117, 0] - [117, 16]
+              (identifier [117, 5] - [117, 16]))
+            right: (value_path [117, 18] - [117, 30]
+              (identifier [117, 20] - [117, 30])))
+          right: (value_path [117, 32] - [117, 48]
+            (identifier [117, 34] - [117, 48])))
+        right: (value_path [117, 50] - [117, 62]
+          (identifier [117, 52] - [117, 62])))))
+  (function_definition [120, 0] - [122, 1]
+    func_name: (identifier [120, 4] - [120, 24])
+    (signature [120, 25] - [120, 29]
+      (parameter [120, 26] - [120, 28]
+        (identifier [120, 26] - [120, 28])))
+    (block [120, 30] - [122, 1]
+      (cmd_invocation [120, 31] - [121, 25]
+        (value_path [121, 5] - [121, 8]
+          (identifier [121, 6] - [121, 8]))
+        (command [121, 10] - [121, 24]
+          cmd_name: (identifier [121, 10] - [121, 14])
+          arg: (identifier [121, 14] - [121, 24])))))
+  (function_definition [124, 0] - [126, 1]
+    func_name: (identifier [124, 4] - [124, 23])
+    (signature [124, 24] - [124, 28]
+      (parameter [124, 25] - [124, 27]
+        (identifier [124, 25] - [124, 27])))
+    (block [124, 29] - [126, 1]
+      (cmd_invocation [124, 30] - [125, 28]
+        (value_path [125, 5] - [125, 8]
+          (identifier [125, 6] - [125, 8]))
+        (command [125, 10] - [125, 27]
+          cmd_name: (identifier [125, 10] - [125, 14])
+          arg: (identifier [125, 14] - [125, 27])))))
+  (function_definition [128, 0] - [135, 1]
+    func_name: (identifier [128, 4] - [128, 19])
+    (signature [128, 20] - [128, 24]
+      (parameter [128, 21] - [128, 23]
+        (identifier [128, 21] - [128, 23])))
+    (block [128, 25] - [135, 1]
+      (variable_declaration [128, 26] - [129, 31]
+        name: (identifier [129, 8] - [129, 10])
+        value: (cmd_invocation [129, 12] - [129, 31]
+          (value_path [129, 14] - [129, 17]
+            (identifier [129, 15] - [129, 17]))
+          (command [129, 19] - [129, 30]
+            cmd_name: (identifier [129, 19] - [129, 23])
+            arg: (identifier [129, 23] - [129, 30]))))
+      (command [130, 0] - [134, 5]
+        cmd_name: (identifier [130, 0] - [130, 6])
+        arg: (binary_expression [130, 6] - [130, 25]
+          left: (value_path [130, 6] - [130, 10]
+            (identifier [130, 8] - [130, 10]))
+          right: (string [130, 13] - [130, 25]))
+        arg: (record_or_block [130, 25] - [132, 5]
+          (string [130, 27] - [131, 10]))
+        arg: (identifier [132, 5] - [132, 10])
+        arg: (record_or_block [132, 10] - [134, 5]
+          (value_path [132, 12] - [133, 11]
+            (identifier [133, 9] - [133, 11]))))))
+  (function_definition [137, 0] - [139, 1]
+    func_name: (identifier [137, 4] - [137, 19])
+    (signature [137, 20] - [137, 24]
+      (parameter [137, 21] - [137, 23]
+        (identifier [137, 21] - [137, 23])))
+    (block [137, 25] - [139, 1]
+      (cmd_invocation [137, 26] - [138, 21]
+        (value_path [138, 5] - [138, 8]
+          (identifier [138, 6] - [138, 8]))
+        (command [138, 10] - [138, 20]
+          cmd_name: (identifier [138, 10] - [138, 14])
+          arg: (identifier [138, 14] - [138, 20])))))
+  (function_definition [141, 0] - [143, 1]
+    func_name: (identifier [141, 4] - [141, 20])
+    (signature [141, 21] - [141, 25]
+      (parameter [141, 22] - [141, 24]
+        (identifier [141, 22] - [141, 24])))
+    (block [141, 26] - [143, 1]
+      (cmd_invocation [141, 27] - [142, 22]
+        (value_path [142, 5] - [142, 8]
+          (identifier [142, 6] - [142, 8]))
+        (command [142, 10] - [142, 21]
+          cmd_name: (identifier [142, 10] - [142, 14])
+          arg: (identifier [142, 14] - [142, 21])))))
+  (function_definition [145, 0] - [162, 1]
+    func_name: (identifier [145, 4] - [145, 18])
+    (signature [145, 19] - [145, 21])
+    (block [145, 22] - [162, 1]
+      (record_or_block [145, 23] - [161, 5]
+        (record_entry [146, 5] - [147, 39]
+          (identifier [146, 5] - [147, 18])
+          (cmd_invocation [147, 19] - [147, 39]
+            (command [147, 21] - [147, 38]
+              cmd_name: (identifier [147, 21] - [147, 25])
+              arg: (identifier [147, 25] - [147, 38]))))
+        (comment [147, 41] - [147, 53])
+        (record_entry [148, 0] - [148, 41]
+          (identifier [148, 0] - [148, 19])
+          (cmd_invocation [148, 20] - [148, 41]
+            (command [148, 22] - [148, 40]
+              cmd_name: (identifier [148, 22] - [148, 26])
+              arg: (identifier [148, 26] - [148, 40]))))
+        (comment [148, 43] - [148, 55])
+        (record_entry [149, 0] - [149, 47]
+          (identifier [149, 0] - [149, 22])
+          (cmd_invocation [149, 23] - [149, 47]
+            (command [149, 25] - [149, 46]
+              cmd_name: (identifier [149, 25] - [149, 29])
+              arg: (identifier [149, 29] - [149, 46]))))
+        (comment [149, 48] - [149, 58])
+        (record_entry [150, 0] - [150, 28]
+          (identifier [150, 0] - [150, 23])
+          (string [150, 24] - [150, 28]))
+        (record_entry [151, 0] - [151, 32]
+          (identifier [151, 0] - [151, 25])
+          (string [151, 26] - [151, 32]))
+        (record_entry [152, 0] - [152, 29]
+          (identifier [152, 0] - [152, 22])
+          (string [152, 23] - [152, 29]))
+        (record_entry [153, 0] - [153, 37]
+          (identifier [153, 0] - [153, 30])
+          (string [153, 31] - [153, 37]))
+        (record_entry [154, 0] - [154, 54]
+          (identifier [154, 0] - [154, 29])
+          (cmd_invocation [154, 30] - [154, 54]
+            (command [154, 32] - [154, 53]
+              cmd_name: (identifier [154, 32] - [154, 36])
+              arg: (identifier [154, 36] - [154, 53]))))
+        (comment [154, 55] - [154, 65])
+        (record_entry [155, 0] - [155, 33]
+          (identifier [155, 0] - [155, 26])
+          (string [155, 27] - [155, 33]))
+        (record_entry [156, 0] - [156, 40]
+          (identifier [156, 0] - [156, 22])
+          (cmd_invocation [156, 23] - [156, 40]
+            (command [156, 25] - [156, 39]
+              cmd_name: (identifier [156, 25] - [156, 29])
+              arg: (identifier [156, 29] - [156, 39]))))
+        (comment [156, 41] - [156, 53])
+        (record_entry [157, 0] - [157, 26]
+          (identifier [157, 0] - [157, 19])
+          (string [157, 20] - [157, 26]))
+        (comment [157, 28] - [157, 34])
+        (record_entry [158, 0] - [158, 37]
+          (identifier [158, 0] - [158, 19])
+          (cmd_invocation [158, 20] - [158, 37]
+            (command [158, 22] - [158, 36]
+              cmd_name: (identifier [158, 22] - [158, 26])
+              arg: (identifier [158, 26] - [158, 36]))))
+        (comment [158, 38] - [158, 50])
+        (record_entry [159, 0] - [159, 26]
+          (identifier [159, 0] - [159, 19])
+          (string [159, 20] - [159, 26]))
+        (comment [159, 28] - [159, 34])
+        (record_entry [160, 0] - [160, 23]
+          (identifier [160, 0] - [160, 16])
+          (string [160, 17] - [160, 23]))
+        (comment [160, 24] - [160, 30]))))
+  (function_definition [164, 0] - [166, 1]
+    func_name: (identifier [164, 4] - [164, 20])
+    (signature [164, 21] - [164, 27]
+      (parameter [164, 22] - [164, 26]
+        (identifier [164, 22] - [164, 26])))
+    (block [164, 28] - [166, 1]
+      (command [164, 29] - [165, 40]
+        cmd_name: (identifier [164, 29] - [165, 6])
+        arg: (flag_shorthand_name [165, 6] - [165, 9])
+        arg: (record_or_block [165, 9] - [165, 40]
+          (command [165, 11] - [165, 27]
+            cmd_name: (identifier [165, 11] - [165, 26]))
+          (command [165, 28] - [165, 39]
+            cmd_name: (identifier [165, 28] - [165, 32])
+            arg: (value_path [165, 32] - [165, 38]
+              (identifier [165, 34] - [165, 38])))))))
+  (function_definition [168, 0] - [179, 1]
+    func_name: (identifier [168, 4] - [168, 15])
+    (signature [168, 16] - [168, 20]
+      (parameter [168, 17] - [168, 19]
+        (identifier [168, 17] - [168, 19])))
+    (block [168, 21] - [179, 1]
+      (comment [168, 22] - [169, 46])
+      (command [169, 46] - [178, 5]
+        cmd_name: (identifier [169, 46] - [170, 6])
+        arg: (cmd_invocation [170, 6] - [170, 22]
+          (binary_expression [170, 8] - [170, 21]
+            left: (value_path [170, 8] - [170, 11]
+              (identifier [170, 9] - [170, 11]))
+            right: (command [170, 14] - [170, 21]
+              cmd_name: (identifier [170, 14] - [170, 21]))))
+        arg: (record_or_block [170, 22] - [172, 5]
+          (cmd_invocation [170, 24] - [171, 22]
+            (command [171, 9] - [171, 21]
+              cmd_name: (identifier [171, 9] - [171, 13])
+              arg: (flag_shorthand_name [171, 13] - [171, 16])
+              arg: (identifier [171, 16] - [171, 21]))))
+        arg: (identifier [172, 5] - [172, 10])
+        arg: (identifier [172, 10] - [172, 13])
+        arg: (cmd_invocation [172, 13] - [172, 28]
+          (binary_expression [172, 15] - [172, 27]
+            left: (value_path [172, 15] - [172, 18]
+              (identifier [172, 16] - [172, 18]))
+            right: (command [172, 21] - [172, 27]
+              cmd_name: (identifier [172, 21] - [172, 27]))))
+        arg: (record_or_block [172, 28] - [174, 5]
+          (cmd_invocation [172, 30] - [173, 22]
+            (command [173, 9] - [173, 21]
+              cmd_name: (identifier [173, 9] - [173, 13])
+              arg: (flag_shorthand_name [173, 13] - [173, 16])
+              arg: (identifier [173, 16] - [173, 21]))))
+        arg: (identifier [174, 5] - [174, 10])
+        arg: (identifier [174, 10] - [174, 13])
+        arg: (cmd_invocation [174, 13] - [174, 30]
+          (binary_expression [174, 15] - [174, 29]
+            left: (value_path [174, 15] - [174, 18]
+              (identifier [174, 16] - [174, 18]))
+            right: (command [174, 21] - [174, 29]
+              cmd_name: (identifier [174, 21] - [174, 29]))))
+        arg: (record_or_block [174, 30] - [176, 5]
+          (cmd_invocation [174, 32] - [175, 22]
+            (command [175, 9] - [175, 21]
+              cmd_name: (identifier [175, 9] - [175, 13])
+              arg: (flag_shorthand_name [175, 13] - [175, 16])
+              arg: (identifier [175, 16] - [175, 21]))))
+        arg: (identifier [176, 5] - [176, 10])
+        arg: (record_or_block [176, 10] - [178, 5]
+          (string [176, 12] - [177, 10])))))
+  (comment [181, 0] - [181, 119])
+  (comment [181, 119] - [182, 58])
+  (comment [182, 58] - [183, 63])
+  (comment [183, 63] - [184, 62])
+  (comment [184, 62] - [185, 62])
+  (comment [185, 62] - [186, 65])
+  (comment [186, 65] - [187, 55])
+  (comment [187, 55] - [188, 60])
+  (comment [188, 60] - [189, 59])
+  (comment [189, 59] - [190, 62])
+  (comment [190, 62] - [191, 59])
+  (comment [191, 59] - [192, 47])
+  (comment [192, 47] - [193, 59])
+  (comment [193, 59] - [194, 47])
+  (comment [194, 47] - [195, 47])
+  (comment [195, 47] - [196, 47])
+  (comment [196, 47] - [197, 47])
+  (comment [197, 47] - [198, 47])
+  (comment [198, 47] - [199, 47])
+  (comment [199, 47] - [200, 47])
+  (comment [200, 47] - [201, 119])
+  (function_definition [201, 119] - [287, 1]
+    func_name: (identifier [203, 4] - [203, 19])
+    (signature [203, 20] - [203, 27]
+      (parameter [203, 21] - [203, 23]
+        (identifier [203, 21] - [203, 23]))
+      (parameter [203, 24] - [203, 26]
+        (identifier [203, 24] - [203, 26])))
+    (block [203, 28] - [287, 1]
+      (comment [203, 29] - [204, 64])
+      (variable_declaration [204, 64] - [205, 67]
+        name: (identifier [205, 8] - [205, 20])
+        value: (cmd_invocation [205, 22] - [205, 67]
+          (command [205, 24] - [205, 66]
+            cmd_name: (identifier [205, 24] - [205, 45])
+            arg: (cmd_invocation [205, 45] - [205, 63]
+              (command [205, 47] - [205, 62]
+                cmd_name: (identifier [205, 47] - [205, 58])
+                arg: (value_path [205, 58] - [205, 62]
+                  (identifier [205, 60] - [205, 62]))))
+            arg: (number_literal [205, 63] - [205, 66]))))
+      (variable_declaration [206, 0] - [206, 43]
+        name: (identifier [206, 8] - [206, 19])
+        value: (cmd_invocation [206, 21] - [206, 43]
+          (command [206, 23] - [206, 42]
+            cmd_name: (identifier [206, 23] - [206, 38])
+            arg: (value_path [206, 38] - [206, 42]
+              (identifier [206, 40] - [206, 42])))))
+      (variable_declaration [207, 0] - [207, 41]
+        name: (identifier [207, 8] - [207, 17])
+        value: (cmd_invocation [207, 19] - [207, 41]
+          (command [207, 21] - [207, 40]
+            cmd_name: (identifier [207, 21] - [207, 36])
+            arg: (value_path [207, 36] - [207, 40]
+              (identifier [207, 38] - [207, 40])))))
+      (variable_declaration [208, 0] - [208, 43]
+        name: (identifier [208, 8] - [208, 18])
+        value: (cmd_invocation [208, 20] - [208, 43]
+          (command [208, 22] - [208, 42]
+            cmd_name: (identifier [208, 22] - [208, 38])
+            arg: (value_path [208, 38] - [208, 42]
+              (identifier [208, 40] - [208, 42])))))
+      (variable_declaration [209, 0] - [209, 55]
+        name: (identifier [209, 8] - [209, 24])
+        value: (cmd_invocation [209, 26] - [209, 55]
+          (command [209, 28] - [209, 54]
+            cmd_name: (identifier [209, 28] - [209, 50])
+            arg: (value_path [209, 50] - [209, 54]
+              (identifier [209, 52] - [209, 54])))))
+      (variable_declaration [210, 0] - [210, 52]
+        name: (identifier [210, 8] - [210, 21])
+        value: (cmd_invocation [210, 23] - [210, 52]
+          (command [210, 25] - [210, 51]
+            cmd_name: (identifier [210, 25] - [210, 47])
+            arg: (value_path [210, 47] - [210, 51]
+              (identifier [210, 49] - [210, 51])))))
+      (variable_declaration [211, 0] - [211, 51]
+        name: (identifier [211, 8] - [211, 22])
+        value: (cmd_invocation [211, 24] - [211, 51]
+          (command [211, 26] - [211, 50]
+            cmd_name: (identifier [211, 26] - [211, 46])
+            arg: (value_path [211, 46] - [211, 50]
+              (identifier [211, 48] - [211, 50])))))
+      (variable_declaration [212, 0] - [212, 49]
+        name: (identifier [212, 8] - [212, 21])
+        value: (cmd_invocation [212, 23] - [212, 49]
+          (command [212, 25] - [212, 48]
+            cmd_name: (identifier [212, 25] - [212, 44])
+            arg: (value_path [212, 44] - [212, 48]
+              (identifier [212, 46] - [212, 48])))))
+      (variable_declaration [213, 0] - [222, 5]
+        name: (identifier [213, 8] - [213, 22])
+        value: (cmd_invocation [213, 24] - [222, 5]
+          (command [213, 26] - [221, 9]
+            cmd_name: (identifier [213, 26] - [214, 10])
+            arg: (binary_expression [214, 10] - [217, 33]
+              left: (binary_expression [214, 10] - [216, 34]
+                left: (binary_expression [214, 10] - [215, 33]
+                  left: (cmd_invocation [214, 10] - [214, 35]
+                    (binary_expression [214, 12] - [214, 34]
+                      left: (value_path [214, 12] - [214, 29]
+                        (identifier [214, 13] - [214, 29]))
+                      right: (number_literal [214, 32] - [214, 34])))
+                  right: (cmd_invocation [214, 38] - [215, 33]
+                    (binary_expression [215, 13] - [215, 32]
+                      left: (value_path [215, 13] - [215, 27]
+                        (identifier [215, 14] - [215, 27]))
+                      right: (number_literal [215, 30] - [215, 32]))))
+                right: (cmd_invocation [215, 36] - [216, 34]
+                  (binary_expression [216, 13] - [216, 33]
+                    left: (value_path [216, 13] - [216, 28]
+                      (identifier [216, 14] - [216, 28]))
+                    right: (number_literal [216, 31] - [216, 33]))))
+              right: (cmd_invocation [216, 37] - [217, 33]
+                (binary_expression [217, 13] - [217, 32]
+                  left: (value_path [217, 13] - [217, 27]
+                    (identifier [217, 14] - [217, 27]))
+                  right: (number_literal [217, 30] - [217, 32]))))
+            arg: (record_or_block [217, 33] - [219, 9]
+              (value_path [217, 35] - [218, 21]
+                (identifier [218, 17] - [218, 21])))
+            arg: (identifier [219, 9] - [219, 14])
+            arg: (record_or_block [219, 14] - [221, 9]
+              (value_path [219, 16] - [220, 18]
+                (identifier [220, 13] - [220, 18]))))))
+      (variable_declaration [224, 0] - [224, 26]
+        name: (identifier [224, 8] - [224, 14])
+        value: (string [224, 16] - [224, 26]))
+      (variable_declaration [225, 0] - [225, 26]
+        name: (identifier [225, 8] - [225, 14])
+        value: (string [225, 16] - [225, 26]))
+      (comment [226, 0] - [226, 29])
+      (comment [226, 29] - [228, 76])
+      (variable_declaration [228, 76] - [230, 50]
+        name: (identifier [230, 8] - [230, 18])
+        value: (cmd_invocation [230, 20] - [230, 50]
+          (command [230, 22] - [230, 49]
+            cmd_name: (identifier [230, 22] - [230, 38])
+            arg: (identifier [230, 38] - [230, 49]))))
+      (comment [231, 0] - [231, 57])
+      (variable_declaration [231, 57] - [232, 56]
+        name: (identifier [232, 8] - [232, 15])
+        value: (cmd_invocation [232, 17] - [232, 56]
+          (command [232, 19] - [232, 55]
+            cmd_name: (identifier [232, 19] - [232, 23])
+            arg: (record_or_block [232, 23] - [232, 55]
+              (record_entry [232, 25] - [232, 39]
+                (identifier [232, 25] - [232, 28])
+                (cmd_invocation [232, 29] - [232, 39]
+                  (value_path [232, 31] - [232, 38]
+                    (identifier [232, 32] - [232, 38]))))
+              (record_entry [232, 40] - [232, 53]
+                (identifier [232, 40] - [232, 42])
+                (cmd_invocation [232, 43] - [232, 53]
+                  (value_path [232, 45] - [232, 52]
+                    (identifier [232, 46] - [232, 52]))))))))
+      (variable_declaration [234, 0] - [234, 52]
+        name: (identifier [234, 8] - [234, 19])
+        value: (cmd_invocation [234, 21] - [234, 52]
+          (command [234, 23] - [234, 51]
+            cmd_name: (identifier [234, 23] - [234, 39])
+            arg: (identifier [234, 39] - [234, 51]))))
+      (comment [235, 0] - [235, 57])
+      (variable_declaration [235, 57] - [236, 56]
+        name: (identifier [236, 8] - [236, 15])
+        value: (cmd_invocation [236, 17] - [236, 56]
+          (command [236, 19] - [236, 55]
+            cmd_name: (identifier [236, 19] - [236, 23])
+            arg: (record_or_block [236, 23] - [236, 55]
+              (record_entry [236, 25] - [236, 39]
+                (identifier [236, 25] - [236, 28])
+                (cmd_invocation [236, 29] - [236, 39]
+                  (value_path [236, 31] - [236, 38]
+                    (identifier [236, 32] - [236, 38]))))
+              (record_entry [236, 40] - [236, 53]
+                (identifier [236, 40] - [236, 42])
+                (cmd_invocation [236, 43] - [236, 53]
+                  (value_path [236, 45] - [236, 52]
+                    (identifier [236, 46] - [236, 52]))))))))
+      (variable_declaration [238, 0] - [238, 64]
+        name: (identifier [238, 8] - [238, 25])
+        value: (cmd_invocation [238, 27] - [238, 64]
+          (command [238, 29] - [238, 63]
+            cmd_name: (identifier [238, 29] - [238, 45])
+            arg: (identifier [238, 45] - [238, 63]))))
+      (comment [239, 0] - [239, 57])
+      (variable_declaration [239, 57] - [240, 56]
+        name: (identifier [240, 8] - [240, 15])
+        value: (cmd_invocation [240, 17] - [240, 56]
+          (command [240, 19] - [240, 55]
+            cmd_name: (identifier [240, 19] - [240, 23])
+            arg: (record_or_block [240, 23] - [240, 55]
+              (record_entry [240, 25] - [240, 39]
+                (identifier [240, 25] - [240, 28])
+                (cmd_invocation [240, 29] - [240, 39]
+                  (value_path [240, 31] - [240, 38]
+                    (identifier [240, 32] - [240, 38]))))
+              (record_entry [240, 40] - [240, 53]
+                (identifier [240, 40] - [240, 42])
+                (cmd_invocation [240, 43] - [240, 53]
+                  (value_path [240, 45] - [240, 52]
+                    (identifier [240, 46] - [240, 52]))))))))
+      (variable_declaration [242, 0] - [242, 74]
+        name: (identifier [242, 8] - [242, 30])
+        value: (cmd_invocation [242, 32] - [242, 74]
+          (command [242, 34] - [242, 73]
+            cmd_name: (identifier [242, 34] - [242, 50])
+            arg: (identifier [242, 50] - [242, 73]))))
+      (comment [243, 0] - [243, 57])
+      (variable_declaration [243, 57] - [244, 56]
+        name: (identifier [244, 8] - [244, 15])
+        value: (cmd_invocation [244, 17] - [244, 56]
+          (command [244, 19] - [244, 55]
+            cmd_name: (identifier [244, 19] - [244, 23])
+            arg: (record_or_block [244, 23] - [244, 55]
+              (record_entry [244, 25] - [244, 39]
+                (identifier [244, 25] - [244, 28])
+                (cmd_invocation [244, 29] - [244, 39]
+                  (value_path [244, 31] - [244, 38]
+                    (identifier [244, 32] - [244, 38]))))
+              (record_entry [244, 40] - [244, 53]
+                (identifier [244, 40] - [244, 42])
+                (cmd_invocation [244, 43] - [244, 53]
+                  (value_path [244, 45] - [244, 52]
+                    (identifier [244, 46] - [244, 52]))))))))
+      (variable_declaration [246, 0] - [246, 58]
+        name: (identifier [246, 8] - [246, 22])
+        value: (cmd_invocation [246, 24] - [246, 58]
+          (command [246, 26] - [246, 57]
+            cmd_name: (identifier [246, 26] - [246, 42])
+            arg: (identifier [246, 42] - [246, 57]))))
+      (comment [247, 0] - [247, 57])
+      (variable_declaration [247, 57] - [248, 56]
+        name: (identifier [248, 8] - [248, 15])
+        value: (cmd_invocation [248, 17] - [248, 56]
+          (command [248, 19] - [248, 55]
+            cmd_name: (identifier [248, 19] - [248, 23])
+            arg: (record_or_block [248, 23] - [248, 55]
+              (record_entry [248, 25] - [248, 39]
+                (identifier [248, 25] - [248, 28])
+                (cmd_invocation [248, 29] - [248, 39]
+                  (value_path [248, 31] - [248, 38]
+                    (identifier [248, 32] - [248, 38]))))
+              (record_entry [248, 40] - [248, 53]
+                (identifier [248, 40] - [248, 42])
+                (cmd_invocation [248, 43] - [248, 53]
+                  (value_path [248, 45] - [248, 52]
+                    (identifier [248, 46] - [248, 52]))))))))
+      (variable_declaration [250, 0] - [250, 72]
+        name: (identifier [250, 8] - [250, 29])
+        value: (cmd_invocation [250, 31] - [250, 72]
+          (command [250, 33] - [250, 71]
+            cmd_name: (identifier [250, 33] - [250, 49])
+            arg: (identifier [250, 49] - [250, 71]))))
+      (comment [251, 0] - [251, 57])
+      (variable_declaration [251, 57] - [252, 56]
+        name: (identifier [252, 8] - [252, 15])
+        value: (cmd_invocation [252, 17] - [252, 56]
+          (command [252, 19] - [252, 55]
+            cmd_name: (identifier [252, 19] - [252, 23])
+            arg: (record_or_block [252, 23] - [252, 55]
+              (record_entry [252, 25] - [252, 39]
+                (identifier [252, 25] - [252, 28])
+                (cmd_invocation [252, 29] - [252, 39]
+                  (value_path [252, 31] - [252, 38]
+                    (identifier [252, 32] - [252, 38]))))
+              (record_entry [252, 40] - [252, 53]
+                (identifier [252, 40] - [252, 42])
+                (cmd_invocation [252, 43] - [252, 53]
+                  (value_path [252, 45] - [252, 52]
+                    (identifier [252, 46] - [252, 52]))))))))
+      (variable_declaration [254, 0] - [254, 58]
+        name: (identifier [254, 8] - [254, 22])
+        value: (cmd_invocation [254, 24] - [254, 58]
+          (command [254, 26] - [254, 57]
+            cmd_name: (identifier [254, 26] - [254, 42])
+            arg: (identifier [254, 42] - [254, 57]))))
+      (comment [255, 0] - [255, 57])
+      (variable_declaration [255, 57] - [256, 56]
+        name: (identifier [256, 8] - [256, 15])
+        value: (cmd_invocation [256, 17] - [256, 56]
+          (command [256, 19] - [256, 55]
+            cmd_name: (identifier [256, 19] - [256, 23])
+            arg: (record_or_block [256, 23] - [256, 55]
+              (record_entry [256, 25] - [256, 39]
+                (identifier [256, 25] - [256, 28])
+                (cmd_invocation [256, 29] - [256, 39]
+                  (value_path [256, 31] - [256, 38]
+                    (identifier [256, 32] - [256, 38]))))
+              (record_entry [256, 40] - [256, 53]
+                (identifier [256, 40] - [256, 42])
+                (cmd_invocation [256, 43] - [256, 53]
+                  (value_path [256, 45] - [256, 52]
+                    (identifier [256, 46] - [256, 52]))))))))
+      (variable_declaration [258, 0] - [258, 60]
+        name: (identifier [258, 8] - [258, 23])
+        value: (cmd_invocation [258, 25] - [258, 60]
+          (command [258, 27] - [258, 59]
+            cmd_name: (identifier [258, 27] - [258, 43])
+            arg: (identifier [258, 43] - [258, 59]))))
+      (comment [259, 0] - [259, 65])
+      (variable_declaration [259, 65] - [260, 64]
+        name: (identifier [260, 8] - [260, 15])
+        value: (cmd_invocation [260, 17] - [260, 64]
+          (command [260, 19] - [260, 63]
+            cmd_name: (identifier [260, 19] - [260, 23])
+            arg: (record_or_block [260, 23] - [260, 63]
+              (record_entry [260, 25] - [260, 39]
+                (identifier [260, 25] - [260, 28])
+                (cmd_invocation [260, 29] - [260, 39]
+                  (value_path [260, 31] - [260, 38]
+                    (identifier [260, 32] - [260, 38]))))
+              (record_entry [260, 40] - [260, 53]
+                (identifier [260, 40] - [260, 42])
+                (cmd_invocation [260, 43] - [260, 53]
+                  (value_path [260, 45] - [260, 52]
+                    (identifier [260, 46] - [260, 52]))))
+              (record_entry [260, 54] - [260, 62]
+                (identifier [260, 54] - [260, 58])
+                (command [260, 59] - [260, 62]
+                  cmd_name: (identifier [260, 59] - [260, 61])))))))
+      (variable_declaration [262, 0] - [262, 66]
+        name: (identifier [262, 8] - [262, 26])
+        value: (cmd_invocation [262, 28] - [262, 66]
+          (command [262, 30] - [262, 65]
+            cmd_name: (identifier [262, 30] - [262, 46])
+            arg: (identifier [262, 46] - [262, 65]))))
+      (comment [263, 0] - [263, 57])
+      (variable_declaration [263, 57] - [264, 56]
+        name: (identifier [264, 8] - [264, 15])
+        value: (cmd_invocation [264, 17] - [264, 56]
+          (command [264, 19] - [264, 55]
+            cmd_name: (identifier [264, 19] - [264, 23])
+            arg: (record_or_block [264, 23] - [264, 55]
+              (record_entry [264, 25] - [264, 39]
+                (identifier [264, 25] - [264, 28])
+                (cmd_invocation [264, 29] - [264, 39]
+                  (value_path [264, 31] - [264, 38]
+                    (identifier [264, 32] - [264, 38]))))
+              (record_entry [264, 40] - [264, 53]
+                (identifier [264, 40] - [264, 42])
+                (cmd_invocation [264, 43] - [264, 53]
+                  (value_path [264, 45] - [264, 52]
+                    (identifier [264, 46] - [264, 52]))))))))
+      (variable_declaration [266, 0] - [266, 24]
+        name: (identifier [266, 8] - [266, 9])
+        value: (cmd_invocation [266, 11] - [266, 24]
+          (command [266, 13] - [266, 23]
+            cmd_name: (identifier [266, 13] - [266, 17])
+            arg: (identifier [266, 17] - [266, 23]))))
+      (variable_declaration [268, 0] - [284, 5]
+        name: (identifier [268, 8] - [268, 19])
+        value: (cmd_invocation [268, 21] - [284, 5]
+          (string [268, 23] - [283, 10])))
+      (value_path [286, 0] - [286, 16]
+        (identifier [286, 5] - [286, 16]))))
+  (function_definition [289, 0] - [386, 1]
+    func_name: (identifier [289, 4] - [289, 19])
+    (signature [289, 20] - [289, 27]
+      (parameter [289, 21] - [289, 23]
+        (identifier [289, 21] - [289, 23]))
+      (parameter [289, 24] - [289, 26]
+        (identifier [289, 24] - [289, 26])))
+    (block [289, 28] - [386, 1]
+      (comment [289, 29] - [290, 64])
+      (variable_declaration [290, 64] - [291, 67]
+        name: (identifier [291, 8] - [291, 20])
+        value: (cmd_invocation [291, 22] - [291, 67]
+          (command [291, 24] - [291, 66]
+            cmd_name: (identifier [291, 24] - [291, 45])
+            arg: (cmd_invocation [291, 45] - [291, 63]
+              (command [291, 47] - [291, 62]
+                cmd_name: (identifier [291, 47] - [291, 58])
+                arg: (value_path [291, 58] - [291, 62]
+                  (identifier [291, 60] - [291, 62]))))
+            arg: (number_literal [291, 63] - [291, 66]))))
+      (variable_declaration [292, 0] - [292, 43]
+        name: (identifier [292, 8] - [292, 19])
+        value: (cmd_invocation [292, 21] - [292, 43]
+          (command [292, 23] - [292, 42]
+            cmd_name: (identifier [292, 23] - [292, 38])
+            arg: (value_path [292, 38] - [292, 42]
+              (identifier [292, 40] - [292, 42])))))
+      (variable_declaration [293, 0] - [293, 24]
+        name: (identifier [293, 8] - [293, 9])
+        value: (cmd_invocation [293, 11] - [293, 24]
+          (command [293, 13] - [293, 23]
+            cmd_name: (identifier [293, 13] - [293, 17])
+            arg: (identifier [293, 17] - [293, 23]))))
+      (comment [295, 0] - [295, 30])
+      (comment [295, 30] - [296, 97])
+      (comment [296, 97] - [298, 37])
+      (comment [298, 37] - [299, 13])
+      (comment [299, 13] - [300, 13])
+      (comment [300, 13] - [301, 13])
+      (comment [301, 13] - [302, 13])
+      (comment [302, 13] - [303, 13])
+      (comment [303, 13] - [304, 25])
+      (comment [304, 25] - [305, 25])
+      (variable_declaration [305, 25] - [307, 26]
+        name: (identifier [307, 8] - [307, 14])
+        value: (string [307, 16] - [307, 26]))
+      (variable_declaration [308, 0] - [308, 26]
+        name: (identifier [308, 8] - [308, 14])
+        value: (string [308, 16] - [308, 26]))
+      (variable_declaration [309, 0] - [309, 27]
+        name: (identifier [309, 8] - [309, 15])
+        value: (string [309, 17] - [309, 27]))
+      (variable_declaration [311, 0] - [311, 47]
+        name: (identifier [311, 8] - [311, 19])
+        value: (cmd_invocation [311, 21] - [311, 47]
+          (command [311, 23] - [311, 46]
+            cmd_name: (identifier [311, 23] - [311, 38])
+            arg: (value_path [311, 38] - [311, 42]
+              (identifier [311, 40] - [311, 42]))
+            arg: (value_path [311, 42] - [311, 46]
+              (identifier [311, 44] - [311, 46])))))
+      (comment [313, 0] - [313, 70])
+      (variable_declaration [313, 70] - [322, 20]
+        name: (identifier [314, 8] - [314, 18])
+        value: (cmd_invocation [314, 20] - [322, 20]
+          (array [314, 22] - [322, 5]
+            (cmd_invocation [314, 23] - [315, 45]
+              (command [315, 9] - [315, 44]
+                cmd_name: (identifier [315, 9] - [315, 13])
+                arg: (record_or_block [315, 13] - [315, 44]
+                  (record_entry [315, 15] - [315, 29]
+                    (identifier [315, 15] - [315, 18])
+                    (string [315, 19] - [315, 29]))
+                  (record_entry [315, 30] - [315, 43]
+                    (identifier [315, 30] - [315, 32])
+                    (string [315, 33] - [315, 43])))))
+            (comment [315, 45] - [315, 60])
+            (cmd_invocation [315, 60] - [316, 20]
+              (command [316, 9] - [316, 19]
+                cmd_name: (identifier [316, 9] - [316, 13])
+                arg: (identifier [316, 13] - [316, 19])))
+            (comment [316, 20] - [316, 54])
+            (cmd_invocation [316, 54] - [317, 25]
+              (command [317, 9] - [317, 24]
+                cmd_name: (identifier [317, 9] - [317, 20])
+                arg: (value_path [317, 20] - [317, 24]
+                  (identifier [317, 22] - [317, 24]))))
+            (comment [317, 25] - [317, 56])
+            (cmd_invocation [317, 56] - [318, 20]
+              (command [318, 9] - [318, 19]
+                cmd_name: (identifier [318, 9] - [318, 13])
+                arg: (identifier [318, 13] - [318, 19])))
+            (comment [318, 20] - [318, 54])
+            (cmd_invocation [318, 54] - [319, 45]
+              (command [319, 9] - [319, 44]
+                cmd_name: (identifier [319, 9] - [319, 13])
+                arg: (record_or_block [319, 13] - [319, 44]
+                  (record_entry [319, 15] - [319, 29]
+                    (identifier [319, 15] - [319, 18])
+                    (string [319, 19] - [319, 29]))
+                  (record_entry [319, 30] - [319, 43]
+                    (identifier [319, 30] - [319, 32])
+                    (string [319, 33] - [319, 43])))))
+            (comment [319, 45] - [319, 65])
+            (cmd_invocation [319, 65] - [320, 22]
+              (command [320, 9] - [320, 21]
+                cmd_name: (identifier [320, 9] - [320, 13])
+                arg: (flag_shorthand_name [320, 13] - [320, 16])
+                arg: (identifier [320, 16] - [320, 21])))
+            (comment [320, 22] - [320, 52])
+            (cmd_invocation [320, 52] - [321, 20]
+              (command [321, 9] - [321, 19]
+                cmd_name: (identifier [321, 9] - [321, 13])
+                arg: (identifier [321, 13] - [321, 19])))
+            (comment [321, 20] - [321, 54]))
+          (command [322, 7] - [322, 19]
+            cmd_name: (identifier [322, 7] - [322, 11])
+            arg: (identifier [322, 11] - [322, 19]))))
+      (variable_declaration [324, 0] - [324, 67]
+        name: (identifier [324, 8] - [324, 23])
+        value: (cmd_invocation [324, 25] - [324, 67]
+          (value_path [324, 27] - [324, 34]
+            (identifier [324, 28] - [324, 30])
+            (identifier [324, 31] - [324, 34]))
+          (command [324, 36] - [324, 66]
+            cmd_name: (identifier [324, 36] - [324, 40])
+            arg: (identifier [324, 40] - [324, 52])
+            arg: (value_path [324, 52] - [324, 66]
+              (identifier [324, 54] - [324, 56])
+              (identifier [324, 57] - [324, 66])))))
+      (variable_declaration [325, 0] - [341, 6]
+        name: (identifier [325, 8] - [325, 20])
+        value: (cmd_invocation [325, 22] - [341, 6]
+          (command [325, 24] - [341, 5]
+            cmd_name: (identifier [325, 24] - [325, 26])
+            arg: (cmd_invocation [325, 26] - [325, 71]
+              (binary_expression [325, 28] - [325, 70]
+                left: (cmd_invocation [325, 28] - [325, 46]
+                  (value_path [325, 29] - [325, 45]
+                    (identifier [325, 30] - [325, 45])))
+                right: (cmd_invocation [325, 49] - [325, 70]
+                  (binary_expression [325, 51] - [325, 69]
+                    left: (value_path [325, 51] - [325, 63]
+                      (identifier [325, 52] - [325, 63]))
+                    right: (string [325, 66] - [325, 69])))))
+            arg: (record_or_block [325, 71] - [333, 5]
+              (array [325, 73] - [332, 9]
+                (cmd_invocation [326, 9] - [327, 22]
+                  (command [327, 9] - [327, 21]
+                    cmd_name: (identifier [327, 9] - [327, 13])
+                    arg: (flag_shorthand_name [327, 13] - [327, 16])
+                    arg: (identifier [327, 16] - [327, 21])))
+                (comment [327, 22] - [327, 62])
+                (cmd_invocation [327, 62] - [328, 20]
+                  (command [328, 9] - [328, 19]
+                    cmd_name: (identifier [328, 9] - [328, 13])
+                    arg: (identifier [328, 13] - [328, 19])))
+                (comment [328, 20] - [328, 54])
+                (value_path [328, 54] - [329, 21]
+                  (identifier [329, 9] - [329, 21]))
+                (comment [329, 21] - [329, 66])
+                (cmd_invocation [329, 66] - [330, 45]
+                  (command [330, 9] - [330, 44]
+                    cmd_name: (identifier [330, 9] - [330, 13])
+                    arg: (record_or_block [330, 13] - [330, 44]
+                      (record_entry [330, 15] - [330, 29]
+                        (identifier [330, 15] - [330, 18])
+                        (string [330, 19] - [330, 29]))
+                      (record_entry [330, 30] - [330, 43]
+                        (identifier [330, 30] - [330, 32])
+                        (string [330, 33] - [330, 43])))))
+                (comment [330, 45] - [330, 83])
+                (cmd_invocation [330, 83] - [331, 20]
+                  (command [331, 9] - [331, 19]
+                    cmd_name: (identifier [331, 9] - [331, 13])
+                    arg: (identifier [331, 13] - [331, 19])))
+                (comment [331, 20] - [331, 54]))
+              (command [332, 11] - [332, 23]
+                cmd_name: (identifier [332, 11] - [332, 15])
+                arg: (identifier [332, 15] - [332, 23])))
+            arg: (identifier [333, 5] - [333, 10])
+            arg: (record_or_block [333, 10] - [341, 5]
+              (array [333, 12] - [340, 9]
+                (cmd_invocation [334, 9] - [335, 22]
+                  (command [335, 9] - [335, 21]
+                    cmd_name: (identifier [335, 9] - [335, 13])
+                    arg: (flag_shorthand_name [335, 13] - [335, 16])
+                    arg: (identifier [335, 16] - [335, 21])))
+                (comment [335, 22] - [335, 64])
+                (cmd_invocation [335, 64] - [336, 20]
+                  (command [336, 9] - [336, 19]
+                    cmd_name: (identifier [336, 9] - [336, 13])
+                    arg: (identifier [336, 13] - [336, 19])))
+                (comment [336, 20] - [336, 54])
+                (value_path [336, 54] - [337, 21]
+                  (identifier [337, 9] - [337, 21]))
+                (comment [337, 21] - [337, 66])
+                (cmd_invocation [337, 66] - [338, 45]
+                  (command [338, 9] - [338, 44]
+                    cmd_name: (identifier [338, 9] - [338, 13])
+                    arg: (record_or_block [338, 13] - [338, 44]
+                      (record_entry [338, 15] - [338, 29]
+                        (identifier [338, 15] - [338, 18])
+                        (string [338, 19] - [338, 29]))
+                      (record_entry [338, 30] - [338, 43]
+                        (identifier [338, 30] - [338, 32])
+                        (string [338, 33] - [338, 43])))))
+                (comment [338, 45] - [338, 83])
+                (cmd_invocation [338, 83] - [339, 20]
+                  (command [339, 9] - [339, 19]
+                    cmd_name: (identifier [339, 9] - [339, 13])
+                    arg: (identifier [339, 13] - [339, 19])))
+                (comment [339, 20] - [339, 54]))
+              (command [340, 11] - [340, 23]
+                cmd_name: (identifier [340, 11] - [340, 15])
+                arg: (identifier [340, 15] - [340, 23]))))))
+      (variable_declaration [343, 0] - [360, 6]
+        name: (identifier [343, 8] - [343, 19])
+        value: (cmd_invocation [343, 21] - [360, 6]
+          (command [343, 23] - [360, 5]
+            cmd_name: (identifier [343, 23] - [343, 25])
+            arg: (cmd_invocation [343, 25] - [343, 46]
+              (binary_expression [343, 27] - [343, 45]
+                left: (value_path [343, 27] - [343, 39]
+                  (identifier [343, 28] - [343, 39]))
+                right: (string [343, 42] - [343, 45])))
+            arg: (record_or_block [343, 46] - [360, 5]
+              (array [343, 48] - [359, 9]
+                (cmd_invocation [344, 9] - [345, 45]
+                  (command [345, 9] - [345, 44]
+                    cmd_name: (identifier [345, 9] - [345, 13])
+                    arg: (record_or_block [345, 13] - [345, 44]
+                      (record_entry [345, 15] - [345, 29]
+                        (identifier [345, 15] - [345, 18])
+                        (string [345, 19] - [345, 29]))
+                      (record_entry [345, 30] - [345, 43]
+                        (identifier [345, 30] - [345, 32])
+                        (string [345, 33] - [345, 43])))))
+                (comment [345, 45] - [345, 54])
+                (cmd_invocation [345, 54] - [346, 22]
+                  (command [346, 9] - [346, 21]
+                    cmd_name: (identifier [346, 9] - [346, 13])
+                    arg: (flag_shorthand_name [346, 13] - [346, 16])
+                    arg: (identifier [346, 16] - [346, 21])))
+                (comment [346, 22] - [346, 52])
+                (cmd_invocation [346, 52] - [347, 20]
+                  (command [347, 9] - [347, 19]
+                    cmd_name: (identifier [347, 9] - [347, 13])
+                    arg: (identifier [347, 13] - [347, 19])))
+                (comment [347, 20] - [347, 54])
+                (cmd_invocation [347, 54] - [348, 44]
+                  (command [348, 9] - [348, 43]
+                    cmd_name: (identifier [348, 9] - [348, 13])
+                    arg: (record_or_block [348, 13] - [348, 43]
+                      (record_entry [348, 15] - [348, 28]
+                        (identifier [348, 15] - [348, 18])
+                        (value_path [348, 19] - [348, 28]
+                          (identifier [348, 21] - [348, 28])))
+                      (record_entry [348, 29] - [348, 42]
+                        (identifier [348, 29] - [348, 31])
+                        (string [348, 32] - [348, 42])))))
+                (comment [348, 44] - [348, 52])
+                (comment [348, 52] - [349, 54])
+                (cmd_invocation [349, 54] - [350, 22]
+                  (command [350, 9] - [350, 21]
+                    cmd_name: (identifier [350, 9] - [350, 13])
+                    arg: (flag_shorthand_name [350, 13] - [350, 16])
+                    arg: (identifier [350, 16] - [350, 21])))
+                (comment [350, 22] - [350, 52])
+                (cmd_invocation [350, 52] - [351, 20]
+                  (command [351, 9] - [351, 19]
+                    cmd_name: (identifier [351, 9] - [351, 13])
+                    arg: (identifier [351, 13] - [351, 19])))
+                (comment [351, 20] - [351, 54])
+                (cmd_invocation [351, 54] - [352, 22]
+                  (value_path [352, 9] - [352, 21]
+                    (identifier [352, 10] - [352, 21])))
+                (comment [352, 22] - [352, 53])
+                (cmd_invocation [352, 53] - [353, 20]
+                  (command [353, 9] - [353, 19]
+                    cmd_name: (identifier [353, 9] - [353, 13])
+                    arg: (identifier [353, 13] - [353, 19])))
+                (comment [353, 20] - [353, 54])
+                (cmd_invocation [353, 54] - [354, 43]
+                  (command [354, 9] - [354, 42]
+                    cmd_name: (identifier [354, 9] - [354, 13])
+                    arg: (record_or_block [354, 13] - [354, 42]
+                      (record_entry [354, 15] - [354, 29]
+                        (identifier [354, 15] - [354, 18])
+                        (string [354, 19] - [354, 29]))
+                      (record_entry [354, 30] - [354, 41]
+                        (identifier [354, 30] - [354, 32])
+                        (value_path [354, 33] - [354, 41]
+                          (identifier [354, 35] - [354, 41]))))))
+                (comment [354, 43] - [354, 52])
+                (cmd_invocation [354, 52] - [355, 22]
+                  (command [355, 9] - [355, 21]
+                    cmd_name: (identifier [355, 9] - [355, 13])
+                    arg: (flag_shorthand_name [355, 13] - [355, 16])
+                    arg: (identifier [355, 16] - [355, 21])))
+                (comment [355, 22] - [355, 52])
+                (cmd_invocation [355, 52] - [356, 20]
+                  (command [356, 9] - [356, 19]
+                    cmd_name: (identifier [356, 9] - [356, 13])
+                    arg: (identifier [356, 13] - [356, 19])))
+                (comment [356, 20] - [356, 54])
+                (cmd_invocation [356, 54] - [357, 12]
+                  (value_path [357, 9] - [357, 11]
+                    (identifier [357, 10] - [357, 11])))
+                (comment [357, 12] - [357, 60])
+                (value_path [357, 60] - [358, 20]
+                  (identifier [358, 9] - [358, 20]))
+                (comment [358, 20] - [358, 58]))
+              (command [359, 11] - [359, 23]
+                cmd_name: (identifier [359, 11] - [359, 15])
+                arg: (identifier [359, 15] - [359, 23]))))))
+      (variable_declaration [362, 0] - [362, 25]
+        name: (identifier [362, 8] - [362, 17])
+        value: (value_path [362, 19] - [362, 25]
+          (identifier [362, 21] - [362, 25])))
+      (variable_declaration [363, 0] - [375, 6]
+        name: (identifier [363, 8] - [363, 25])
+        value: (cmd_invocation [363, 27] - [375, 6]
+          (command [363, 29] - [375, 5]
+            cmd_name: (identifier [363, 29] - [363, 31])
+            arg: (cmd_invocation [363, 31] - [363, 75]
+              (binary_expression [363, 33] - [363, 74]
+                left: (binary_expression [363, 33] - [363, 51]
+                  left: (value_path [363, 33] - [363, 45]
+                    (identifier [363, 34] - [363, 45]))
+                  right: (string [363, 48] - [363, 51]))
+                right: (binary_expression [363, 54] - [363, 74]
+                  left: (value_path [363, 54] - [363, 65]
+                    (identifier [363, 56] - [363, 65]))
+                  right: (value_path [363, 68] - [363, 74]
+                    (identifier [363, 70] - [363, 74])))))
+            arg: (record_or_block [363, 75] - [369, 5]
+              (array [363, 77] - [368, 9]
+                (cmd_invocation [364, 9] - [365, 44]
+                  (command [365, 9] - [365, 43]
+                    cmd_name: (identifier [365, 9] - [365, 13])
+                    arg: (record_or_block [365, 13] - [365, 43]
+                      (record_entry [365, 15] - [365, 29]
+                        (identifier [365, 15] - [365, 18])
+                        (string [365, 19] - [365, 29]))
+                      (record_entry [365, 30] - [365, 42]
+                        (identifier [365, 30] - [365, 32])
+                        (value_path [365, 33] - [365, 42]
+                          (identifier [365, 35] - [365, 42]))))))
+                (comment [365, 44] - [365, 52])
+                (cmd_invocation [365, 52] - [366, 22]
+                  (command [366, 9] - [366, 21]
+                    cmd_name: (identifier [366, 9] - [366, 13])
+                    arg: (flag_shorthand_name [366, 13] - [366, 16])
+                    arg: (identifier [366, 16] - [366, 21])))
+                (comment [366, 22] - [366, 52])
+                (cmd_invocation [366, 52] - [367, 12]
+                  (value_path [367, 9] - [367, 11]
+                    (identifier [367, 10] - [367, 11])))
+                (comment [367, 12] - [367, 60]))
+              (command [368, 11] - [368, 23]
+                cmd_name: (identifier [368, 11] - [368, 15])
+                arg: (identifier [368, 15] - [368, 23])))
+            arg: (identifier [369, 5] - [369, 10])
+            arg: (record_or_block [369, 10] - [375, 5]
+              (array [369, 12] - [374, 9]
+                (cmd_invocation [370, 9] - [371, 42]
+                  (command [371, 9] - [371, 41]
+                    cmd_name: (identifier [371, 9] - [371, 13])
+                    arg: (record_or_block [371, 13] - [371, 41]
+                      (record_entry [371, 15] - [371, 27]
+                        (identifier [371, 15] - [371, 18])
+                        (value_path [371, 19] - [371, 27]
+                          (identifier [371, 21] - [371, 27])))
+                      (record_entry [371, 28] - [371, 40]
+                        (identifier [371, 28] - [371, 30])
+                        (value_path [371, 31] - [371, 40]
+                          (identifier [371, 33] - [371, 40]))))))
+                (comment [371, 42] - [371, 50])
+                (cmd_invocation [371, 50] - [372, 22]
+                  (command [372, 9] - [372, 21]
+                    cmd_name: (identifier [372, 9] - [372, 13])
+                    arg: (flag_shorthand_name [372, 13] - [372, 16])
+                    arg: (identifier [372, 16] - [372, 21])))
+                (comment [372, 22] - [372, 52])
+                (cmd_invocation [372, 52] - [373, 12]
+                  (value_path [373, 9] - [373, 11]
+                    (identifier [373, 10] - [373, 11])))
+                (comment [373, 12] - [373, 60]))
+              (command [374, 11] - [374, 23]
+                cmd_name: (identifier [374, 11] - [374, 15])
+                arg: (identifier [374, 15] - [374, 23]))))))
+      (comment [377, 0] - [377, 53])
+      (array [377, 53] - [385, 5]
+        (value_path [378, 5] - [379, 19]
+          (identifier [379, 9] - [379, 19]))
+        (value_path [379, 19] - [380, 21]
+          (identifier [380, 9] - [380, 21]))
+        (cmd_invocation [380, 21] - [383, 10]
+          (command [381, 9] - [383, 9]
+            cmd_name: (identifier [381, 9] - [381, 11])
+            arg: (cmd_invocation [381, 11] - [381, 34]
+              (binary_expression [381, 13] - [381, 33]
+                left: (value_path [381, 13] - [381, 23]
+                  (identifier [381, 14] - [381, 23]))
+                right: (value_path [381, 26] - [381, 33]
+                  (identifier [381, 28] - [381, 33]))))
+            arg: (record_or_block [381, 34] - [383, 9]
+              (value_path [381, 36] - [382, 24]
+                (identifier [382, 13] - [382, 24])))))
+        (value_path [383, 10] - [384, 26]
+          (identifier [384, 9] - [384, 26])))
+      (command [385, 7] - [385, 19]
+        cmd_name: (identifier [385, 7] - [385, 11])
+        arg: (identifier [385, 11] - [385, 19]))))
+  (function_definition [388, 0] - [484, 1]
+    func_name: (identifier [388, 4] - [388, 20])
+    (signature [388, 21] - [388, 28]
+      (parameter [388, 22] - [388, 24]
+        (identifier [388, 22] - [388, 24]))
+      (parameter [388, 25] - [388, 27]
+        (identifier [388, 25] - [388, 27])))
+    (block [388, 29] - [484, 1]
+      (comment [388, 30] - [389, 24])
+      (comment [389, 24] - [390, 35])
+      (comment [390, 35] - [391, 35])
+      (comment [391, 35] - [392, 37])
+      (comment [392, 37] - [393, 27])
+      (comment [393, 27] - [394, 80])
+      (comment [394, 80] - [395, 51])
+      (variable_declaration [395, 51] - [397, 43]
+        name: (identifier [397, 8] - [397, 19])
+        value: (cmd_invocation [397, 21] - [397, 43]
+          (command [397, 23] - [397, 42]
+            cmd_name: (identifier [397, 23] - [397, 38])
+            arg: (value_path [397, 38] - [397, 42]
+              (identifier [397, 40] - [397, 42])))))
+      (variable_declaration [398, 0] - [398, 47]
+        name: (identifier [398, 8] - [398, 19])
+        value: (cmd_invocation [398, 21] - [398, 47]
+          (command [398, 23] - [398, 46]
+            cmd_name: (identifier [398, 23] - [398, 38])
+            arg: (value_path [398, 38] - [398, 42]
+              (identifier [398, 40] - [398, 42]))
+            arg: (value_path [398, 42] - [398, 46]
+              (identifier [398, 44] - [398, 46])))))
+      (variable_declaration [399, 0] - [399, 24]
+        name: (identifier [399, 8] - [399, 9])
+        value: (cmd_invocation [399, 11] - [399, 24]
+          (command [399, 13] - [399, 23]
+            cmd_name: (identifier [399, 13] - [399, 17])
+            arg: (identifier [399, 17] - [399, 23]))))
+      (variable_declaration [400, 0] - [400, 27]
+        name: (identifier [400, 8] - [400, 15])
+        value: (string [400, 17] - [400, 27]))
+      (variable_declaration [401, 0] - [401, 27]
+        name: (identifier [401, 8] - [401, 15])
+        value: (string [401, 17] - [401, 27]))
+      (variable_declaration [402, 0] - [402, 26]
+        name: (identifier [402, 8] - [402, 14])
+        value: (string [402, 16] - [402, 26]))
+      (variable_declaration [403, 0] - [403, 26]
+        name: (identifier [403, 8] - [403, 14])
+        value: (string [403, 16] - [403, 26]))
+      (variable_declaration [404, 0] - [404, 27]
+        name: (identifier [404, 8] - [404, 15])
+        value: (string [404, 17] - [404, 27]))
+      (variable_declaration [406, 0] - [414, 20]
+        name: (identifier [406, 8] - [406, 24])
+        value: (cmd_invocation [406, 26] - [414, 20]
+          (array [406, 28] - [414, 5]
+            (cmd_invocation [406, 29] - [407, 43]
+              (command [407, 9] - [407, 42]
+                cmd_name: (identifier [407, 9] - [407, 13])
+                arg: (record_or_block [407, 13] - [407, 42]
+                  (record_entry [407, 15] - [407, 28]
+                    (identifier [407, 15] - [407, 18])
+                    (value_path [407, 19] - [407, 28]
+                      (identifier [407, 21] - [407, 28])))
+                  (record_entry [407, 29] - [407, 41]
+                    (identifier [407, 29] - [407, 31])
+                    (value_path [407, 32] - [407, 41]
+                      (identifier [407, 34] - [407, 41]))))))
+            (cmd_invocation [407, 43] - [408, 22]
+              (command [408, 9] - [408, 21]
+                cmd_name: (identifier [408, 9] - [408, 13])
+                arg: (flag_shorthand_name [408, 13] - [408, 16])
+                arg: (identifier [408, 16] - [408, 21])))
+            (comment [408, 22] - [408, 32])
+            (cmd_invocation [408, 32] - [409, 43]
+              (command [409, 9] - [409, 42]
+                cmd_name: (identifier [409, 9] - [409, 13])
+                arg: (record_or_block [409, 13] - [409, 42]
+                  (record_entry [409, 15] - [409, 28]
+                    (identifier [409, 15] - [409, 18])
+                    (value_path [409, 19] - [409, 28]
+                      (identifier [409, 21] - [409, 28])))
+                  (record_entry [409, 29] - [409, 41]
+                    (identifier [409, 29] - [409, 31])
+                    (value_path [409, 32] - [409, 41]
+                      (identifier [409, 34] - [409, 41]))))))
+            (cmd_invocation [409, 43] - [410, 20]
+              (command [410, 9] - [410, 19]
+                cmd_name: (identifier [410, 9] - [410, 13])
+                arg: (identifier [410, 13] - [410, 19])))
+            (cmd_invocation [410, 20] - [411, 56]
+              (command [411, 9] - [411, 18]
+                cmd_name: (identifier [411, 9] - [411, 13])
+                arg: (identifier [411, 13] - [411, 17]))
+              (command [411, 19] - [411, 55]
+                cmd_name: (identifier [411, 19] - [411, 24])
+                arg: (identifier [411, 24] - [411, 31])
+                arg: (string [411, 31] - [411, 55])))
+            (cmd_invocation [411, 56] - [412, 20]
+              (command [412, 9] - [412, 19]
+                cmd_name: (identifier [412, 9] - [412, 13])
+                arg: (identifier [412, 13] - [412, 19])))
+            (cmd_invocation [412, 20] - [413, 12]
+              (value_path [413, 9] - [413, 11]
+                (identifier [413, 10] - [413, 11]))))
+          (command [414, 7] - [414, 19]
+            cmd_name: (identifier [414, 7] - [414, 11])
+            arg: (identifier [414, 11] - [414, 19]))))
+      (variable_declaration [416, 0] - [424, 20]
+        name: (identifier [416, 8] - [416, 20])
+        value: (cmd_invocation [416, 22] - [424, 20]
+          (array [416, 24] - [424, 5]
+            (cmd_invocation [416, 25] - [417, 43]
+              (command [417, 9] - [417, 42]
+                cmd_name: (identifier [417, 9] - [417, 13])
+                arg: (record_or_block [417, 13] - [417, 42]
+                  (record_entry [417, 15] - [417, 28]
+                    (identifier [417, 15] - [417, 18])
+                    (value_path [417, 19] - [417, 28]
+                      (identifier [417, 21] - [417, 28])))
+                  (record_entry [417, 29] - [417, 41]
+                    (identifier [417, 29] - [417, 31])
+                    (value_path [417, 32] - [417, 41]
+                      (identifier [417, 34] - [417, 41]))))))
+            (cmd_invocation [417, 43] - [418, 22]
+              (command [418, 9] - [418, 21]
+                cmd_name: (identifier [418, 9] - [418, 13])
+                arg: (flag_shorthand_name [418, 13] - [418, 16])
+                arg: (identifier [418, 16] - [418, 21])))
+            (comment [418, 22] - [418, 32])
+            (cmd_invocation [418, 32] - [419, 43]
+              (command [419, 9] - [419, 42]
+                cmd_name: (identifier [419, 9] - [419, 13])
+                arg: (record_or_block [419, 13] - [419, 42]
+                  (record_entry [419, 15] - [419, 28]
+                    (identifier [419, 15] - [419, 18])
+                    (value_path [419, 19] - [419, 28]
+                      (identifier [419, 21] - [419, 28])))
+                  (record_entry [419, 29] - [419, 41]
+                    (identifier [419, 29] - [419, 31])
+                    (value_path [419, 32] - [419, 41]
+                      (identifier [419, 34] - [419, 41]))))))
+            (cmd_invocation [419, 43] - [420, 20]
+              (command [420, 9] - [420, 19]
+                cmd_name: (identifier [420, 9] - [420, 13])
+                arg: (identifier [420, 13] - [420, 19])))
+            (cmd_invocation [420, 20] - [421, 46]
+              (command [421, 9] - [421, 18]
+                cmd_name: (identifier [421, 9] - [421, 13])
+                arg: (identifier [421, 13] - [421, 17]))
+              (command [421, 19] - [421, 45]
+                cmd_name: (identifier [421, 19] - [421, 24])
+                arg: (identifier [421, 24] - [421, 31])
+                arg: (string [421, 31] - [421, 45])))
+            (cmd_invocation [421, 46] - [422, 20]
+              (command [422, 9] - [422, 19]
+                cmd_name: (identifier [422, 9] - [422, 13])
+                arg: (identifier [422, 13] - [422, 19])))
+            (cmd_invocation [422, 20] - [423, 12]
+              (value_path [423, 9] - [423, 11]
+                (identifier [423, 10] - [423, 11]))))
+          (command [424, 7] - [424, 19]
+            cmd_name: (identifier [424, 7] - [424, 11])
+            arg: (identifier [424, 11] - [424, 19]))))
+      (variable_declaration [426, 0] - [447, 6]
+        name: (identifier [426, 8] - [426, 19])
+        value: (cmd_invocation [426, 21] - [447, 6]
+          (command [426, 23] - [447, 5]
+            cmd_name: (identifier [426, 23] - [426, 25])
+            arg: (cmd_invocation [426, 25] - [426, 46]
+              (binary_expression [426, 27] - [426, 45]
+                left: (value_path [426, 27] - [426, 39]
+                  (identifier [426, 28] - [426, 39]))
+                right: (string [426, 42] - [426, 45])))
+            arg: (record_or_block [426, 46] - [447, 5]
+              (array [426, 48] - [446, 9]
+                (cmd_invocation [427, 9] - [428, 42]
+                  (command [428, 9] - [428, 41]
+                    cmd_name: (identifier [428, 9] - [428, 13])
+                    arg: (record_or_block [428, 13] - [428, 41]
+                      (record_entry [428, 15] - [428, 27]
+                        (identifier [428, 15] - [428, 18])
+                        (value_path [428, 19] - [428, 27]
+                          (identifier [428, 21] - [428, 27])))
+                      (record_entry [428, 28] - [428, 40]
+                        (identifier [428, 28] - [428, 30])
+                        (value_path [428, 31] - [428, 40]
+                          (identifier [428, 33] - [428, 40]))))))
+                (comment [428, 42] - [428, 52])
+                (cmd_invocation [428, 52] - [429, 22]
+                  (command [429, 9] - [429, 21]
+                    cmd_name: (identifier [429, 9] - [429, 13])
+                    arg: (flag_shorthand_name [429, 13] - [429, 16])
+                    arg: (identifier [429, 16] - [429, 21])))
+                (comment [429, 22] - [429, 50])
+                (cmd_invocation [429, 50] - [430, 42]
+                  (command [430, 9] - [430, 41]
+                    cmd_name: (identifier [430, 9] - [430, 13])
+                    arg: (record_or_block [430, 13] - [430, 41]
+                      (record_entry [430, 15] - [430, 28]
+                        (identifier [430, 15] - [430, 18])
+                        (value_path [430, 19] - [430, 28]
+                          (identifier [430, 21] - [430, 28])))
+                      (record_entry [430, 29] - [430, 40]
+                        (identifier [430, 29] - [430, 31])
+                        (value_path [430, 32] - [430, 40]
+                          (identifier [430, 34] - [430, 40]))))))
+                (comment [430, 42] - [430, 52])
+                (cmd_invocation [430, 52] - [431, 20]
+                  (command [431, 9] - [431, 19]
+                    cmd_name: (identifier [431, 9] - [431, 13])
+                    arg: (identifier [431, 13] - [431, 19])))
+                (comment [431, 20] - [431, 52])
+                (value_path [431, 52] - [432, 20]
+                  (identifier [432, 9] - [432, 20]))
+                (comment [432, 20] - [432, 58])
+                (cmd_invocation [432, 58] - [433, 42]
+                  (command [433, 9] - [433, 41]
+                    cmd_name: (identifier [433, 9] - [433, 13])
+                    arg: (record_or_block [433, 13] - [433, 41]
+                      (record_entry [433, 15] - [433, 28]
+                        (identifier [433, 15] - [433, 18])
+                        (value_path [433, 19] - [433, 28]
+                          (identifier [433, 21] - [433, 28])))
+                      (record_entry [433, 29] - [433, 40]
+                        (identifier [433, 29] - [433, 31])
+                        (value_path [433, 32] - [433, 40]
+                          (identifier [433, 34] - [433, 40]))))))
+                (comment [433, 42] - [433, 52])
+                (cmd_invocation [433, 52] - [434, 20]
+                  (command [434, 9] - [434, 19]
+                    cmd_name: (identifier [434, 9] - [434, 13])
+                    arg: (identifier [434, 13] - [434, 19])))
+                (cmd_invocation [434, 20] - [435, 44]
+                  (command [435, 9] - [435, 43]
+                    cmd_name: (identifier [435, 9] - [435, 13])
+                    arg: (record_or_block [435, 13] - [435, 43]
+                      (record_entry [435, 15] - [435, 29]
+                        (identifier [435, 15] - [435, 18])
+                        (string [435, 19] - [435, 29]))
+                      (record_entry [435, 30] - [435, 41]
+                        (identifier [435, 30] - [435, 32])
+                        (value_path [435, 33] - [435, 41]
+                          (identifier [435, 35] - [435, 41]))))))
+                (comment [435, 44] - [435, 52])
+                (cmd_invocation [435, 52] - [436, 22]
+                  (command [436, 9] - [436, 21]
+                    cmd_name: (identifier [436, 9] - [436, 13])
+                    arg: (flag_shorthand_name [436, 13] - [436, 16])
+                    arg: (identifier [436, 16] - [436, 21])))
+                (comment [436, 22] - [436, 50])
+                (cmd_invocation [436, 50] - [437, 44]
+                  (command [437, 9] - [437, 43]
+                    cmd_name: (identifier [437, 9] - [437, 13])
+                    arg: (record_or_block [437, 13] - [437, 43]
+                      (record_entry [437, 15] - [437, 28]
+                        (identifier [437, 15] - [437, 18])
+                        (value_path [437, 19] - [437, 28]
+                          (identifier [437, 21] - [437, 28])))
+                      (record_entry [437, 29] - [437, 42]
+                        (identifier [437, 29] - [437, 31])
+                        (string [437, 32] - [437, 42])))))
+                (comment [437, 44] - [437, 52])
+                (cmd_invocation [437, 52] - [438, 20]
+                  (command [438, 9] - [438, 19]
+                    cmd_name: (identifier [438, 9] - [438, 13])
+                    arg: (identifier [438, 13] - [438, 19])))
+                (comment [438, 20] - [438, 52])
+                (comment [438, 52] - [439, 52])
+                (comment [439, 52] - [440, 52])
+                (cmd_invocation [440, 52] - [441, 28]
+                  (command [441, 9] - [441, 27]
+                    cmd_name: (identifier [441, 9] - [441, 13])
+                    arg: (identifier [441, 13] - [441, 27])))
+                (comment [441, 28] - [441, 53])
+                (cmd_invocation [441, 53] - [442, 20]
+                  (command [442, 9] - [442, 19]
+                    cmd_name: (identifier [442, 9] - [442, 13])
+                    arg: (identifier [442, 13] - [442, 19])))
+                (comment [442, 20] - [442, 52])
+                (value_path [442, 52] - [443, 20]
+                  (identifier [443, 9] - [443, 20]))
+                (comment [443, 20] - [443, 51])
+                (cmd_invocation [443, 51] - [444, 20]
+                  (command [444, 9] - [444, 19]
+                    cmd_name: (identifier [444, 9] - [444, 13])
+                    arg: (identifier [444, 13] - [444, 19])))
+                (comment [444, 20] - [444, 52])
+                (cmd_invocation [444, 52] - [445, 12]
+                  (value_path [445, 9] - [445, 11]
+                    (identifier [445, 10] - [445, 11])))
+                (comment [445, 12] - [445, 58]))
+              (command [446, 11] - [446, 23]
+                cmd_name: (identifier [446, 11] - [446, 15])
+                arg: (identifier [446, 15] - [446, 23]))))))
+      (variable_declaration [449, 0] - [458, 5]
+        name: (identifier [449, 8] - [449, 30])
+        value: (cmd_invocation [449, 32] - [458, 5]
+          (array [449, 34] - [457, 9]
+            (cmd_invocation [450, 9] - [451, 48]
+              (command [451, 13] - [451, 47]
+                cmd_name: (identifier [451, 13] - [451, 17])
+                arg: (record_or_block [451, 17] - [451, 47]
+                  (record_entry [451, 19] - [451, 33]
+                    (identifier [451, 19] - [451, 22])
+                    (string [451, 23] - [451, 33]))
+                  (record_entry [451, 34] - [451, 46]
+                    (identifier [451, 34] - [451, 36])
+                    (value_path [451, 37] - [451, 46]
+                      (identifier [451, 39] - [451, 46]))))))
+            (cmd_invocation [451, 48] - [452, 26]
+              (command [452, 13] - [452, 25]
+                cmd_name: (identifier [452, 13] - [452, 17])
+                arg: (flag_shorthand_name [452, 17] - [452, 20])
+                arg: (identifier [452, 20] - [452, 25])))
+            (cmd_invocation [452, 26] - [453, 24]
+              (command [453, 13] - [453, 23]
+                cmd_name: (identifier [453, 13] - [453, 17])
+                arg: (identifier [453, 17] - [453, 23])))
+            (value_path [453, 24] - [454, 32]
+              (identifier [454, 13] - [454, 16])
+              (identifier [454, 17] - [454, 32]))
+            (cmd_invocation [454, 32] - [455, 24]
+              (command [455, 13] - [455, 23]
+                cmd_name: (identifier [455, 13] - [455, 17])
+                arg: (identifier [455, 17] - [455, 23])))
+            (cmd_invocation [455, 24] - [456, 16]
+              (value_path [456, 13] - [456, 15]
+                (identifier [456, 14] - [456, 15]))))
+          (command [457, 11] - [457, 23]
+            cmd_name: (identifier [457, 11] - [457, 15])
+            arg: (identifier [457, 15] - [457, 23]))))
+      (comment [460, 0] - [460, 27])
+      (comment [460, 27] - [461, 23])
+      (comment [461, 23] - [463, 28])
+      (array [463, 28] - [467, 5]
+        (value_path [464, 5] - [465, 31]
+          (identifier [465, 9] - [465, 31]))
+        (value_path [465, 31] - [466, 21]
+          (identifier [466, 9] - [466, 21])))
+      (command [467, 7] - [467, 19]
+        cmd_name: (identifier [467, 7] - [467, 11])
+        arg: (identifier [467, 11] - [467, 19]))
+      (comment [469, 0] - [469, 27])
+      (comment [469, 27] - [470, 18])
+      (comment [470, 18] - [472, 49])
+      (comment [472, 49] - [473, 7])
+      (comment [473, 7] - [474, 22])
+      (comment [474, 22] - [475, 23])
+      (comment [475, 23] - [476, 21])
+      (comment [476, 21] - [478, 47])
+      (comment [478, 47] - [479, 7])
+      (comment [479, 7] - [480, 21])
+      (comment [480, 21] - [481, 23])
+      (comment [481, 23] - [482, 23])
+      (comment [482, 23] - [483, 7])))
+  (function_definition [486, 0] - [504, 1]
+    func_name: (identifier [486, 11] - [486, 21])
+    (signature [486, 22] - [486, 24])
+    (block [486, 25] - [504, 1]
+      (variable_declaration [486, 26] - [487, 20]
+        name: (identifier [487, 8] - [487, 10])
+        value: (cmd_invocation [487, 12] - [487, 20]
+          (command [487, 14] - [487, 19]
+            cmd_name: (identifier [487, 14] - [487, 19]))))
+      (variable_declaration [488, 0] - [488, 30]
+        name: (identifier [488, 8] - [488, 10])
+        value: (cmd_invocation [488, 12] - [488, 30]
+          (cmd_invocation [488, 14] - [488, 29]
+            (command [488, 15] - [488, 18]
+              cmd_name: (identifier [488, 15] - [488, 18]))
+            (identifier [488, 20] - [488, 24])
+            (identifier [488, 25] - [488, 29]))))
+      (variable_declaration [489, 0] - [489, 47]
+        name: (identifier [489, 8] - [489, 19])
+        value: (cmd_invocation [489, 21] - [489, 47]
+          (command [489, 23] - [489, 46]
+            cmd_name: (identifier [489, 23] - [489, 38])
+            arg: (value_path [489, 38] - [489, 42]
+              (identifier [489, 40] - [489, 42]))
+            arg: (value_path [489, 42] - [489, 46]
+              (identifier [489, 44] - [489, 46])))))
+      (variable_declaration [490, 0] - [490, 49]
+        name: (identifier [490, 8] - [490, 20])
+        value: (cmd_invocation [490, 22] - [490, 49]
+          (command [490, 24] - [490, 48]
+            cmd_name: (identifier [490, 24] - [490, 40])
+            arg: (value_path [490, 40] - [490, 44]
+              (identifier [490, 42] - [490, 44]))
+            arg: (value_path [490, 44] - [490, 48]
+              (identifier [490, 46] - [490, 48])))))
+      (comment [492, 0] - [492, 69])
+      (comment [492, 69] - [493, 67])
+      (record_or_block [493, 67] - [497, 5]
+        (record_entry [494, 5] - [495, 33]
+          (identifier [494, 5] - [495, 19])
+          (value_path [495, 20] - [495, 33]
+            (identifier [495, 22] - [495, 33])))
+        (record_entry [496, 0] - [496, 35]
+          (identifier [496, 0] - [496, 20])
+          (value_path [496, 21] - [496, 35]
+            (identifier [496, 23] - [496, 35]))))
+      (comment [498, 0] - [498, 5])
+      (comment [498, 5] - [499, 50])
+      (comment [499, 50] - [500, 74])
+      (comment [500, 74] - [501, 59])
+      (comment [501, 59] - [502, 66])
+      (comment [502, 66] - [503, 36]))))
