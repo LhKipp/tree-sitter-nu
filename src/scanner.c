@@ -20,6 +20,7 @@ bool tree_sitter_nu_external_scanner_scan(
             || lexer->lookahead == '}'  
             || lexer->lookahead == ')' 
             || lexer->lookahead == ']' 
+            || lexer->lookahead == '|' 
             || lexer->lookahead == '\n'
             || lexer->lookahead == '\r' // \r\n for windows newlines
             ){

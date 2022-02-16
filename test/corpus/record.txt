@@ -79,20 +79,19 @@ export def from-file [base-txt: path] {
         (cmd_invocation
           (command
             (identifier)
-            (binary_expression
-              (value_path
-                (identifier))
-              (command
-                (identifier)))
+            (value_path
+              (identifier)))
+          (command
+            (identifier))
+          (command
             (identifier)
             (binary_expression
               (cmd_invocation
-                (binary_expression
-                  (value_path
-                    (identifier))
-                  (command
-                    (identifier)
-                    (identifier))))
+                (value_path
+                  (identifier))
+                (command
+                  (identifier)
+                  (identifier)))
               (number_literal)))))
       (record_or_block
         (record_entry

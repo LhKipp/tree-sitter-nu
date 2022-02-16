@@ -303,10 +303,6 @@
             "named": false
           },
           {
-            "type": "|",
-            "named": false
-          },
-          {
             "type": "||",
             "named": false
           }
@@ -464,9 +460,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
+        {
+          "type": "alias",
+          "named": true
+        },
         {
           "type": "array",
           "named": true
@@ -496,11 +496,19 @@
           "named": true
         },
         {
+          "type": "function_definition",
+          "named": true
+        },
+        {
           "type": "number_literal",
           "named": true
         },
         {
           "type": "range",
+          "named": true
+        },
+        {
+          "type": "record_entry",
           "named": true
         },
         {
@@ -517,6 +525,10 @@
         },
         {
           "type": "value_path",
+          "named": true
+        },
+        {
+          "type": "variable_declaration",
           "named": true
         },
         {

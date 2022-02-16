@@ -82,11 +82,10 @@ echo ($separator | empty?)
   (command
     (identifier)
     (cmd_invocation
-      (binary_expression
-        (value_path
-          (identifier))
-        (command
-          (identifier))))))
+      (value_path
+        (identifier))
+      (command
+        (identifier)))))
 
 ================================================================================
 Parse alias
@@ -127,4 +126,3 @@ let pos_y = 0.995 * $resolution_y
       (number_literal)
       (value_path
         (identifier)))))
-

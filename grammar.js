@@ -1,6 +1,6 @@
 const PREC = {
     PAREN_DECLARATOR: -10,
-    PIPE: -5,
+    // PIPE: -5,
     DEFAULT: 0,
     LOGICAL_OR: 1,
     LOGICAL_AND: 2,
@@ -17,7 +17,7 @@ const PREC = {
 };
 
 const OPERATOR_PREC = [
-    ['|', PREC.PIPE],
+    // ['|', PREC.PIPE],
     ['+', PREC.ADD],
     ['-', PREC.ADD],
     ['*', PREC.MULTIPLY],
@@ -223,7 +223,7 @@ module.exports = grammar({
             seq('\\', noneOf('\\s'))
         )))),
 
-        string: $ => seq(optional('$'),choice(
+        string: $ => seq(optional('$'), choice(
             seq(
                 '"',
                 token(prec(-1, /[^"]+/)),
@@ -278,7 +278,7 @@ module.exports = grammar({
         // backtracking is not allowed in ts. Therefore we have a catch both rule
         record_or_block: $ => seq(
             '{',
-                optional($._statements),
+            optional($._statements),
             '}'
         ),
 
@@ -292,7 +292,7 @@ module.exports = grammar({
 
         cmd_invocation: $ => seq(
             '(',
-            $._expression,
+            $._statements,
             ')'
         ),
 
