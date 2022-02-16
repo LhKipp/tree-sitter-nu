@@ -166,7 +166,7 @@ module.exports = grammar({
 
         variable_declaration: $ => seq(
             'let',
-            field('name', $.identifier),
+            choice(field('name', $.identifier), $.number_literal),
             '=',
             field('value', $._expression),
         ),
