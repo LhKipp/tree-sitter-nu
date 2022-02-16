@@ -293,7 +293,8 @@ module.exports = grammar({
         cmd_invocation: $ => seq(
             '(',
             $._statements,
-            ')'
+            ')',
+            repeat(seq(token.immediate('.'), choice($.identifier, $.number_literal)))
         ),
 
         operator: $ => choice(...OPERATOR_PREC.map(([operator, _]) => {
