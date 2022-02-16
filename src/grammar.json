@@ -432,27 +432,7 @@
         },
         {
           "type": "STRING",
-          "value": "string"
-        },
-        {
-          "type": "STRING",
-          "value": "path"
-        },
-        {
-          "type": "STRING",
-          "value": "table"
-        },
-        {
-          "type": "STRING",
-          "value": "unit"
-        },
-        {
-          "type": "STRING",
-          "value": "number"
-        },
-        {
-          "type": "STRING",
-          "value": "pattern"
+          "value": "float"
         },
         {
           "type": "STRING",
@@ -460,11 +440,43 @@
         },
         {
           "type": "STRING",
+          "value": "bool"
+        },
+        {
+          "type": "STRING",
+          "value": "string"
+        },
+        {
+          "type": "STRING",
           "value": "block"
         },
         {
           "type": "STRING",
-          "value": "any"
+          "value": "duration"
+        },
+        {
+          "type": "STRING",
+          "value": "date"
+        },
+        {
+          "type": "STRING",
+          "value": "filesize"
+        },
+        {
+          "type": "STRING",
+          "value": "number"
+        },
+        {
+          "type": "STRING",
+          "value": "table"
+        },
+        {
+          "type": "STRING",
+          "value": "error"
+        },
+        {
+          "type": "STRING",
+          "value": "binary"
         }
       ]
     },

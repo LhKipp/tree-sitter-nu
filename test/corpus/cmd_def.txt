@@ -9,6 +9,7 @@ def a [] {}
     (identifier)
     (signature)
     (block)))
+
 ================================================================================
 Test simple exported def
 ================================================================================
@@ -19,4 +20,29 @@ export def a [] {}
   (function_definition
     (identifier)
     (signature)
+    (block)))
+
+================================================================================
+Test def with full flag
+================================================================================
+def cmd [
+    --command(-c): string # The command to run
+    --interval(-i): duration # The interval duration
+    ] { }
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_definition
+    (identifier)
+    (signature
+      (flag
+        (flag_name)
+        (flag_shorthand_name)
+        (type))
+      (comment)
+      (flag
+        (flag_name)
+        (flag_shorthand_name)
+        (type))
+      (comment))
     (block)))

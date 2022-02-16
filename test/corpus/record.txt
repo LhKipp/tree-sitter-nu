@@ -58,7 +58,7 @@ Test record with dynamic field
 ================================================================================
 Test record in def
 ================================================================================
-export def from-file [base-txt: path] {
+export def from-file [base-txt: duration] {
     let base16-lines = (open $base-txt | lines | where ($it | str length) > 0)
     {
         base00 : $base16-lines.0 # Default Background
