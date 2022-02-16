@@ -243,7 +243,7 @@ module.exports = grammar({
 
         value_path: $ => seq(
             '$',
-            $.identifier,
+            choice($.identifier, $.number_literal),
             repeat(seq(token.immediate('.'), choice($.identifier, $.number_literal)))
         ),
 
