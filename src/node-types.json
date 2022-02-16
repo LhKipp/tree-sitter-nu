@@ -55,6 +55,10 @@
           "named": true
         },
         {
+          "type": "if_statement",
+          "named": true
+        },
+        {
           "type": "number_literal",
           "named": true
         },
@@ -409,6 +413,10 @@
           "named": true
         },
         {
+          "type": "if_statement",
+          "named": true
+        },
+        {
           "type": "number_literal",
           "named": true
         },
@@ -509,6 +517,10 @@
         },
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "if_statement",
           "named": true
         },
         {
@@ -758,6 +770,73 @@
     }
   },
   {
+    "type": "if_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "block",
+          "named": true
+        },
+        {
+          "type": "cmd_invocation",
+          "named": true
+        },
+        {
+          "type": "file_path",
+          "named": true
+        },
+        {
+          "type": "flag_arg",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "record_or_block",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "value_path",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "parameter",
     "named": true,
     "fields": {},
@@ -933,6 +1012,10 @@
           "named": true
         },
         {
+          "type": "if_statement",
+          "named": true
+        },
+        {
           "type": "number_literal",
           "named": true
         },
@@ -1051,6 +1134,10 @@
         },
         {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "if_statement",
           "named": true
         },
         {
@@ -1381,6 +1468,10 @@
     "named": false
   },
   {
+    "type": "else",
+    "named": false
+  },
+  {
     "type": "env",
     "named": false
   },
@@ -1415,6 +1506,10 @@
   {
     "type": "identifier",
     "named": true
+  },
+  {
+    "type": "if",
+    "named": false
   },
   {
     "type": "in",

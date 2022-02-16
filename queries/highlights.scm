@@ -23,6 +23,8 @@
  (#match? @constant "^[A-Z][A-Z\\d_]*$"))
 
 [
+ "if"
+ "else"
  "let"
  "def"
  "export"

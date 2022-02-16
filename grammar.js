@@ -94,11 +94,7 @@ module.exports = grammar({
             $.env_export,
             $.function_definition,
             $.alias,
-            // $.for_statement,
-            // $.while_statement,
-            // $.if_statement,
-            // $.case_statement,
-            // $.pipeline,
+            $.if_statement,
             $._expression,
             // A record entry is not a 'real' statement, but treating it as such
             // makes life much easier
@@ -112,6 +108,13 @@ module.exports = grammar({
             'env',
             $.identifier,
             $._expression,
+        ),
+
+        if_statement: $ => seq(
+            "if",
+            $._cmd_expr,
+            $.block,
+            optional(seq("else", $.block))
         ),
 
         function_definition: $ => seq(
