@@ -39,6 +39,10 @@
           "named": true
         },
         {
+          "type": "env_export",
+          "named": true
+        },
+        {
           "type": "file_path",
           "named": true
         },
@@ -405,6 +409,10 @@
           "named": true
         },
         {
+          "type": "env_export",
+          "named": true
+        },
+        {
           "type": "file_path",
           "named": true
         },
@@ -500,6 +508,10 @@
         },
         {
           "type": "command",
+          "named": true
+        },
+        {
+          "type": "env_export",
           "named": true
         },
         {
@@ -641,6 +653,77 @@
           }
         ]
       }
+    }
+  },
+  {
+    "type": "env_export",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "array",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "cmd_invocation",
+          "named": true
+        },
+        {
+          "type": "command",
+          "named": true
+        },
+        {
+          "type": "file_path",
+          "named": true
+        },
+        {
+          "type": "flag_name",
+          "named": true
+        },
+        {
+          "type": "flag_shorthand_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "number_literal",
+          "named": true
+        },
+        {
+          "type": "range",
+          "named": true
+        },
+        {
+          "type": "record_or_block",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
+        {
+          "type": "table",
+          "named": true
+        },
+        {
+          "type": "value_path",
+          "named": true
+        },
+        {
+          "type": "word",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -854,6 +937,10 @@
           "named": true
         },
         {
+          "type": "env_export",
+          "named": true
+        },
+        {
           "type": "file_path",
           "named": true
         },
@@ -972,6 +1059,10 @@
         },
         {
           "type": "command",
+          "named": true
+        },
+        {
+          "type": "env_export",
           "named": true
         },
         {
@@ -1307,6 +1398,10 @@
   },
   {
     "type": "def",
+    "named": false
+  },
+  {
+    "type": "env",
     "named": false
   },
   {

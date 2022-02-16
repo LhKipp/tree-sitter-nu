@@ -91,6 +91,7 @@ module.exports = grammar({
 
         _statement: $ => choice(
             $.variable_declaration,
+            $.env_export,
             $.function_definition,
             $.alias,
             // $.for_statement,
@@ -105,6 +106,13 @@ module.exports = grammar({
         ),
 
         record_entry: $ => seq(choice($.identifier, $.string, $.value_path), ':', $._expression),
+
+        env_export: $ => seq(
+            'export',
+            'env',
+            $.identifier,
+            $._expression,
+        ),
 
         function_definition: $ => seq(
             optional('export'),
