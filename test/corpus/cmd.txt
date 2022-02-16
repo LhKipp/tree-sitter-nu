@@ -35,3 +35,16 @@ build-string $fahren ' °F is ' $celcius ' °C'
     (value_path
       (identifier))
     (string)))
+
+================================================================================
+Test cmd with flagargs
+================================================================================
+cmd -f --flag -flag
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (identifier)
+    (flag_arg)
+    (flag_arg)
+    (flag_arg)))

@@ -597,7 +597,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_flag_arg"
+          "name": "flag_arg"
         },
         {
           "type": "SYMBOL",
@@ -654,7 +654,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_flag_arg"
+          "name": "flag_arg"
         },
         {
           "type": "SYMBOL",
@@ -879,18 +879,9 @@
         }
       ]
     },
-    "_flag_arg": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "SYMBOL",
-          "name": "flag_name"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "flag_shorthand_name"
-        }
-      ]
+    "flag_arg": {
+      "type": "PATTERN",
+      "value": "-?-[a-zA-Z_]+[a-zA-Z_0-9\\-]*"
     },
     "range": {
       "type": "SEQ",

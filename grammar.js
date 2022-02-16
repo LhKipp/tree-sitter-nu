@@ -196,7 +196,7 @@ module.exports = grammar({
             $.string,
             $.value_path,
             $.file_path, // TODO
-            $._flag_arg,
+            $.flag_arg,
             $.range,
             $.record_or_block,
             // $.operator,
@@ -214,7 +214,7 @@ module.exports = grammar({
             $.string,
             $.value_path,
             $.file_path, // TODO
-            $._flag_arg,
+            $.flag_arg,
             $.range,
             $.record_or_block,
             // $.operator,
@@ -264,10 +264,7 @@ module.exports = grammar({
             /(([\w\-\.~]+\/)*)([\w\-\.~]+)\.\w+/, //filepath must end with <.file_ending> for now
         ),
 
-        _flag_arg: $ => choice(
-            $.flag_name,
-            $.flag_shorthand_name,
-        ),
+        flag_arg: $ => /-?-[a-zA-Z_]+[a-zA-Z_0-9\-]*/,
 
         range: $ => seq(
             field('from', $.number_literal),

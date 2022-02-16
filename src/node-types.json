@@ -47,11 +47,7 @@
           "named": true
         },
         {
-          "type": "flag_name",
-          "named": true
-        },
-        {
-          "type": "flag_shorthand_name",
+          "type": "flag_arg",
           "named": true
         },
         {
@@ -126,11 +122,7 @@
           "named": true
         },
         {
-          "type": "flag_name",
-          "named": true
-        },
-        {
-          "type": "flag_shorthand_name",
+          "type": "flag_arg",
           "named": true
         },
         {
@@ -193,11 +185,7 @@
             "named": true
           },
           {
-            "type": "flag_name",
-            "named": true
-          },
-          {
-            "type": "flag_shorthand_name",
+            "type": "flag_arg",
             "named": true
           },
           {
@@ -337,11 +325,7 @@
             "named": true
           },
           {
-            "type": "flag_name",
-            "named": true
-          },
-          {
-            "type": "flag_shorthand_name",
+            "type": "flag_arg",
             "named": true
           },
           {
@@ -417,11 +401,7 @@
           "named": true
         },
         {
-          "type": "flag_name",
-          "named": true
-        },
-        {
-          "type": "flag_shorthand_name",
+          "type": "flag_arg",
           "named": true
         },
         {
@@ -519,11 +499,7 @@
           "named": true
         },
         {
-          "type": "flag_name",
-          "named": true
-        },
-        {
-          "type": "flag_shorthand_name",
+          "type": "flag_arg",
           "named": true
         },
         {
@@ -598,11 +574,7 @@
             "named": true
           },
           {
-            "type": "flag_name",
-            "named": true
-          },
-          {
-            "type": "flag_shorthand_name",
+            "type": "flag_arg",
             "named": true
           },
           {
@@ -684,11 +656,7 @@
           "named": true
         },
         {
-          "type": "flag_name",
-          "named": true
-        },
-        {
-          "type": "flag_shorthand_name",
+          "type": "flag_arg",
           "named": true
         },
         {
@@ -862,11 +830,7 @@
           "named": true
         },
         {
-          "type": "flag_name",
-          "named": true
-        },
-        {
-          "type": "flag_shorthand_name",
+          "type": "flag_arg",
           "named": true
         },
         {
@@ -945,11 +909,7 @@
           "named": true
         },
         {
-          "type": "flag_name",
-          "named": true
-        },
-        {
-          "type": "flag_shorthand_name",
+          "type": "flag_arg",
           "named": true
         },
         {
@@ -1070,11 +1030,7 @@
           "named": true
         },
         {
-          "type": "flag_name",
-          "named": true
-        },
-        {
-          "type": "flag_shorthand_name",
+          "type": "flag_arg",
           "named": true
         },
         {
@@ -1203,11 +1159,7 @@
             "named": true
           },
           {
-            "type": "flag_name",
-            "named": true
-          },
-          {
-            "type": "flag_shorthand_name",
+            "type": "flag_arg",
             "named": true
           },
           {
@@ -1427,6 +1379,10 @@
   {
     "type": "filesize",
     "named": false
+  },
+  {
+    "type": "flag_arg",
+    "named": true
   },
   {
     "type": "flag_name",
