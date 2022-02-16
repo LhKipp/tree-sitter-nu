@@ -450,16 +450,17 @@
   {
     "type": "block_args",
     "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "identifier",
-          "named": true
-        }
-      ]
+    "fields": {
+      "block_param": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -804,9 +805,28 @@
   {
     "type": "record_entry",
     "named": true,
-    "fields": {},
+    "fields": {
+      "entry_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          },
+          {
+            "type": "string",
+            "named": true
+          },
+          {
+            "type": "value_path",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
@@ -831,10 +851,6 @@
         },
         {
           "type": "flag_arg",
-          "named": true
-        },
-        {
-          "type": "identifier",
           "named": true
         },
         {

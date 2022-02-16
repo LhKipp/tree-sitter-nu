@@ -68,7 +68,7 @@ ansi -e $ansi_str
 (source_file
   (command
     (identifier)
-    (flag_shorthand_name)
+    (flag_arg)
     (value_path
       (identifier))))
 
@@ -98,7 +98,7 @@ alias fmt_error = ansi -e "31;1m"
     (identifier)
     (command
       (identifier)
-      (flag_shorthand_name)
+      (flag_arg)
       (string))))
 
 ================================================================================

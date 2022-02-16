@@ -105,7 +105,7 @@ module.exports = grammar({
             repeat1(seq($.record_entry, optional(",")))
         ),
 
-        record_entry: $ => seq(choice($.identifier, $.string, $.value_path), ':', $._expression),
+        record_entry: $ => seq(field("entry_name", choice($.identifier, $.string, $.value_path)), ':', $._expression),
 
         env_export: $ => seq(
             'export',
@@ -264,7 +264,7 @@ module.exports = grammar({
             /(([\w\-\.~]+\/)*)([\w\-\.~]+)\.\w+/, //filepath must end with <.file_ending> for now
         ),
 
-        flag_arg: $ => /-?-[a-zA-Z_]+[a-zA-Z_0-9\-]*/,
+        flag_arg: $ =>  /-?-[a-zA-Z_]+[a-zA-Z_0-9\-]*/,
 
         range: $ => seq(
             field('from', $.number_literal),
@@ -300,7 +300,7 @@ module.exports = grammar({
 
         block_args: $ => seq(
             '|',
-            repeat(seq($.identifier, optional(','))),
+            repeat(seq(field("block_param", $.identifier), optional(','))),
             '|',
         ),
 
