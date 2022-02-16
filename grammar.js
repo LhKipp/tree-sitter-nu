@@ -216,7 +216,7 @@ module.exports = grammar({
 
         // TODO figure out 
         // number_literal: $ => /(0x[\da-fA-F]+|[\d]+(\.([\d]+)?)?|0b[01]+)/,
-        number_literal: $ => /[\d]+(\.([\d]+)?)?/,
+        number_literal: $ => /[\d]+(\.[\d]+)?/,
 
         word: $ => token(prec(-1, repeat1(choice(
             noneOf(...SPECIAL_CHARACTERS),
