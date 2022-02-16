@@ -101,7 +101,7 @@ module.exports = grammar({
             $._expression,
             // A record entry is not a 'real' statement, but treating it as such
             // makes life much easier
-            repeat1($.record_entry)
+            repeat1(seq($.record_entry, optional(",")))
         ),
 
         record_entry: $ => seq(choice($.identifier, $.string, $.value_path), ':', $._expression),
