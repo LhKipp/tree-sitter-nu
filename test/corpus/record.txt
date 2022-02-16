@@ -8,8 +8,9 @@ Test simple record1
 
 (source_file
   (record_or_block
-    (identifier)
-    (number_literal)))
+    (record_entry
+      (identifier)
+      (number_literal))))
 
 ================================================================================
 Test simple record2
@@ -23,16 +24,20 @@ Test simple record2
 
 (source_file
   (record_or_block
-    (identifier)
-    (number_literal)
-    (identifier)
-    (record_or_block
+    (record_entry
       (identifier)
       (number_literal))
-    (identifier)
-    (value_path
+    (record_entry
       (identifier)
-      (identifier))))
+      (record_or_block
+        (record_entry
+          (identifier)
+          (number_literal))))
+    (record_entry
+      (identifier)
+      (value_path
+        (identifier)
+        (identifier)))))
 
 ================================================================================
 Test record with dynamic field
@@ -44,9 +49,10 @@ Test record with dynamic field
 
 (source_file
   (record_or_block
-    (value_path
-      (identifier))
-    (number_literal)
+    (record_entry
+      (value_path
+        (identifier))
+      (number_literal))
     (comment)))
 
 ================================================================================
@@ -89,8 +95,30 @@ export def from-file [base-txt: path] {
                     (identifier))))
               (number_literal)))))
       (record_or_block
-        (identifier)
-        (value_path
+        (record_entry
           (identifier)
-          (number_literal))
+          (value_path
+            (identifier)
+            (number_literal)))
         (comment)))))
+
+================================================================================
+Test record one line
+================================================================================
+{ a: $var.b b: 1 c: e}
+--------------------------------------------------------------------------------
+
+(source_file
+  (record_or_block
+    (record_entry
+      (identifier)
+      (value_path
+        (identifier)
+        (identifier)))
+    (record_entry
+      (identifier)
+      (number_literal))
+    (record_entry
+      (identifier)
+      (command
+        (identifier)))))
