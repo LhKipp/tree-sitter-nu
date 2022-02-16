@@ -278,14 +278,22 @@ module.exports = grammar({
         // backtracking is not allowed in ts. Therefore we have a catch both rule
         record_or_block: $ => seq(
             '{',
+            optional($.block_args),
             optional($._statements),
             '}'
         ),
 
         block: $ => seq(
             '{',
+            optional($.block_args),
             optional($._statements),
             '}'
+        ),
+
+        block_args: $ => seq(
+            '|',
+            repeat(seq($.identifier, optional(','))),
+            '|',
         ),
 
         comment: $ => token(prec(-10, /#.*/)),

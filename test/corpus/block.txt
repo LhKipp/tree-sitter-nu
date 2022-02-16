@@ -29,3 +29,25 @@ Parse block_multiple
       (identifier))
     (command
       (identifier))))
+
+================================================================================
+Parse block with args
+================================================================================
+each { |arg, arg2|
+    cmd $arg $arg2
+}
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (identifier)
+    (record_or_block
+      (block_args
+        (identifier)
+        (identifier))
+      (command
+        (identifier)
+        (value_path
+          (identifier))
+        (value_path
+          (identifier))))))

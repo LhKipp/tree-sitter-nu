@@ -393,6 +393,10 @@
           "named": true
         },
         {
+          "type": "block_args",
+          "named": true
+        },
+        {
           "type": "cmd_invocation",
           "named": true
         },
@@ -450,6 +454,21 @@
         },
         {
           "type": "word",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "block_args",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
           "named": true
         }
       ]
@@ -820,6 +839,10 @@
         },
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "block_args",
           "named": true
         },
         {
