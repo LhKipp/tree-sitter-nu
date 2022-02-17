@@ -10,11 +10,15 @@
 (command cmd_name: (identifier) @function)
 (function_definition func_name: (identifier) @function)
 
-(variable_declaration name: (identifier) @property)
-(parameter (identifier) @property)
-(record_entry entry_name: (identifier) @property)
-(block_args block_param: (identifier) @property)
-; (parameter (identifier) @variable.parameter) -- alternative highlighting group?
+[
+    (variable_declaration name: (identifier))
+    (parameter (identifier))
+    (flag (flag_name))
+    (flag (flag_shorthand_name))
+    (record_entry entry_name: (identifier))
+    (block_args block_param: (identifier))
+] @property
+; (parameter (identifier) @variable.parameter) ; -- alternative highlighting group?
 
 (cmd_invocation) @embedded
 
