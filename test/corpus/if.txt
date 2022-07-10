@@ -5,16 +5,14 @@ if $a { echo hello } else { echo world }
 --------------------------------------------------------------------------------
 
 (source_file
-  (command
-    (identifier)
+  (if_statement
     (value_path
       (identifier))
-    (record_or_block
+    (block
       (command
         (identifier)
         (identifier)))
-    (identifier)
-    (record_or_block
+    (block
       (command
         (identifier)
         (identifier)))))
@@ -30,18 +28,16 @@ if $incorrect_count > 0 {
 --------------------------------------------------------------------------------
 
 (source_file
-  (command
-    (identifier)
+  (if_statement
     (binary_expression
       (value_path
         (identifier))
       (number_literal))
-    (record_or_block
+    (block
       (command
         (identifier)
         (number_literal)))
-    (identifier)
-    (record_or_block
+    (block
       (command
         (identifier)
         (number_literal)))))
@@ -58,13 +54,12 @@ if $incorrect_count > 0 {
 --------------------------------------------------------------------------------
 
 (source_file
-  (command
-    (identifier)
+  (if_statement
     (binary_expression
       (value_path
         (identifier))
       (number_literal))
-    (record_or_block
+    (block
       (command
         (identifier)
         (number_literal))
@@ -72,8 +67,7 @@ if $incorrect_count > 0 {
         (identifier)
         (identifier)
         (identifier)))
-    (identifier)
-    (record_or_block
+    (block
       (command
         (identifier)
         (number_literal)))))
