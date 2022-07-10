@@ -46,3 +46,87 @@ def cmd [
         (type))
       (comment))
     (block)))
+
+================================================================================
+Test def with default arg value
+================================================================================
+def cmd [
+    interval: duration = 5000 # The interval duration
+    interval2 = 5000 # The interval duration
+    ] { }
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_definition
+    (identifier)
+    (signature
+      (parameter
+        (identifier)
+        (type)
+        (defaultParameterAssignment
+          (number_literal)))
+      (comment)
+      (parameter
+        (identifier)
+        (defaultParameterAssignment
+          (number_literal)))
+      (comment))
+    (block)))
+
+================================================================================
+Test def with default flag value
+================================================================================
+def cmd [
+    --interval(-i): duration = 5000 # The interval duration
+    --interval2(-i) = 5000 # The interval duration
+    ] { }
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_definition
+    (identifier)
+    (signature
+      (flag
+        (flag_name)
+        (flag_shorthand_name)
+        (type)
+        (defaultParameterAssignment
+          (number_literal)))
+      (comment)
+      (flag
+        (flag_name)
+        (flag_shorthand_name)
+        (defaultParameterAssignment
+          (number_literal)))
+      (comment))
+    (block)))
+
+================================================================================
+Test def with default value from call
+================================================================================
+def cmd [
+    arg@call
+    arg2:string@call2
+    --flag:string@call3
+    ] { }
+--------------------------------------------------------------------------------
+
+(source_file
+  (function_definition
+    (identifier)
+    (signature
+      (parameter
+        (identifier)
+        (defaultParameterAssignment
+          (identifier)))
+      (parameter
+        (identifier)
+        (type)
+        (defaultParameterAssignment
+          (identifier)))
+      (flag
+        (flag_name)
+        (type)
+        (defaultParameterAssignment
+          (identifier))))
+    (block)))

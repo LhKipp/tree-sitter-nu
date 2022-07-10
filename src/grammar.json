@@ -373,6 +373,18 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "defaultParameterAssignment"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         }
       ]
     },
@@ -423,6 +435,18 @@
                   "name": "type"
                 }
               ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SYMBOL",
+              "name": "defaultParameterAssignment"
             },
             {
               "type": "BLANK"
@@ -523,6 +547,42 @@
         {
           "type": "STRING",
           "value": "binary"
+        }
+      ]
+    },
+    "defaultParameterAssignment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "="
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_cmd_expr"
+                }
+              ]
+            },
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "@"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "identifier"
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -748,7 +808,7 @@
             "members": [
               {
                 "type": "PATTERN",
-                "value": "[^'\"`{}\\[\\]()\\\\\\s$;.|#\\-]"
+                "value": "[^'\"`@{}\\[\\]()\\\\\\s$;.|#\\-]"
               },
               {
                 "type": "SEQ",

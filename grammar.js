@@ -43,7 +43,7 @@ const OPERATOR_PREC = [
 
 
 const SPECIAL_CHARACTERS = [
-    "'", '"', '`',
+    "'", '"', '`', '@',
     '{', '}',
     '\\[', '\\]',
     '(', ')',
@@ -148,6 +148,7 @@ module.exports = grammar({
             $.identifier,
             optional(seq(':', $.type)),
             optional('?'),
+            optional($.default_parameter_assignment),
         ),
         flag: $ => seq(
             $.flag_name,
@@ -155,6 +156,7 @@ module.exports = grammar({
                 seq('(', $.flag_shorthand_name, ')')
             ),
             optional(seq(':', $.type)),
+            optional($.default_parameter_assignment),
         ),
         flag_name: $ => /--[a-zA-Z_]+[a-zA-Z_0-9]*/,
         flag_shorthand_name: $ => /-[a-zA-Z0-9]/,
@@ -177,6 +179,11 @@ module.exports = grammar({
             "error",
             "binary",
         ),
+        default_parameter_assignment: $ => seq(
+            choice(
+                seq("=", $._cmd_expr),
+                seq("@", $.identifier))
+        ),
 
         variable_declaration: $ => seq(
             'let',
@@ -187,10 +194,11 @@ module.exports = grammar({
 
         command: $ => seq(
             field('cmd_name', seq($.identifier, optional('?'))),
-            repeat(field('arg', $._cmd_expr)), // ITS OVER 9000
+            repeat(field('arg', $._cmd_expr)), 
             choice($._cmd_newline, $._terminator)
             // prec(9002,$._terminator)
-            // repeat(field('arg', $._cmd_expr)) // ITS OVER 9000
+            // ITS OVER 9000 
+            // ^- Thanks to my previous me for the meme. Had a good laugh for this random comment :)
         ),
 
         _expression: $ => choice(
