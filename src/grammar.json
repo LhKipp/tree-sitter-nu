@@ -277,8 +277,17 @@
           ]
         },
         {
-          "type": "STRING",
-          "value": "def"
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "def"
+            },
+            {
+              "type": "STRING",
+              "value": "def-env"
+            }
+          ]
         },
         {
           "type": "FIELD",

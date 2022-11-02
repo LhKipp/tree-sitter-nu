@@ -121,7 +121,7 @@ module.exports = grammar({
 
         function_definition: $ => seq(
             optional('export'),
-            'def',
+            choice('def', 'def-env'),
             field('func_name', choice($.identifier, $.string)),
             $.signature,
             $.block,
