@@ -604,6 +604,10 @@
         {
           "type": "STRING",
           "value": "binary"
+        },
+        {
+          "type": "STRING",
+          "value": "path"
         }
       ]
     },

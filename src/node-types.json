@@ -1635,6 +1635,10 @@
     "named": true
   },
   {
+    "type": "path",
+    "named": false
+  },
+  {
     "type": "range",
     "named": false
   },

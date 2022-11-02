@@ -180,6 +180,7 @@ module.exports = grammar({
             "table",
             "error",
             "binary",
+            "path",
         ),
         default_parameter_assignment: $ => seq(
             choice(
