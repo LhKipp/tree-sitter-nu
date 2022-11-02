@@ -29,6 +29,7 @@
 [
  "if"
  "else"
+ "not"
  "let"
  "def"
  "export"

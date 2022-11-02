@@ -183,12 +183,60 @@
           "value": "if"
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "not"
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "SYMBOL",
           "name": "_cmd_expr"
         },
         {
           "type": "SYMBOL",
           "name": "block"
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "STRING",
+                "value": "else"
+              },
+              {
+                "type": "STRING",
+                "value": "if"
+              },
+              {
+                "type": "CHOICE",
+                "members": [
+                  {
+                    "type": "STRING",
+                    "value": "not"
+                  },
+                  {
+                    "type": "BLANK"
+                  }
+                ]
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_cmd_expr"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "block"
+              }
+            ]
+          }
         },
         {
           "type": "CHOICE",
@@ -457,7 +505,7 @@
     },
     "flag_name": {
       "type": "PATTERN",
-      "value": "--[a-zA-Z_]+[a-zA-Z_0-9]*"
+      "value": "--[a-zA-Z_]+[a-zA-Z_0-9-]*"
     },
     "flag_shorthand_name": {
       "type": "PATTERN",

@@ -112,8 +112,10 @@ module.exports = grammar({
 
         if_statement: $ => seq(
             "if",
+            optional("not"),
             $._cmd_expr,
             $.block,
+            repeat(seq("else","if", optional("not"), $._cmd_expr, $.block)),
             optional(seq("else", $.block))
         ),
 
@@ -158,7 +160,7 @@ module.exports = grammar({
             optional(seq(':', $.type)),
             optional($.default_parameter_assignment),
         ),
-        flag_name: $ => /--[a-zA-Z_]+[a-zA-Z_0-9]*/,
+        flag_name: $ => /--[a-zA-Z_]+[a-zA-Z_0-9-]*/,
         flag_shorthand_name: $ => /-[a-zA-Z0-9]/,
         rest: $ => seq(
             '...rest',
