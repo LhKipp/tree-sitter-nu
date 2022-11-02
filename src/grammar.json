@@ -989,7 +989,7 @@
       "members": [
         {
           "type": "PATTERN",
-          "value": "[^\\S\\r\\n]\\.\\.|\\s\\.[^\\S\\r\\n]"
+          "value": "\\s\\.\\.\\s|\\s\\.\\s"
         },
         {
           "type": "PATTERN",

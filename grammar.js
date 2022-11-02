@@ -270,8 +270,8 @@ module.exports = grammar({
         ),
 
         file_path: $ => choice(
-            // '-', //previous pwd (conflicts with operator)
-            /[^\S\r\n]\.\.|\s\.[^\S\r\n]/, //Expect ws before .|.. and after (but exclude newline)
+            // '-', // previous pwd (conflicts with operator)
+            /\s\.\.\s|\s\.\s/, // Only . and .. (match ws before and after to disambiguate)
             /(([\w\-\.~]+\/)*)([\w\-\.~]+)\.\w+/, //filepath must end with <.file_ending> for now
         ),
 
