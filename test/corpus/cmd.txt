@@ -48,3 +48,22 @@ cmd -f --flag -flag
     (flag_arg)
     (flag_arg)
     (flag_arg)))
+
+================================================================================
+Test native cmd with flags and args
+================================================================================
+^git --no-pager log --graph --all --oneline --decorate --simplify-by-decoration -n 10
+--------------------------------------------------------------------------------
+
+(source_file
+  (command
+    (identifier)
+    (flag_arg)
+    (identifier)
+    (flag_arg)
+    (flag_arg)
+    (flag_arg)
+    (flag_arg)
+    (flag_arg)
+    (flag_arg)
+    (number_literal)))

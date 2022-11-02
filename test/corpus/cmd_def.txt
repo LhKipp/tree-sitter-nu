@@ -63,12 +63,12 @@ def cmd [
       (parameter
         (identifier)
         (type)
-        (defaultParameterAssignment
+        (default_parameter_assignment
           (number_literal)))
       (comment)
       (parameter
         (identifier)
-        (defaultParameterAssignment
+        (default_parameter_assignment
           (number_literal)))
       (comment))
     (block)))
@@ -90,13 +90,13 @@ def cmd [
         (flag_name)
         (flag_shorthand_name)
         (type)
-        (defaultParameterAssignment
+        (default_parameter_assignment
           (number_literal)))
       (comment)
       (flag
         (flag_name)
         (flag_shorthand_name)
-        (defaultParameterAssignment
+        (default_parameter_assignment
           (number_literal)))
       (comment))
     (block)))
@@ -117,16 +117,16 @@ def cmd [
     (signature
       (parameter
         (identifier)
-        (defaultParameterAssignment
+        (default_parameter_assignment
           (identifier)))
       (parameter
         (identifier)
         (type)
-        (defaultParameterAssignment
+        (default_parameter_assignment
           (identifier)))
       (flag
         (flag_name)
         (type)
-        (defaultParameterAssignment
+        (default_parameter_assignment
           (identifier))))
     (block)))

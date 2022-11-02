@@ -633,6 +633,10 @@
             "named": false
           },
           {
+            "type": "^",
+            "named": false
+          },
+          {
             "type": "identifier",
             "named": true
           }
@@ -641,7 +645,7 @@
     }
   },
   {
-    "type": "defaultParameterAssignment",
+    "type": "default_parameter_assignment",
     "named": true,
     "fields": {},
     "children": {
@@ -784,7 +788,7 @@
       "required": true,
       "types": [
         {
-          "type": "defaultParameterAssignment",
+          "type": "default_parameter_assignment",
           "named": true
         },
         {
@@ -912,7 +916,7 @@
       "required": true,
       "types": [
         {
-          "type": "defaultParameterAssignment",
+          "type": "default_parameter_assignment",
           "named": true
         },
         {
@@ -1504,6 +1508,10 @@
   },
   {
     "type": "]",
+    "named": false
+  },
+  {
+    "type": "^",
     "named": false
   },
   {

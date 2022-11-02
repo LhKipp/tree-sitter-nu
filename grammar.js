@@ -193,7 +193,7 @@ module.exports = grammar({
         ),
 
         command: $ => seq(
-            field('cmd_name', seq($.identifier, optional('?'))),
+            field('cmd_name', seq(optional('^'), $.identifier, optional('?'))),
             repeat(field('arg', $._cmd_expr)), 
             choice($._cmd_newline, $._terminator)
             // prec(9002,$._terminator)
