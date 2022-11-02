@@ -278,9 +278,9 @@ module.exports = grammar({
         flag_arg: $ =>  /-?-[a-zA-Z_]+[a-zA-Z_0-9\-]*/,
 
         range: $ => seq(
-            field('from', $.number_literal),
+            field('from', choice($.number_literal, $.value_path)),
             '..',
-            field('to', $.number_literal),
+            field('to', choice($.number_literal, $.value_path)),
         ),
 
         identifier: $ => /[a-zA-Z_][a-zA-Z0-9_\-]*/,

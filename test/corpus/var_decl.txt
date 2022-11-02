@@ -8,3 +8,37 @@ let x = 1
   (variable_declaration
     (identifier)
     (number_literal)))
+
+================================================================================
+Test complex var_decl
+================================================================================
+let path = (1..$nb | each {|_| ".."} | reduce {|it, acc| $acc + "/" + $it})
+--------------------------------------------------------------------------------
+
+(source_file
+  (variable_declaration
+    (identifier)
+    (cmd_invocation
+      (range
+        (number_literal)
+        (value_path
+          (identifier)))
+      (command
+        (identifier)
+        (record_or_block
+          (block_args
+            (identifier))
+          (string)))
+      (command
+        (identifier)
+        (record_or_block
+          (block_args
+            (identifier)
+            (identifier))
+          (binary_expression
+            (binary_expression
+              (value_path
+                (identifier))
+              (string))
+            (value_path
+              (identifier))))))))

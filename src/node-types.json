@@ -941,6 +941,10 @@
           {
             "type": "number_literal",
             "named": true
+          },
+          {
+            "type": "value_path",
+            "named": true
           }
         ]
       },
@@ -950,6 +954,10 @@
         "types": [
           {
             "type": "number_literal",
+            "named": true
+          },
+          {
+            "type": "value_path",
             "named": true
           }
         ]
