@@ -235,7 +235,7 @@
             "named": false
           },
           {
-            "type": "&&",
+            "type": "and",
             "named": false
           },
           {
@@ -299,7 +299,7 @@
             "named": false
           },
           {
-            "type": "||",
+            "type": "or",
             "named": false
           }
         ]
@@ -1411,7 +1411,7 @@
     "named": false
   },
   {
-    "type": "&&",
+    "type": "and",
     "named": false
   },
   {
@@ -1663,7 +1663,7 @@
     "named": false
   },
   {
-    "type": "||",
+    "type": "or",
     "named": false
   },
   {

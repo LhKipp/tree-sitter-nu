@@ -1416,7 +1416,7 @@
           "members": [
             {
               "type": "STRING",
-              "value": "||"
+              "value": "or"
             }
           ]
         },
@@ -1425,7 +1425,7 @@
           "members": [
             {
               "type": "STRING",
-              "value": "&&"
+              "value": "and"
             }
           ]
         },
@@ -1774,7 +1774,7 @@
                 "name": "operator",
                 "content": {
                   "type": "STRING",
-                  "value": "||"
+                  "value": "or"
                 }
               },
               {
@@ -1807,7 +1807,7 @@
                 "name": "operator",
                 "content": {
                   "type": "STRING",
-                  "value": "&&"
+                  "value": "and"
                 }
               },
               {
