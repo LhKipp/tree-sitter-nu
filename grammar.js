@@ -25,8 +25,8 @@ const OPERATOR_PREC = [
     ['%', PREC.MULTIPLY],
     ['=', PREC.ASSIGN],
     ['mod', PREC.MULTIPLY],
-    ['||', PREC.LOGICAL_OR],
-    ['&&', PREC.LOGICAL_AND],
+    ['or', PREC.LOGICAL_OR],
+    ['and', PREC.LOGICAL_AND],
     // ['^', PREC.EXCLUSIVE_OR],
     // ['&', PREC.BITWISE_AND],
     ['=~', PREC.EQUAL],
@@ -205,6 +205,7 @@ module.exports = grammar({
         ),
 
         _expression: $ => choice(
+            $.bool_literal,
             $.command,
             $.number_literal,
             $.string,
@@ -223,6 +224,7 @@ module.exports = grammar({
 
 
         _cmd_expr: $ => choice(
+            $.bool_literal,
             $.identifier,
             $.number_literal,
             $.string,
@@ -239,6 +241,7 @@ module.exports = grammar({
             $.word,
         ),
 
+        bool_literal: $ => choice('true', 'false'),
         // TODO figure out 
         // number_literal: $ => /(0x[\da-fA-F]+|[\d]+(\.([\d]+)?)?|0b[01]+)/,
         number_literal: $ => /[\d]+(\.[\d]+)?/,

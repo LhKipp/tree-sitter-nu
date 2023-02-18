@@ -31,6 +31,10 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "cmd_invocation",
           "named": true
         },
@@ -114,6 +118,10 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "cmd_invocation",
           "named": true
         },
@@ -177,6 +185,10 @@
             "named": true
           },
           {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
             "type": "cmd_invocation",
             "named": true
           },
@@ -235,10 +247,6 @@
             "named": false
           },
           {
-            "type": "&&",
-            "named": false
-          },
-          {
             "type": "*",
             "named": false
           },
@@ -291,6 +299,10 @@
             "named": false
           },
           {
+            "type": "and",
+            "named": false
+          },
+          {
             "type": "in",
             "named": false
           },
@@ -299,7 +311,7 @@
             "named": false
           },
           {
-            "type": "||",
+            "type": "or",
             "named": false
           }
         ]
@@ -314,6 +326,10 @@
           },
           {
             "type": "binary_expression",
+            "named": true
+          },
+          {
+            "type": "bool_literal",
             "named": true
           },
           {
@@ -386,6 +402,10 @@
         },
         {
           "type": "block_args",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
           "named": true
         },
         {
@@ -472,6 +492,11 @@
     }
   },
   {
+    "type": "bool_literal",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "cmd_invocation",
     "named": true,
     "fields": {},
@@ -489,6 +514,10 @@
         },
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
           "named": true
         },
         {
@@ -579,6 +608,10 @@
             "named": true
           },
           {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
             "type": "cmd_invocation",
             "named": true
           },
@@ -661,6 +694,10 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "cmd_invocation",
           "named": true
         },
@@ -721,6 +758,10 @@
         },
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
           "named": true
         },
         {
@@ -858,6 +899,10 @@
         },
         {
           "type": "block",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
           "named": true
         },
         {
@@ -1000,6 +1045,10 @@
           "named": true
         },
         {
+          "type": "bool_literal",
+          "named": true
+        },
+        {
           "type": "cmd_invocation",
           "named": true
         },
@@ -1068,6 +1117,10 @@
         },
         {
           "type": "block_args",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
           "named": true
         },
         {
@@ -1193,6 +1246,10 @@
         },
         {
           "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "bool_literal",
           "named": true
         },
         {
@@ -1333,6 +1390,10 @@
             "named": true
           },
           {
+            "type": "bool_literal",
+            "named": true
+          },
+          {
             "type": "cmd_invocation",
             "named": true
           },
@@ -1408,10 +1469,6 @@
   },
   {
     "type": "%",
-    "named": false
-  },
-  {
-    "type": "&&",
     "named": false
   },
   {
@@ -1531,6 +1588,10 @@
     "named": false
   },
   {
+    "type": "and",
+    "named": false
+  },
+  {
     "type": "binary",
     "named": false
   },
@@ -1576,6 +1637,10 @@
   },
   {
     "type": "export",
+    "named": false
+  },
+  {
+    "type": "false",
     "named": false
   },
   {
@@ -1635,6 +1700,10 @@
     "named": true
   },
   {
+    "type": "or",
+    "named": false
+  },
+  {
     "type": "path",
     "named": false
   },
@@ -1651,6 +1720,10 @@
     "named": false
   },
   {
+    "type": "true",
+    "named": false
+  },
+  {
     "type": "word",
     "named": true
   },
@@ -1660,10 +1733,6 @@
   },
   {
     "type": "|",
-    "named": false
-  },
-  {
-    "type": "||",
     "named": false
   },
   {

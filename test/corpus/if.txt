@@ -71,3 +71,21 @@ if $incorrect_count > 0 {
       (command
         (identifier)
         (number_literal)))))
+
+================================================================================
+Parse if3
+================================================================================
+if true and false {
+   exit 1 
+} 
+--------------------------------------------------------------------------------
+
+(source_file
+  (if_statement
+    (binary_expression
+      (bool_literal)
+      (bool_literal))
+    (block
+      (command
+        (identifier)
+        (number_literal)))))

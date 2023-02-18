@@ -10,6 +10,30 @@ Test binary_simple_expr
     (number_literal)))
 
 ================================================================================
+Test logical expr
+================================================================================
+true or false and 1 > 2 or 1 < 3 and (4 == 5)
+--------------------------------------------------------------------------------
+
+(source_file
+  (binary_expression
+    (binary_expression
+      (bool_literal)
+      (binary_expression
+        (bool_literal)
+        (binary_expression
+          (number_literal)
+          (number_literal))))
+    (binary_expression
+      (binary_expression
+        (number_literal)
+        (number_literal))
+      (cmd_invocation
+        (binary_expression
+          (number_literal)
+          (number_literal))))))
+
+================================================================================
 Test binary_in_block
 ================================================================================
 {

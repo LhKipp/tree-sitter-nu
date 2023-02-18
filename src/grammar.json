@@ -756,6 +756,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "bool_literal"
+        },
+        {
+          "type": "SYMBOL",
           "name": "command"
         },
         {
@@ -813,6 +817,10 @@
       "members": [
         {
           "type": "SYMBOL",
+          "name": "bool_literal"
+        },
+        {
+          "type": "SYMBOL",
           "name": "identifier"
         },
         {
@@ -862,6 +870,19 @@
         {
           "type": "SYMBOL",
           "name": "word"
+        }
+      ]
+    },
+    "bool_literal": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "true"
+        },
+        {
+          "type": "STRING",
+          "value": "false"
         }
       ]
     },
@@ -1416,7 +1437,7 @@
           "members": [
             {
               "type": "STRING",
-              "value": "||"
+              "value": "or"
             }
           ]
         },
@@ -1425,7 +1446,7 @@
           "members": [
             {
               "type": "STRING",
-              "value": "&&"
+              "value": "and"
             }
           ]
         },
@@ -1774,7 +1795,7 @@
                 "name": "operator",
                 "content": {
                   "type": "STRING",
-                  "value": "||"
+                  "value": "or"
                 }
               },
               {
@@ -1807,7 +1828,7 @@
                 "name": "operator",
                 "content": {
                   "type": "STRING",
-                  "value": "&&"
+                  "value": "and"
                 }
               },
               {
