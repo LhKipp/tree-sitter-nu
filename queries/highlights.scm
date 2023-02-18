@@ -34,6 +34,10 @@
  "def"
  "def-env"
  "export"
+ "true"
+ "false"
+ "and"
+ "or"
 ] @keyword
 
 [
